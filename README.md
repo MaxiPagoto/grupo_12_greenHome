@@ -20,35 +20,28 @@ Blog de jardinería, decoración y reformas del hogar.
 
     Paginas de referencia 
 
-        https://www.vivelatural.com/
-        No es de la competencia. Sin embargo refleja los valores que deseamos trasmitir: Integrar la vegetación en la arquitectura para mejorar nuestra calidad de vida.
+https://www.vivelatural.com/
+No es de la competencia. Sin embargo refleja los valores que deseamos trasmitir: Integrar la vegetación en la arquitectura para mejorar nuestra calidad de vida.
 
-        https://be.green/
-        Por la funcionalidad de la seccion inspiracion donde podamos insertar los posteos realizados por los usuarios a traves de un hashtag
+https://be.green/
+Por la funcionalidad de la seccion inspiracion donde podamos insertar los posteos realizados por los usuarios a traves de un hashtag
 
-        https://viveroverdevida.com.ar/
-        Por el diseño y funcionalidad UI del market place
+https://viveroverdevida.com.ar/
+Por el diseño y funcionalidad UI del market place
 
-        https://www.fronda.com/
-        Nos gusta lo informativo e instructivo.
-        
-        https://www.invertironline.com/
-        Por la funcionalidad. a traves del test buscaremos definir el perfil del usuario para poder brindarle mejor asesoria y producotos acorde a su necesidad 
+https://www.fronda.com/
+Nos gusta lo informativo e instructivo.
 
-        https://www.huellabotanica.com.ar/
-        Ofrece los mismos productos y algunos servicios.
+https://www.invertironline.com/
+Por la funcionalidad. a traves del test buscaremos definir el perfil del usuario para poder brindarle mejor asesoria y producotos acorde a su necesidad 
 
-        
-     
+https://www.huellabotanica.com.ar/
+Ofrece los mismos productos y algunos servicios.
 
     El equipo:
 
-        Ivan Alejandro Pizarro
-        Tengo 27 años, vivo en Córdoba y soy Lic. en Cine y TV. Actualmente estoy formándome como Desarrollador Full Stack en Digital House. Green Home es mi primer proyecto como desarrollador, o lo que es igual, la razón por la cual me dormiré muy tarde en estos meses preguntándome '¿Por qué está fallando este código?'.  
+Ivan Alejandro Pizarro
+Tengo 27 años, vivo en Córdoba y soy Lic. en Cine y TV. Actualmente estoy formándome como Desarrollador Full Stack en Digital House. Green Home es mi primer proyecto como desarrollador, o lo que es igual, la razón por la cual me dormiré muy tarde en estos meses preguntándome '¿Por qué está fallando este código?'.  
 
-        Maximiliano Pagoto
-        Tengo 28 años, vivo actualmente en Capital federal, una de mis caracteristicas personales es el compromiso, por lo que voy a buscar desarrollar una pagina acorde a las necesidades del usuario, 
-        Me encuentro estudiando en Digital House preparandome para un gran desafio.
-
-
-
+Maximiliano Pagoto
+Tengo 28 años, vivo actualmente en Capital federal, una de mis caracteristicas personales es el compromiso, por lo que voy a buscar desarrollar una pagina acorde a las necesidades del usuario. Me encuentro estudiando en Digital House preparandome para un gran desafio.
