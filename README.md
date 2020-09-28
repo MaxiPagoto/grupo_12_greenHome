@@ -38,7 +38,7 @@ Por la funcionalidad. a traves del test buscaremos definir el perfil del usuario
 https://www.huellabotanica.com.ar/
 Ofrece los mismos productos y algunos servicios.
 
-    El equipo:
+    El equipo
 
 Ivan Alejandro Pizarro: Tengo 27 años, vivo en Córdoba y soy Lic. en Cine y TV. Actualmente estoy formándome como Desarrollador Full Stack en Digital House. Green Home es mi primer proyecto como desarrollador, o lo que es igual, la razón por la cual me dormiré muy tarde en estos meses preguntándome '¿Por qué está fallando este código?'.  
 
