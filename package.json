@@ -1,0 +1,23 @@
+{
+  "name": "grupo_12_greenhome",
+  "version": "1.0.0",
+  "description": "GREEN HOME",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxiPagoto/grupo_12_greenHome.git"
+  },
+  "author": "Maximiliano Pagoto e Ivan Alejandro Pizzaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxiPagoto/grupo_12_greenHome/issues"
+  },
+  "homepage": "https://github.com/MaxiPagoto/grupo_12_greenHome#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mkdirp": "^1.0.4"
+  }
+}
