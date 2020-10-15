@@ -19,8 +19,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.listen(3000, ()=> {
+  console.log('Servidor Levantado. http//localhost:3000');
+});
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + '/views/index.html');
+});
+
+/* OMITÍ ESTO PARA USAR EL app.get de arriba
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,5 +46,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
