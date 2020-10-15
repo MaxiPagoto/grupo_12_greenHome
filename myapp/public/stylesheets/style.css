@@ -1,10 +1,30 @@
+/*FUENTES
+TITULOS
+font-family: 'Playfair Display', serif;
+
+CONTENIDO 
+font-family: 'Poppins', sans-serif;
+*/
+
+/*
+  NEGRO #5B5B5B
+  GRIS #ACACAC 
+  BLANCO
+  VERDE 1° #78C092
+  ROSA 1° #E1AEA6
+  VERDE 2° #038B6B
+  ROSA 2° #E88B7B
+  VERDE 3° #447977 #699492
+  ROSA 3° #A84A4A
+*/
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 
-@media(max-width:411px){
+
   ul li {
     list-style: none;
 
@@ -20,11 +40,18 @@ body {
       display: none;
     }
 
-.piedepagina{
-  background-color: lightgreen;
+footer {
+  background-color: #447977;
+  color: #fff;
   display: flex;
 
 }
+footer a {
+  color: #fff;
+}
+
+
+
 .listadofooter{
   display: flex;
   flex-direction: column;
@@ -36,6 +63,4 @@ body {
 .displayfooter3{
   display: flex;
   
-}
-
 }
