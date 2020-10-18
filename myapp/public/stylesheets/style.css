@@ -20,45 +20,120 @@ font-family: 'Poppins', sans-serif;
 
 body {
   padding: 50px;
+  width: 425px;
+  height: auto;
+  margin: 5px;
+  padding: 0px;
   font-family: 'Poppins', sans-serif;
 }
 
-
-
-  ul li {
-    list-style: none;
-
-    }
-    nav{
+/* MENU PRINCIPAL NAVEGACION */
+      nav{
+      margin: 0 auto;
+      width: 425px;
+      height: 50px;
       color: #fff;
-      background-color: lightgreen;
+      background-color:  #447977;  
+    }
+
+    .conteiner{
+      width: 100%;
+      height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
+      border: 1px solid #000;
+      
+      }
+
+      .lista{
+        list-style: none;
+      }
+
+      .img-principal{
+        width: 100%;
+        height: 500px;
+      }
+
+      
+
+      
+      
+
+    
+
+    
+
+    .nav-menu{
+      display:none ;
     }
 
-    #menu{
-      display: none;
+    
+
+/* MAIN */
+
+    .img-destacada{
+      width: 200px;
+      
     }
 
-footer {
-  background-color: #447977;
+/* FOOTER */
+
+footer{
+  font-size: 10px;
+  width: 425px;
+  height: 200px;
+  margin: 0px;
+
+  background-color:  #447977;
   color: #fff;
+  border: solid #fff;
+}
+
+.footer-conteiner{
+  width: 100%;
+  height: 80%;
   display: flex;
-
-}
-footer a {
-  color: #fff;
+  justify-content: space-around; 
 }
 
+.footer-conteiner2{
+  height: 20%;
+  display: flex;
+}
 
-
-.listadofooter{
-  
+.listaF1{
+  width: 50%;
+  height: 100%;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  border: 1px solid #fff;
   flex-direction: column;
-}
-.listadofooter2{
-  
-  flex-direction: column;
+  justify-content: center;
 }
 
-  
+.listaF2{
+  width: 50%;
+  height: 100%;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  border: 1px solid #fff;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+}
+
+.listaF3{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  border: 1px solid #fff;
+  justify-content: space-around;
+  align-items: center;
+}
+ 
+
