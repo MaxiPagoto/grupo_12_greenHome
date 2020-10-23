@@ -18,122 +18,708 @@ font-family: 'Poppins', sans-serif;
   ROSA 3° #A84A4A
 */
 
-body {
-  padding: 50px;
-  width: 425px;
-  height: auto;
-  margin: 5px;
-  padding: 0px;
+* {
   font-family: 'Poppins', sans-serif;
 }
 
+a{
+  color: white;
+  text-decoration:none;
+}
+
+body {
+  height: auto;
+  width: 100%;
+  margin: 0px;
+  padding: auto;
+  border: 0px;
+}
+
 /* MENU PRINCIPAL NAVEGACION */
-      nav{
-      margin: 0 auto;
-      width: 425px;
-      height: 50px;
-      color: #fff;
-      background-color:  #447977;  
+    header{
+      margin: 0px;
+      border: 0px;
     }
 
-    .conteiner{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-around;
-      border: 1px solid #000;
+    .header-container{
       
+      height: 100px;
+      color: #fff;
+      background-color:  #447977; 
+      margin: 0px;
+      border: 0px;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 5%;
+      padding-right: 5%;
+      flex-wrap: wrap;
+         
+      }
+      
+    .menu{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-self: flex-start;
+    }
+    .menu-button{
+      width: 10%;
+    }
+    .titulo{
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
       }
 
-      .lista{
-        list-style: none;
+    .lista{
+      display: none;  
+      list-style: none;
+      width: 20%;
       }
+    .nav-button{
+      
+    }
+    .carrito{
+      width: 10%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-weight: 600;
+    }
 
       .img-principal{
         width: 100%;
         height: 500px;
       }
-
-      
-
-      
-      
-
     
-
-    
-
     .nav-menu{
-      display:none ;
+      display: none;
     }
 
+
+@media (min-width:1023px){
+
+  header{
+    background-color:  #447977;
+  }
+
+  .header-container{
+    box-sizing: border-box;
+    width: 1024px;
+    height: 60px;
+    color: #fff;
+    background-color:  #447977; 
+    margin: 0px;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+  .menu{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-self: center;
+    align-items: center;
+  }
+  .menu-button{
+    width: 10%;
+  }
+  .titulo{
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    order: -1;  
+  }
     
 
+  .lista{
+    display: flex;  
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+    align-self: center;
+    }
+  .nav-button{
+    display: none;
+  }
+  .carrito{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    align-items: center;
+    order: 1;
+  }
+  
+  .nav-menu{
+    display: inline-flex;
+    color: white;
+  }
+}
 /* MAIN */
 
-    .img-destacada{
-      width: 200px;
+
+.principal-container{
+ 
+  background: url(../images/image-not-found.png) no-repeat ;
+  background-position: center center;
+   background-size: cover;
+   height: 500px;
+   width: 100% ;
+}
+
+h2{
+  margin-left: 5%;
+}
+
+
+
+.descubri-button{
+  background-color: #699492;
+  color: #fff;
+  text-decoration: none;
+
+  }
+
+                                            /* DESTACADOS */
+
+.destacados-container{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  
+}
+
+.art-destacado-1,.art-destacado-2{
+  height: 65%;
+  width: 45%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border: solid #447977;
+}
+
+.art-destacado-3,.art-destacado-4{
+  display: none;
+}
+
+.img-destacada{
+  display: flex;
+   background-color: #447977;
+   width: 100%;
+   height: 90%;
+   margin: 5px;
+   align-items: flex-end;
+  
+}
+
+.nombre-planta-destacado{
+  display: flex;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+.precio-destacado{
+
+  display: flex;
+  height: 10%;
+  align-items: center;
+  justify-content: flex-end;
+  
+  
+  
+}
+                                          
+.img{
+  height: 100%;
+  width: 100%;
+}
+
+.img-cont{
+  height: 500px;
+  width: 500px;
+}
+
+   
+
+
+
+                                              /*TIENDA */
+    .tienda-container{
+      display: flex;
+      flex-direction: column;
+      
+      height: 1000px;
+      width: 100%;
+    }
+
+    .art-tienda1,.art-tienda2, .art-tienda3, .art-tienda4 {
+      width: 100%;
+      height: 25%;
+      margin-top: 10px;
+    }
+
+    .img-tienda{
+      
+      background-color: #447977;
+      width: 100%;
+      height: 100%;
       
     }
+
+    .nombre-tipo-tienda{
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+                                              /*SUBSCRIBIR */
+
+    .subscribir-container{
+      display: flex;
+      border:  #447977 solid;
+      background-color: #b7ebcd ;
+      margin: 10px 0px 10px 0px;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 5%;
+      align-content: center;
+       }
+
+    .subscribir-form{
+      padding-top: 5%;
+      align-self: center;
+      
+    }
+
+    .subscribir-text{
+      align-self: center;
+    }
+
+    
+
+    
+
+    
+
+    /* INSPIRATE */
+
+    
+    .inspirate-container{
+
+      height: 1000px;
+
+      width: 100%;
+
+      display: flex;
+
+      
+
+      flex-wrap: wrap;
+
+
+    }
+
+    .img-inspirate1,.img-inspirate2,.img-inspirate3,.img-inspirate4,.img-inspirate5,.img-inspirate6{
+      width: 50%;
+      height: 25%;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      
+       
+    }
+    .img-inspirate7,.img-inspirate8,.img-inspirate9,.img-inspirate10,.img-inspirate11,.img-inspirate12,.img-inspirate13,.img-inspirate14,.img-inspirate15,.img-inspirate16{
+      display: none;
+    }
+
+
+
+    
+
+    
+
 
 /* FOOTER */
 
 footer{
-  font-size: 10px;
-  width: 425px;
   height: 200px;
-  margin: 0px;
+  width: 100%;
+}
 
-  background-color:  #447977;
+.footer-general{
+  font-size: 0.8em ;
+  height: 100%;
+  width: 100%;
+  border-top: #4d9e6f solid 1px;
+  background-color: #b7ebcd ;
   color: #fff;
   border: solid #fff;
+  
 }
 
 .footer-conteiner{
-  width: 100%;
-  height: 80%;
+  width: 90%;
+  height: 50%;
   display: flex;
-  justify-content: space-around; 
+  padding: 5%;
+  align-items: center;
+  
+
+  
 }
 
 .footer-conteiner2{
-  height: 20%;
+  height: 50%;
   display: flex;
+  
+
 }
 
 .listaF1{
   width: 50%;
   height: 100%;
   margin: 0px;
+  padding-left: 0%;
   list-style: none;
   display: flex;
-  border: 1px solid #fff;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
+  
 }
 
 .listaF2{
   width: 50%;
   height: 100%;
   margin: 0px;
+  padding-left: 0%;
   list-style: none;
   display: flex;
-  border: 1px solid #fff;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   order: 1;
 }
 
 .listaF3{
+  
+  font-size: 00.8em;
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
   list-style: none;
   display: flex;
-  border: 1px solid #fff;
   justify-content: space-around;
   align-items: center;
+  
 }
  
+
+
+
+@media(min-width: 1023px){
+  body html{
+    width: 100%;
+    margin: 0px;
+    padding:1%;
+    display: flex;
+    
+  }
+
+  header{
+    width: 100%;
+  }
+
+  main{
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+  }
+/* MAIN */
+
+
+  .principal-container {
+    width: 100%;
+    height: 500px;
+    background: url(../images/647487-PORI67-249.jpg) 9% 87%;
+    background-size: 1168px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.text-principal{
+  font-size: 2em;
+  font-weight: 500;
+  color: black;
+}
+
+.sub-text-principal{
+  color: black;
+  font-size: 1.5em;
+}
+
+.descubri-button{
+  FONT-WEIGHT: 500;
+    color: white;
+    text-decoration: none;
+    background-color: #447977;
+    width: 35%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    box-sizing: content-box;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+
+.destacados-container{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  
+}
+
+.box-destacado{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    box-sizing: border-box;
+    border: black solid 1px;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+.imagen-destacado{
+  width: 175px;
+  height: 175px
+}
+
+.column-destacado{
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.item5025{
+  width: 50%;
+  height: 25%;
+  box-sizing: border-box;
+  padding: 0%;
+}
+
+
+
+
+.art-destacado-1{
+  border: solid #000;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-destacado-2{
+  border: solid #000;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-destacado-3{
+  border: solid #000;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-destacado-4{
+  border: solid #000;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-destacada{
+  width: 100%;
+  height: 90%;
+  background-image: url(../images/image-not-found.png);
+  background-size: cover;
+  display: flex;
+  
+  
+  
+}
+
+
+.tienda-container{
+  width: 100%;
+  box-sizing: border-box;
+  
+  
+ margin: 0 auto;
+ flex-direction: row;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: space-around;
+}
+
+.art-tienda1{
+  background-image: url(../images/plantas-de-interior-830x538.jpg);
+  background-size: cover;
+  
+  width: 45%;
+  height: 45%;
+  background-color: #447977;
+  margin: 1%;
+  
+}
+
+.art-tienda2{
+  background-image: url(../images/plantas-de-exterior-resistentes-al-frío-y-al-calor-1.jpg);
+  background-size: cover;
+  width: 45%;
+  height: 45%;
+  background-color: #447977;
+  margin: 1%;
+  
+}
+
+.art-tienda3{
+  background-image: url(../images/suculentas.jpg);
+  background-size: cover;
+  width: 45%;
+  height: 45%;
+  background-color: #447977;
+  margin: 1%;
+  
+  
+}
+
+.art-tienda4{
+  background-image: url(../images/image-not-found.png);
+  background-size: cover;
+  width: 45%;
+  height: 45%;
+  background-color: #447977;
+  margin: 1%;
+  
+}
+
+.nombre-tipo-tienda{
+  color: rgb(26, 64, 167);
+  text-decoration: none;
+  font-size: 5vh;
+  
+  
+}
+
+.categoria-tienda{
+
+width: 450px;
+height: 450px;
+padding: 5%;
+margin: 5%;
+box-sizing: border-box;
+
+
+}
+
+.suculenta-foto{
+  background-image: url(../images/suculentas.jpg);
+  background-size: cover;
+
+}
+
+.categoria-tienda div{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.subscribir-container{
+  display: none;
+}
+
+.inspirate-container{
+  width: 1024px;
+  height: 1024px;
+ 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-inspirate{
+  width: 25%;
+  height: 25%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.img-inspirate1,.img-inspirate2,.img-inspirate3,.img-inspirate4,.img-inspirate5,.img-inspirate6,.img-inspirate7,.img-inspirate8,.img-inspirate9,.img-inspirate10,.img-inspirate11,.img-inspirate12,.img-inspirate13,.img-inspirate14,.img-inspirate15,.img-inspirate16{
+  width: 25%;
+  height: 25%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  
+}
+
+.inspirate-box {
+  width: 25%;
+  height: 25%;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.img-inspirate2{
+  background: url(../images/PRINCIPAL.jpg) center center;
+  background-size: cover;
+  }
+
+
+
+}
+
+
 
