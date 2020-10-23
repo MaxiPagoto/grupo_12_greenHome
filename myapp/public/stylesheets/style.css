@@ -18,49 +18,749 @@ font-family: 'Poppins', sans-serif;
   ROSA 3° #A84A4A
 */
 
-body {
-  padding: 50px;
+* {
   font-family: 'Poppins', sans-serif;
 }
 
+a{
+  color: white;
+  text-decoration:none;
+}
 
+body {
+  height: auto;
+  width: 100%;
+  margin: 0px;
+  padding: auto;
+  border: 0px;
+}
 
-  ul li {
-    list-style: none;
-
+/* MENU PRINCIPAL NAVEGACION */
+    header{
+      margin: 0px;
+      border: 0px;
     }
-    nav{
+
+    .header-container{
+      
+      height: 100px;
       color: #fff;
-      background-color: lightgreen;
+      background-color:  #447977; 
+      margin: 0px;
+      border: 0px;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 5%;
+      padding-right: 5%;
+      flex-wrap: wrap;
+         
+      }
+      
+    .menu{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-self: flex-start;
+    }
+    .menu-button{
+      width: 10%;
+    }
+    .titulo{
+      width: 70%;
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      }
+
+    .lista{
+      display: none;  
+      list-style: none;
+      width: 20%;
+      }
+    .nav-button{
+      
+    }
+    .carrito{
+      width: 10%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-weight: 600;
     }
 
-    #menu{
+      .img-principal{
+        width: 100%;
+        height: 500px;
+      }
+    
+    .nav-menu{
       display: none;
     }
 
-footer {
+
+@media (min-width:1023px){
+
+  header{
+    background-color:  #447977;
+  }
+
+  .header-container{
+    box-sizing: border-box;
+    width: 1024px;
+    height: 60px;
+    color: #fff;
+    background-color:  #447977; 
+    margin: 0px;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+  .menu{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-self: center;
+    align-items: center;
+  }
+  .menu-button{
+    width: 10%;
+  }
+  .titulo{
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    order: -1;  
+  }
+    
+
+  .lista{
+    display: flex;  
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+    align-self: center;
+    }
+  .nav-button{
+    display: none;
+  }
+  .carrito{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    align-items: center;
+    order: 1;
+  }
+  
+  .nav-menu{
+    display: inline-flex;
+    color: white;
+  }
+}
+
+/* MAIN */
+
+    .img-destacada{
+      width: 200px;
+      
+    }
+
+/* PRODUCT */
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-gallery{
+  display: none;
+}
+
+.gallery{
+  display: flex;
+  width: 100%;
+}
+.main-photo{
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.main-photo-img{
+  width: 100%;
+}
+.main-photo-title{
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  color: white;
+  font-size: 2em;
+  font-weight: medium ;
+  z-index: 1;
+}
+
+
+.product-title{
+  display: none;
+}
+
+.main-description{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  padding-bottom: 0%;
+}
+
+
+.plant-prop{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plant-prop-row{
+  box-sizing: content-box;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prop{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.prop-icon{
+  height: 60px;
+  color: #447977;
+}
+
+.prop-text{
+  height: 20%;
+  text-align: center;
+}
+
+.product-shop-fixed{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0px;
+  height: 75px;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+}
+
+.product-shop-button{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 80%;
+  padding: 15px;
+  padding: 5%;
   background-color: #447977;
-  color: #fff;
-  display: flex;
-
-}
-footer a {
-  color: #fff;
+  align-items: center;
+  border-radius: 5px;
 }
 
+.product-button-text{
+position: absolute;
+right: auto;
+left: auto;
+color: white;
+font-size: 1em;
+font-weight: medium;
+}
 
+.product-button-price{
+  position: absolute;
+  right: 5%;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  justify-self: flex-end;
+}
 
-.listadofooter{
+.button-shop-container{
+  display:none;
+}
+
+.resume-container{
+  border: 1px solid gainsboro;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 5%;
+  border: 1px solid #bcd8c6;
+  background-color: #e6f1ea;
+  box-sizing: border-box;
 }
-.listadofooter2{
+
+.resume-list{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  
+}
+
+.row-simple-item{
+  position: relative;
+}
+
+.row-simple-item-text{
+  float: left;
+}
+
+.row-simple-item-value{
+  display: inline-flex;
+  float: right;
+}
+
+.delivery {
+  float: right;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.resume-total{
+  float: right;
+  font-size: 1.2em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.top-content {
+  display:none;
+}
+
+.recomend-articles-container{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  
 }
-.displayfooter3{
+
+.recomend-articles-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+.recomend-articles-item-container{
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid gainsboro;
+  border-radius: 2%;
+  
+}
+
+.recomend-item{
+  height: 90%;
+  width: 100%;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.price-item{
+  height: 10%;
+  width: 100%;
+  padding:0px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #447977;
+}
+
+.recomend-articles-container h5 {
+  padding-left: 5%;
+  font-weight: 600;
+  color: #447977;
+  margin-bottom: 0px;
+}
+
+@media (min-width:1023px){
+.main-photo-title{
+  display: none;
+}
+
+.container-flex-100{
+  width: 1024px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-flex-60{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding:5%;
+}
+
+.container-flex-40{
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5%;
+  padding-left: 0px;
+  
+}
+
+.product-description{
+  order: 3;
+}
+
+.plant-prop{
+  order: 2;
+}
+
+.product-longlin  e{
+  order: 1;
+}
+
+.main-description{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0%;
+}
+
+.top-content{
+  display:flex;
+  flex-direction: column;
+}
+
+.product-title-row{
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1.6em;
+  font-weight: 700;
+
+}
+.product-title-price{
+  display: block;
+  font-weight: 500;
+  font-size: 0,8;
+}
+.product-shortline{
+  display: block;
+  
+}
+.recomend-articles-container h5{
+  padding-left: 0px;
+}
+.resume-container{
+  margin: 0px;
+  margin-top: 5%;
+}
+.product-shop-fixed{
+  display: none;
+}
+
+.button-shop-container{
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  
+
+}
+
+.button-shop{
+  box-sizing: initial;
+  width: 165px;
+  background-color: #447977;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+
+}
+/* SHOPPING CART */
+
+.carrito-title{
+  margin-left: 5%;
+}
+
+.cart-container{
+  margin:5%;
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.item-cart-thumbnail{
+  width: 30%;
+}
+
+.item-cart-infobox{
+ width: 70%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: flex-end;
+ padding-bottom: 5%;
+}
+
+.item-cart-name{
+  font-weight: 600;
+
+  text-align: end;
+}
+
+.item-cart-counter{
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.item-cart-counter-control{
   display: flex;
   
+}
+
+.item-cart-counter-control-input{
+  padding: 5%;
+}
+
+.item-cart-counter-control-increase{
+
+}
+.item-cart-counter-control-decrease{
+
+}
+
+.item-cart-price{
+  order: 2;
+  width: 30%;
+  text-align: end;
+  justify-self: flex-end;
+
+}
+
+.resume-shop-cart-container{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 15%;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5%;
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+  padding-top: 2.5%;
+
+}
+
+.resume-shop-cart-delivery{
+
+}
+
+.resume-shop-cart-delivery-date{
+text-align: end;
+font-size: 0.8em;
+}
+
+.resume-shop-cart-delivery-price{
+  text-align: end;
+  font-size: 0.8em;
+}
+
+.resume-shop-cart-pay-button{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding: 15px;
+  padding: 3%;
+  background-color: #447977;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.resume-shop-cart-pay-button:hover{
+  background-color: #038B6B;
+}
+
+.resume-shop-cart-pay-button-text{
+  color: white;
+  font-size: 1em;
+  font-weight: medium;
+}
+
+.resume-shop-cart-pay-button-total-price{
+
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+@media (min-width:1023px){
+  .container-flex-100-column{
+  width: 1024px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-self: center;
+}
+
+.cart-container{
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+
+.item-cart-thumbnail{
+}
+
+.resume-shop-cart-container{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: static;
+  width: 500px;
+  background-color: white;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0%;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+  align-self: flex-end;
+}
+
+}
+
+/* FOOTER */
+
+footer{
+    background-color:  #447977;
+  color: #fff;
+  border: solid #fff;
+}
+
+.footer-conteiner{
+  box-sizing: border-box;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 5%; 
+}
+
+.footer-conteiner2{
+  height: 20%;
+  display: flex;
+}
+
+.listaF1{
+  width: 50%;
+  height: 100%;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  border: 1px solid #fff;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.listaF2{
+  width: 50%;
+  height: 100%;
+  margin: 0px;
+  list-style: none;
+  display: flex;
+  border: 1px solid #fff;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+}
+
+.listaF3{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  border: 1px solid #fff;
+  justify-content: space-around;
+  align-items: center;
+}
+ 
+
+@media (min-width:1023px){
+  footer{  
+    background-color:  #447977;
+    color: #fff;
+    border: solid #fff;
+    width: 1024px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    height: 150px;
+  }
+
+  .footer-conteiner {
+    width: 50%;
+    display: flex;
+  }
 }
