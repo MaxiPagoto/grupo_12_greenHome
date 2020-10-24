@@ -26,6 +26,22 @@ app.get('/', (req,res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
+app.get('/login', (req,res) => {
+  res.sendFile(__dirname + '/views/login.html');
+});
+
+app.get('/product', (req,res) => {
+  res.sendFile(__dirname + '/views/product.html');
+});
+
+app.get('/register', (req,res) => {
+  res.sendFile(__dirname + '/views/Registro.html');
+});
+
+app.get('/shopping-cart', (req,res) => {
+  res.sendFile(__dirname + '/views/shopping-cart.html');
+});
+
 /* OMITÍ ESTO PARA USAR EL app.get de arriba
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
