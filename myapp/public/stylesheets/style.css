@@ -815,6 +815,10 @@ box-sizing: border-box;
 
 }
 
+.categoria-tienda:hover {
+  -webkit-box-shadow: 3px 2px 12px 1px rgba(0,0,0,0.38); 
+box-shadow: 3px 2px 12px 1px rgba(0,0,0,0.38);
+}
 
 .categoria-tienda div{
   color: #fff;
