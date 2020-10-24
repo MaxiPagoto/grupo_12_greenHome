@@ -1,0 +1,348 @@
+/* PRODUCT */
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mini-gallery{
+    display: none;
+  }
+  
+  .gallery{
+    display: flex;
+    width: 100%;
+  }
+  .main-photo{
+    position: relative;
+    width: 100%;
+    display: flex;
+  }
+  
+  .main-photo-img{
+    width: 100%;
+  }
+  .main-photo-title{
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    color: white;
+    font-size: 2em;
+    font-weight: medium ;
+    z-index: 1;
+  }
+  
+  
+  .product-title{
+    display: none;
+  }
+  
+  .main-description{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    padding-bottom: 0%;
+  }
+  
+  
+  .plant-prop{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .plant-prop-row{
+    box-sizing: content-box;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .prop{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .prop-icon{
+    height: 60px;
+    color: #447977;
+  }
+  
+  .prop-text{
+    height: 20%;
+    text-align: center;
+  }
+  
+  .product-shop-fixed{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0px;
+    height: 75px;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.5);
+  }
+  
+  .product-shop-button{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 80%;
+    padding: 15px;
+    padding: 5%;
+    background-color: #447977;
+    align-items: center;
+    border-radius: 5px;
+  }
+  
+  .product-button-text{
+  position: absolute;
+  right: auto;
+  left: auto;
+  color: white;
+  font-size: 1em;
+  font-weight: medium;
+  }
+  
+  .product-button-price{
+    position: absolute;
+    right: 5%;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    justify-self: flex-end;
+  }
+  
+  .button-shop-container{
+    display:none;
+  }
+  
+  .resume-container{
+    border: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+    border: 1px solid #bcd8c6;
+    background-color: #e6f1ea;
+    box-sizing: border-box;
+  }
+  
+  .resume-list{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+    
+  }
+  
+  .row-simple-item{
+    position: relative;
+  }
+  
+  .row-simple-item-text{
+    float: left;
+  }
+  
+  .row-simple-item-value{
+    display: inline-flex;
+    float: right;
+  }
+  
+  .delivery {
+    float: right;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .resume-total{
+    float: right;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  
+  .top-content {
+    display:none;
+  }
+  
+  .recomend-articles-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+  
+  .recomend-articles-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5%;
+  }
+  
+  .recomend-articles-item-container{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid gainsboro;
+    border-radius: 2%;
+    
+  }
+  
+  .recomend-item{
+    height: 90%;
+    width: 100%;
+    padding-left: auto;
+    padding-right: auto;
+  }
+  
+  .price-item{
+    height: 10%;
+    width: 100%;
+    padding:0px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #447977;
+  }
+  
+  .recomend-articles-container h5 {
+    padding-left: 5%;
+    font-weight: 600;
+    color: #447977;
+    margin-bottom: 0px;
+  }
+  
+  @media (min-width:1023px){
+  .main-photo-title{
+    display: none;
+  }
+  
+  .container-flex-100{
+    width: 1024px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .container-flex-60{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding:5%;
+  }
+  
+  .container-flex-40{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5%;
+    padding-left: 0px;
+    
+  }
+  
+  .product-description{
+    order: 3;
+  }
+  
+  .plant-prop{
+    order: 2;
+  }
+  
+  .product-longlin  e{
+    order: 1;
+  }
+  
+  .main-description{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0%;
+  }
+  
+  .top-content{
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .product-title-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6em;
+    font-weight: 700;
+  
+  }
+  .product-title-price{
+    display: block;
+    font-weight: 500;
+    font-size: 0,8;
+  }
+  .product-shortline{
+    display: block;
+    
+  }
+  .recomend-articles-container h5{
+    padding-left: 0px;
+  }
+  .resume-container{
+    margin: 0px;
+    margin-top: 5%;
+  }
+  .product-shop-fixed{
+    display: none;
+  }
+  
+  .button-shop-container{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    
+  
+  }
+  
+  .button-shop{
+    box-sizing: initial;
+    width: 165px;
+    background-color: #447977;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 0.8em;
+  }
+  
+  
+  }
