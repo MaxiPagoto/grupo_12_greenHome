@@ -78,9 +78,7 @@ body {
       list-style: none;
       width: 20%;
       }
-    .nav-button{
-      
-    }
+    
     .carrito{
       width: 10%;
       display: flex;
@@ -174,100 +172,185 @@ body {
 
 .principal-container{
  
-  background: url(../images/image-not-found.png) no-repeat ;
+  background: url(../images/647487-PORI67-249.jpg) no-repeat;
   background-position: center center;
-   background-size: cover;
-   height: 500px;
-   width: 100% ;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;}
+
+  h2{
+    margin-left: 5%;
+  }
+
+
+.text-principal {
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
-h2{
-  margin-left: 5%;
+.sub-text-principal{
+  font-size: 1.2em;
+  font-weight: 400;
+  padding-bottom: 5px
 }
-
-
 
 .descubri-button{
   background-color: #699492;
   color: #fff;
   text-decoration: none;
-
+  padding: 2%;
+  width: fit-content;
+  border-radius: 5px;
   }
-
-                                            /* DESTACADOS */
+/* DESTACADOS */
 
 .destacados-container{
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  
+display: flex;
+justify-content: center;
+height: fit-content;
+flex-wrap: wrap;
+box-sizing: border-box;
+padding: 5%;
 }
 
+.box-destacado{
+width: 220px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+box-sizing: border-box;
+padding: 5%;
+margin: 1%;
+border-radius: 5px;
+}
+
+.imagen-destacado{
+height: 180px;
+width: 180px;
+}
+
+.column-destacado{
+width: 100%;
+height: fit-content;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.nombre-destacado{
+padding-bottom: 12px;
+font-weight: 200;
+font-size: 1.2em;
+}
+.precio-destacado{
+display: flex;
+height: 10%;
+align-items: center;
+justify-content: flex-end;
+font-weight: 600; 
+}
+
+
 .art-destacado-1,.art-destacado-2{
-  height: 65%;
-  width: 45%;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5px;
-  border: solid #447977;
+height: 65%;
+width: 45%;
+margin: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 5px;
+border: solid #447977;
 }
 
 .art-destacado-3,.art-destacado-4{
-  display: none;
+display: none;
 }
 
 .img-destacada{
-  display: flex;
-   background-color: #447977;
-   width: 100%;
-   height: 90%;
-   margin: 5px;
-   align-items: flex-end;
-  
+display: flex;
+  background-color: #447977;
+  width: 100%;
+  height: 90%;
+  margin: 5px;
+  align-items: flex-end;
+
 }
 
 .nombre-planta-destacado{
-  display: flex;
-  padding: 5px;
-  color: #fff;
-  text-decoration: none;
-  
+display: flex;
+padding: 5px;
+color: #fff;
+text-decoration: none;
+
 }
 
 .precio-destacado{
 
-  display: flex;
-  height: 10%;
-  align-items: center;
-  justify-content: flex-end;
-  
-  
-  
+display: flex;
+height: 10%;
+align-items: center;
+justify-content: flex-end;
+
+
+
 }
-                                          
+                                        
 .img{
-  height: 100%;
-  width: 100%;
+height: 100%;
+width: 100%;
 }
 
 .img-cont{
-  height: 500px;
-  width: 500px;
+height: 500px;
+width: 500px;
 }
 
-   
 
 
 
                                               /*TIENDA */
     .tienda-container{
       display: flex;
-      flex-direction: column;
-      
-      height: 1000px;
-      width: 100%;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    }
+
+    .item5025{
+      width: 90%;
+    height: 90vw;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .suculenta-foto{
+    background: url(../images/inspire/5f7c289344072855257515.jpg) center center;
+    background-size: cover;
+    
+    }
+
+    .categoria-tienda{ 
+      font-size: 1.5em;
+    color: black;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    }
+
+    .categoria-tienda-titulo{
+      position: relative;
+      top: 5%;
+      left: 5%;
+      width: 90%;
     }
 
     .art-tienda1,.art-tienda2, .art-tienda3, .art-tienda4 {
@@ -296,7 +379,7 @@ h2{
       display: flex;
       border:  #447977 solid;
       background-color: #b7ebcd ;
-      margin: 10px 0px 10px 0px;
+      margin: 43px 0px 10px 0px;
       flex-direction: column;
       justify-content: center;
       padding-left: 5%;
@@ -324,29 +407,36 @@ h2{
     
     .inspirate-container{
 
-      height: 1000px;
-
-      width: 100%;
+      width: 100vw;
 
       display: flex;
 
-      
+      flex-direction: row;
 
       flex-wrap: wrap;
+     
+     
+     box-sizing: border-box;
+
 
 
     }
 
-    .img-inspirate1,.img-inspirate2,.img-inspirate3,.img-inspirate4,.img-inspirate5,.img-inspirate6{
-      width: 50%;
-      height: 25%;
+    .inspirate-box{
+      width: 50vw;
+      height: 50vw;
+      display: flex;
+    }
+
+    .img-inspirate1,.img-inspirate2,.img-inspirate3,.img-inspirate4,.img-inspirate5,.img-inspirate6,.img-inspirate7,.img-inspirate8{
       margin: 0px;
       padding: 0px;
       display: flex;
+      background: url(../images/plantas-de-interior-830x538.jpg);
       
        
     }
-    .img-inspirate7,.img-inspirate8,.img-inspirate9,.img-inspirate10,.img-inspirate11,.img-inspirate12,.img-inspirate13,.img-inspirate14,.img-inspirate15,.img-inspirate16{
+    .img-inspirate9,.img-inspirate10,.img-inspirate11,.img-inspirate12,.img-inspirate13,.img-inspirate14,.img-inspirate15,.img-inspirate16{
       display: none;
     }
 
@@ -463,45 +553,44 @@ footer{
 /* MAIN */
 
 
-  .principal-container {
-    width: 100%;
-    height: 500px;
-    background: url(../images/647487-PORI67-249.jpg) 9% 87%;
-    background-size: 1168px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5%;
-    box-sizing: border-box;
+.principal-container {
+  width: 100%;
+  height: 500px;
+  background: url(../images/647487-PORI67-249.jpg) 9% 87%;
+  background-size: 1168px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  box-sizing: border-box;
 }
 
 .text-principal{
-  font-size: 2em;
-  font-weight: 500;
-  color: black;
+font-size: 2em;
+font-weight: 500;
+color: black;
 }
 
 .sub-text-principal{
-  color: black;
-  font-size: 1.5em;
+color: black;
+font-size: 1.5em;
 }
 
 .descubri-button{
-  FONT-WEIGHT: 500;
-    color: white;
-    text-decoration: none;
-    background-color: #447977;
-    width: 35%;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px;
-    box-sizing: content-box;
-    border-radius: 5px;
-    margin-top: 5px;
+FONT-WEIGHT: 500;
+  color: white;
+  text-decoration: none;
+  background-color: #447977;
+  width: 35%;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  box-sizing: content-box;
+  border-radius: 5px;
+  margin-top: 5px;
 }
-
 
 .destacados-container{
   display: flex;
@@ -510,6 +599,7 @@ footer{
     
     flex-wrap: wrap;
     box-sizing: border-box;
+    padding: 0% 2%
   
 }
 
@@ -519,7 +609,6 @@ footer{
     flex-direction: column;
     padding: 1%;
     box-sizing: border-box;
-    border: black solid 1px;
     align-items: center;
     justify-content: center;
     margin: 2%;
@@ -538,7 +627,6 @@ footer{
   justify-content: space-between;
   padding-top: 5px;
 }
-
 .item5025{
   width: 50%;
   height: 25%;
@@ -591,10 +679,8 @@ footer{
 
 .tienda-container{
   width: 100%;
-  box-sizing: border-box;
-  
-  
- margin: 0 auto;
+  box-sizing: border-box;    
+ margin:0% 2.5%;
  flex-direction: row;
  display: flex;
  flex-wrap: wrap;
@@ -681,41 +767,75 @@ box-sizing: border-box;
 }
 
 .inspirate-container{
-  width: 1024px;
-  height: 1024px;
- 
-  display: flex;
-  flex-wrap: wrap;
+ width: 1024px;
+ height: 1024px;
+ display: flex;
+ flex-wrap: wrap;
+ margin:25px 5%;
 }
-
-.img-inspirate{
-  width: 25%;
-  height: 25%;
+.inspirate-box{
+  width: 256px;
+  height: 256px;
   padding: 0px;
   margin: 0px;
 }
 
+/*
 .img-inspirate1,.img-inspirate2,.img-inspirate3,.img-inspirate4,.img-inspirate5,.img-inspirate6,.img-inspirate7,.img-inspirate8,.img-inspirate9,.img-inspirate10,.img-inspirate11,.img-inspirate12,.img-inspirate13,.img-inspirate14,.img-inspirate15,.img-inspirate16{
-  width: 25%;
-  height: 25%;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  
-}
+ width: 25%;  
+}*/
 
-.inspirate-box {
-  width: 25%;
-  height: 25%;
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-}
+
+
 
 .img-inspirate2{
   background: url(../images/PRINCIPAL.jpg) center center;
   background-size: cover;
+  
   }
+
+  .img-inspirate9{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+  .img-inspirate10{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+  .img-inspirate11{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+  .img-inspirate12{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+  .img-inspirate13{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+  .img-inspirate14{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+  .img-inspirate15{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+  .img-inspirate16{
+    background: url(../images/PRINCIPAL.jpg) center center;
+    background-size: cover;
+    display: block;
+  }
+
+ 
 
 
 
