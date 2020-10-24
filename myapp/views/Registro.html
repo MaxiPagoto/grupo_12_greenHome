@@ -11,66 +11,61 @@
 </head>
 <body>
     <header>
-        <nav>
-            <section class="conteiner"> 
-    
-                    <div class="menu">   
-                        <ul class="lista">
-                        <button class="nav-button">Menu</button>
-                        <li><a href="#" class="nav-menu">Home</a></li>
-                        <li><a href="#" class="nav-menu">Tienda</a></li>
-                        <li><a href="#" class="nav-menu">Descubre</a></li>
-                        <li><a href="#" class="nav-menu">Inspirate</a></li>
-                        <li><a href="#" class="nav-menu">Ingresá</a></li>
-                        <li><a href="#" class="nav-menu">Registrate</a></li>
-                        <li><a href="#" class="nav-menu">Ingresá></a></li>
-                        <li><a href="#" class="nav-menu">Ingresá></a></li>  
-                        </ul>            
-                    </div>
-    
-                    <div class="titulo">
-                        <h1>GREEN HOME</h1>
-                    </div>    
-    
-                    <div class="Carrito">
-                        <p>Carrito</p>
-                    </div>
-    
-            </section>
-            
-        </nav>
+        <section class="header-container"> 
+                <div class="menu">
+                    <div><button class="nav-button">Menu</button></div>
+                    <nav> <ul class="lista">
+                    <li class="nav-menu"><a href="#">Home</a></li>
+                    <li class="nav-menu"><a href="#">Tienda</a></li>
+                    <li class="nav-menu"><a href="#">Descubre</a></li>
+                    <li class="nav-menu"><a href="#">Inspirate</a></li>
+                    <li class="nav-menu"><a href="#">Ingresá</a></li>
+                    <li class="nav-menu"><a href="#">Registrate</a></li>
+                    </ul> 
+                </nav>           
+                </div>
 
+                <div class="titulo">
+                    <h1>GREEN HOME</h1>
+                </div>    
+
+                <div class="carrito">
+                    <div>Carrito</div>
+                </div>
+    </section>
+    </header>
+    <main>
         <section class="registro-container">
             <h2 class="titulo-registro">Registrarse</h2>
             <div class="post-container">
                 <form action="" method="POST">
-                    <p>
+                    <div class="registro-input">
                         <label for="Nombre"></label>
                         <input class="box-container" type="text" name="Nombre" id="Nombre" placeholder="Nombre">
-                    </p>
-                    <p>
+                    </div>
+                    <div class="registro-input"> 
                         <label for="Apellido"></label>
                         <input class="box-container" type="text" name="Apellido" id="Apellido" placeholder="Apellido">
-                    </p>
-                    <p>
+                    </div>
+                    <div class="registro-input">
                         <label for="correo"></label>
                         <input class="box-container" type="email" name="email" id="email" placeholder="Correo electronico">
-                    </p>
-                    <p>
+                    </div>
+                    <div class="registro-input registro-contraseña">
                         <label for="contraseña"></label>
                         <input class="box-container" type="password" name="password" id="password" placeholder="Contraseña">
-                    </p>
-                    <p>
+                    </div>
+                    <div class="registro-input">
                         <label for="Confirmacioncontraseña"></label>
                         <input class="box-container" type="password" name="Confirmacioncontraseña" id="Confirmacioncontraseña" placeholder="Confirmacioncontraseña">
-                    </p>
-                    <p>
-                        <input class="box-container-buttom" type="submit" value="Ingresa">
-                    </p>
+                    </div>
+                    <div class="registro-input">
+                        <input class="box-container-buttom" type="submit" value="Registrate">
+                    </div>
             </div>
         </section>
 
-    </header>
+    </main>  
     
 </body>
 </html>

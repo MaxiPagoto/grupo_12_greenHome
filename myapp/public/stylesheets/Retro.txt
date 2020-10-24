@@ -1,0 +1,12 @@
+Como en el primer sprint no tuvimos muchas tareas a realizar nos parecio una buena opcion dejar la retro 
+para el final del segundo sprint y sumar la experiencia del mismo para formar un analisis mas completo.
+
+Start Doing : Definir las tareas a realizar de tal forma que no influyan en el desarrollo del compañero y asi 
+evitar perder tiempo en mezclar el codigo o que el mismo pueda a llegar a influir en el comportamiento del otro. 
+
+More of: Ser mas extricos en los tiempos internos del sprint, para cada tarea definimos una fecha en la cual deberia 
+estar terminada y asi poder llegar mejor con los tiempo.
+
+Keep Doing : la comunicacion interna del grupo y el trabajo de forma remota para chequear avances.
+
+Less of:
