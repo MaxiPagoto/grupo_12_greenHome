@@ -1,7 +1,6 @@
 const productController = {
     article: function (req,res,next){
-        res.render('product')
+        res.render('products/product')
       }
 }
-
 module.exports = productController;
