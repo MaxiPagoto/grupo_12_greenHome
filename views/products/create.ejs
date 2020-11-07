@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <link href="/stylesheets/cargaProducto.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>GreenHome</title>
+</head>
+<body>
+    <%-include('../partials/header')%>
+    <main>
+                                                            <!-- CARGA DE ITEMS  --> 
+        <section class="carga-visuales-container">
+            <div class="carga-titulo-principal"><h2> Agregar producto</h1></div>
+
+            <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
+
+            <div class="carga-productos-img-artic">
+                <div class="carga-items">
+                    
+                </div>
+
+                <div class="carga-items">
+                    
+                </div>
+
+                <div class="carga-items">
+                    
+                </div>
+
+                <div class="carga-items">
+                    
+                </div>
+            </div>
+        </section>
+
+                                                              <!-- NOMBRE Y DISCRIPCION --> 
+
+        <section class="carga-discripcion-container">
+            <div class="carga-sub-titulos">
+                <h3>Nombre y discripcion</h3>
+            </div>
+
+            <div class="carga-discripcion-60-40">
+
+                <div class="discripcion-60">
+
+                    <div class="nombre-discripcion-producto">
+
+                        
+                        <div>
+                            <label for="nombre-planta"> </label>
+                            <input type="text" name="nombre-producto" id="nombre-producto" placeholder="Nombre de planta">
+                        </div>
+                    </div>
+                        
+
+
+                        <div class="precios-discripcion-producto">
+                            <div class="precio-precio">
+
+                            <label for="precio-producto"> </label>
+                            <input type="text" name="precio-producto" id="precio-producto" placeholder="Precio">
+
+                            </div>
+
+                            <div class="precio-promocional">
+
+                            <label for="precio-promo-producto"> </label>
+                            <input type="text" name="precio-promo-producto" id="precio-promo-producto" placeholder="Precio promocional">
+
+                            </div>
+                        </div>
+
+                            <div class="categoria-select">
+                                <select name="categoria-producto" id="categoria-producto-select">
+                                    <option value="planta-interior">Planta interior</option>
+                                    <option value="planta-exterior">Planta exterior </option>
+                                    <option value="cactus-suculentas">Cactus o suculentas</option>
+                                    <option value="macetas-complementos">Macetas y complementos</option>
+                                   
+                                </select>
+                            </div> 
+
+                            <div class="discripcion-corta-producto">
+
+                                <label for="discripcion-corta"> </label>
+                                <input type="text" name="discripcion-corta-producto" id="barra-carga-discripcion-corta-producto" placeholder="Discripcion breve">
+    
+                                </div>
+
+                                <div class="discripcion-producto">
+
+                                    <label for="discripcion-producto"> </label>
+                                    <input type="text" name="discripcion-producto" id="barra-carga-discripcion-producto" placeholder="Discripcion">
+        
+                                    </div>
+
+                        </div>
+
+                        <div class="discripcion-40">
+
+                            <div> Caracteristicas</div>
+
+                            <div class="select-caracteristicas-box">
+    
+
+                            <div class="caracteristica-producto">
+
+                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
+                                    <option value="muy-poca">Muy poca</option>
+                                    <option value="poca">Poca</option>
+                                    <option value="mucha">Mucha</option>                                   
+                                </select>
+
+                            </div> 
+
+                            <div class="caracteristica-producto">
+
+                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
+                                    <option value="una-por-semana">1 vez por semana</option>
+                                    <option value="dos-por-semana">2 veces por semana</option>
+                                    <option value="tres-por-semana">3 veces por semana</option>                                    
+                                </select>
+
+                            </div> 
+
+                            <div class="caracteristica-producto">
+
+                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
+                                    <option value="poco-espacio">Poco espacio</option>
+                                    <option value="mucho-espacio">Mucho espacio</option>                                                                     
+                                </select>
+
+                            </div> 
+
+                            <div class="caracteristica-producto">
+
+                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
+                                    <option value="maceta-pequeña">Maceta pequeña</option>
+                                    <option value="maceta-mediana">Maceta mediana</option>
+                                    <option value="maceta-grande">Maceta Grande</option>    
+                                    <option value="maceta-muy-grande">Maceta muy grande</option>                                                                         
+                                </select>
+
+                            </div> 
+
+                            <div class="caracteristica-producto">
+
+                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
+                                    <option value="plagas-poco-res">Poco resistencia</option>
+                                    <option value="plagas-res">Resistente mediana</option>
+                                    <option value="plagas-muy-res">Mucha resistencia</option>                                                                           
+                                </select>
+
+                            </div> 
+
+                        </div>
+    
+                        </div>
+
+                    </div>
+
+                
+                
+
+            </div>            
+        </section>
+
+                                                          <!-- FILTROS --> 
+                                                          
+        <section class="carga-filtros-container">
+
+            <div class="carga-sub-titulos">
+                <h3>Filtros</h3>
+            </div>
+
+            <div class="carga-filtros-60-40">
+                <div class="filtros-60">
+
+                    <div class="beneficio-check">
+                        <input type="checkbox" name="beneficios" value="Trae-buena-suerte"> Trae buena suerte.<br>
+                        <input type="checkbox" name="beneficios" value="apta-mascota"> Apta para mascota.<br>
+                        <input type="checkbox" name="beneficios" value="ayuda-ansiedad"> Ayuda a la ansiedad.<br>
+                        <input type="checkbox" name="beneficios" value="absorbe-humedad">Absorban la humedad.<br>
+                    </div>
+                    <div class="cuidado-select">
+                    <select name="Cuidado" id="">
+                        <option value="Facil-cuidado">Facil</option>
+                        <option value="requiere-atencion">Reqeuiere atencion </option>
+                        <option value="cuidado-especial">Cuidado especial</option>
+                    </select>
+                    </div>      
+
+                    <div class="ubicacion-check">
+                        <input type="checkbox" name="ubicacion" value="Exterior"> Exterior.<br>
+                        <input type="checkbox" name="ubicacion" value="Interior"> Interior.<br>
+                        <input type="checkbox" name="ubicacion" value="Dormitorio"> Dormitorio.<br>
+                        <input type="checkbox" name="ubicacion" value="Living">Living.<br>
+                    </div>
+
+                </div>
+
+                <div class="filtros-40">
+
+                    <div class="altura-planta-select">
+                        <select name="altura-planta" id="">
+                            <option value="hasta-10cm">Hasta 10 cm</option>
+                            <option value="hasta-20cm">Hasta 20 cm </option>
+                            <option value="hasta-50cm">Hasta 50 cm</option>
+                        </select>
+                        </div>      
+
+                        <div class="maceta-select">
+                            <select name="maceta-complemento" id="">
+                                <option value="maceta-5">Maceta n° 5</option>
+                                <option value="maceta-10">Maceta n° 10 </option>
+                                <option value="maceta-15">Maceta n° 15</option>
+                            </select>
+                            </div>      
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+ 
+  
+    <%-include('../partials/footer')%>
+</body>
+</html>

@@ -1,0 +1,252 @@
+.carga-sub-titulos{
+    margin-left: 1%;
+}
+/* -------------------------------------------------------------------------------- */
+
+.carga-visuales-container{
+    display: flex;
+    height: 300px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.carga-titulo-principal{
+    height: 15%;
+}
+
+.carga-sub-titulos{
+    height: 15%;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.carga-productos-img-artic{
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+.carga-items{
+    display: flex;
+    width: 20%;
+    height: 90%;
+    border: dimgray dashed;
+    
+}
+
+
+
+/* -------------------------------------------------------------------------------- */
+
+
+
+.carga-discripcion-container{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.carga-discripcion-60-40{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+.discripcion-60{
+    width: 60%;
+    height: 100%;
+    padding: 3%;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+#nombre-producto{
+    width: 100%;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+.precios-discripcion-producto{
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio-precio{
+    width: 45%;
+}
+
+#precio-producto{
+    width: 100%;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+.precio-promocional{
+    width: 45%;
+}
+
+#precio-promo-producto{
+    width: 100%;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+#categoria-producto-select{
+    width: 100%;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+#barra-carga-discripcion-corta-producto{
+    width: 100%;
+    height: 30px;
+    border-radius: 4px;
+    border-style: solid;
+}
+
+#barra-carga-discripcion-producto{
+    width: 100%;
+    height: 100px;
+    border-radius: 4px;
+    border-style: solid;
+}
+.discripcion-40{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    border: solid gray;
+    flex-direction: column;
+}
+
+.select-caracteristicas-box{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 5%;
+    height: 100%;
+}
+
+#caracteristicas-select{
+    width: 100%;
+    border-radius: 4px;
+    border-style: solid;
+    
+}
+
+.caracteristica-producto{
+    height: 20%;
+}
+/* -------------------------------------------------------------------------------- */
+
+.carga-filtros-container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carga-filtros-60-40{
+    display: flex;
+    height: 100%;
+}
+
+.filtros-60{
+    width: 60%;
+    height: 100%;
+   
+    display: flex;
+}
+
+.beneficio-check{
+    width: 33%;
+    font-size: 0.8em;
+}
+
+.cuidado-select{
+    width: 33%;
+}
+.ubicacion-check{
+    width: 33%;
+}
+
+.filtros-40{
+    width: 40%;
+    height: 100%;
+    
+    display: flex;
+}
+
+.altura-planta-select{
+    width: 50%;
+}
+
+.maceta-select{
+    width: 50%;
+}
+
+@media(max-width: 1023px){
+
+    body{
+        width: 100vw;
+    }
+
+    .carga-visuales-container{
+        display: flex;
+        width: 100vw;
+        height: auto;
+        border: solid black;
+        flex-direction: column;
+    }
+
+    .carga-productos-img-artic{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        
+       
+    }
+
+    .carga-items{
+    width: 45vw;
+    height: 50vw;
+    border: black solid;
+    display: flex;
+    margin-bottom: 2%;
+    }
+
+
+
+/* NOMBRE Y DISCRIPCION */
+
+.carga-discripcion-container{
+    width: auto;
+    height: auto;
+    display: flex;
+    border: solid black;
+    
+}
+
+.carga-discripcion-60-40{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.discripcion-60{
+    width: 100%;
+}
+
+.discripcion-40{
+    width: 100%;
+}
+
+}
