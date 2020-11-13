@@ -13,17 +13,22 @@
     <%-include('../partials/header')%>
     <main>
                                                             <!-- CARGA DE ITEMS  --> 
+
         <section class="carga-visuales-container">
             <div class="carga-titulo-principal"><h2> Agregar producto</h1></div>
+
+                <form action="/products/create" method="POST">
 
             <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
 
             <div class="carga-productos-img-artic">
                 <div class="carga-items">
+                    <input type="file">
                     
                 </div>
 
                 <div class="carga-items">
+                    <input type="file">
                     
                 </div>
 
@@ -41,7 +46,7 @@
 
         <section class="carga-discripcion-container">
             <div class="carga-sub-titulos">
-                <h3>Nombre y discripcion</h3>
+                <h3>Descripción</h3>
             </div>
 
             <div class="carga-discripcion-60-40">
@@ -103,14 +108,15 @@
 
                         <div class="discripcion-40">
 
-                            <div> Caracteristicas</div>
+                            <div class="titulo-caracteristica"> Caracteristicas</div>
 
                             <div class="select-caracteristicas-box">
     
 
                             <div class="caracteristica-producto">
-
+                                <label>Luz</label>
                                 <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
+                                    
                                     <option value="muy-poca">Muy poca</option>
                                     <option value="poca">Poca</option>
                                     <option value="mucha">Mucha</option>                                   
@@ -119,6 +125,7 @@
                             </div> 
 
                             <div class="caracteristica-producto">
+                                <label>Riego</label>
 
                                 <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
                                     <option value="una-por-semana">1 vez por semana</option>
@@ -129,6 +136,7 @@
                             </div> 
 
                             <div class="caracteristica-producto">
+                                <label>Espacio</label>
 
                                 <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
                                     <option value="poco-espacio">Poco espacio</option>
@@ -138,6 +146,7 @@
                             </div> 
 
                             <div class="caracteristica-producto">
+                                <label>Maceta</label>
 
                                 <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
                                     <option value="maceta-pequeña">Maceta pequeña</option>
@@ -149,6 +158,7 @@
                             </div> 
 
                             <div class="caracteristica-producto">
+                                <label>Resistencia</label>
 
                                 <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
                                     <option value="plagas-poco-res">Poco resistencia</option>
@@ -182,12 +192,14 @@
                 <div class="filtros-60">
 
                     <div class="beneficio-check">
+                        <label>Beneficio</label><br>
                         <input type="checkbox" name="beneficios" value="Trae-buena-suerte"> Trae buena suerte.<br>
                         <input type="checkbox" name="beneficios" value="apta-mascota"> Apta para mascota.<br>
                         <input type="checkbox" name="beneficios" value="ayuda-ansiedad"> Ayuda a la ansiedad.<br>
                         <input type="checkbox" name="beneficios" value="absorbe-humedad">Absorban la humedad.<br>
                     </div>
                     <div class="cuidado-select">
+                        <label>Dificultad</label>
                     <select name="Cuidado" id="">
                         <option value="Facil-cuidado">Facil</option>
                         <option value="requiere-atencion">Reqeuiere atencion </option>
@@ -196,10 +208,11 @@
                     </div>      
 
                     <div class="ubicacion-check">
-                        <input type="checkbox" name="ubicacion" value="Exterior"> Exterior.<br>
-                        <input type="checkbox" name="ubicacion" value="Interior"> Interior.<br>
-                        <input type="checkbox" name="ubicacion" value="Dormitorio"> Dormitorio.<br>
-                        <input type="checkbox" name="ubicacion" value="Living">Living.<br>
+                        <label>Ubicacion</label><br>
+                        <input type="checkbox" name="ubicacion" value="Exterior"> Exterior<br>
+                        <input type="checkbox" name="ubicacion" value="Interior"> Interior<br>
+                        <input type="checkbox" name="ubicacion" value="Dormitorio"> Dormitorio<br>
+                        <input type="checkbox" name="ubicacion" value="Living">Living<br>
                     </div>
 
                 </div>
@@ -207,6 +220,7 @@
                 <div class="filtros-40">
 
                     <div class="altura-planta-select">
+                        <label>Altura</label><br>
                         <select name="altura-planta" id="">
                             <option value="hasta-10cm">Hasta 10 cm</option>
                             <option value="hasta-20cm">Hasta 20 cm </option>
@@ -215,6 +229,7 @@
                         </div>      
 
                         <div class="maceta-select">
+                            <label>Maceta</label><br>
                             <select name="maceta-complemento" id="">
                                 <option value="maceta-5">Maceta n° 5</option>
                                 <option value="maceta-10">Maceta n° 10 </option>
@@ -225,6 +240,8 @@
                 </div>
             </div>
         </section>
+        <button type="submit" class="save-button">Guardar producto</button>
+    </form>
 
     </main>
  

@@ -5,7 +5,6 @@
 
 .carga-visuales-container{
     display: flex;
-    height: 300px;
     box-sizing: border-box;
     flex-direction: column;
 }
@@ -32,10 +31,13 @@
 
 .carga-items{
     display: flex;
-    width: 20%;
-    height: 90%;
+    width: 200px;
+    height: 200px;
     border: dimgray dashed;
-    
+    box-sizing: border-box;
+    padding: 1%;
+    align-items: center;
+    justify-items: center;   
 }
 
 
@@ -60,7 +62,7 @@
 .discripcion-60{
     width: 60%;
     height: 100%;
-    padding: 3%;
+    padding-right: 3%;
     padding-left: 0px;
     display: flex;
     flex-direction: column;
@@ -100,7 +102,7 @@
 }
 
 #categoria-producto-select{
-    width: 100%;
+    width: 101.5%;
     border-radius: 4px;
     border-style: solid;
 }
@@ -126,12 +128,18 @@
     flex-direction: column;
 }
 
+.titulo-caracteristica{
+    margin-top: 2.5%;
+    margin-left: 5%;
+}
+
 .select-caracteristicas-box{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 5%;
     height: 100%;
+    padding-top: 2.5%;
 }
 
 #caracteristicas-select{
@@ -147,9 +155,10 @@
 /* -------------------------------------------------------------------------------- */
 
 .carga-filtros-container{
-    height: 300px;
+    
     display: flex;
     flex-direction: column;
+    padding-bottom: 3%;
 }
 
 .carga-filtros-60-40{
@@ -162,6 +171,10 @@
     height: 100%;
    
     display: flex;
+}
+
+.filtros-60 label{
+    font-size: 16px;
 }
 
 .beneficio-check{
@@ -248,5 +261,6 @@
 .discripcion-40{
     width: 100%;
 }
+
 
 }
