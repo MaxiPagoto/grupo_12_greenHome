@@ -15,8 +15,8 @@ router.get('/create', productController.create);
 router.post('/create', productController.store);
 
 //Ruta hacia Modificar y guardar producto existente
-router.get('/edit/:id', productController.edit)
-router.post('/edit/:id', productController.save)
+router.get('/edit/:id?', productController.edit)
+router.post('/edit', productController.save)
 
 //Ruta hacia carrito de compras
 router.get('/cart', productController.cart);
