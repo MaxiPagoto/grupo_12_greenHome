@@ -1,38 +1,37 @@
-    Retro Sprint 2
+ || Retro Sprint 2
 
 Como en el primer sprint no tuvimos muchas tareas a realizar nos parecio una buena opcion dejar la retro 
 para el final del segundo sprint y sumar la experiencia del mismo para formar un analisis mas completo.
 
-- Start Doing: Definir las tareas a realizar de tal forma que no influyan en el desarrollo del compañero y asi 
+Start Doing: 
+- Definir las tareas a realizar de tal forma que no influyan en el desarrollo del compañero y asi 
 evitar perder tiempo en mezclar el codigo o que el mismo pueda a llegar a influir en el comportamiento del otro. 
 
-- More of: Ser mas extricos en los tiempos internos del sprint, para cada tarea definimos una fecha en la cual deberia 
+More of
+- Ser mas extricos en los tiempos internos del sprint, para cada tarea definimos una fecha en la cual deberia 
 estar terminada y asi poder llegar mejor con los tiempo.
 
-- Keep Doing: la comunicacion interna del grupo y el trabajo de forma remota para chequear avances.
+Keep Doing
+- La comunicacion interna del grupo y el trabajo de forma remota para chequear avances.
 
-- Less of:
+ || Retro Sprint 3
 
-- Stop doing: 
+Start Doing
+- Investigar el CSS Grid Layout para tomar una decisión de reescribir el CSS en ese formato. Para el home y la tienda.
+- Mostrar a terceros para corregir el diseño UX.
 
-    Retro Sprint 3
+More of
+- Revisión en conjunto de las funciones de los controllers que puedan declararse al inicio del código para optimizar la lectura y escritura en sus uso.
 
-- Start Doing: 
-1) Investigar el CSS Grid Layout para tomar una decisión de reescribir el CSS en ese formato. Para el home y la tienda.
-2) Mostrar a terceros para corregir el diseño UX.
+Keep Doing
+- Realizar el testing y depuración de código en vivo. Nos ayuda a aprender de nuestros errores y compartiendo la perspectiva desde donde se escribió.
 
-- More of: 
-1) Revisión en conjunto de las funciones de los controllers que puedan declararse al inicio del código para optimizar la lectura y escritura en sus uso.
+Less of
+- Reducir el tiempo de reuniones entre "dailys".
+- Dejar de crear tantas Branches y optimizar su uso.
 
-- Keep Doing:
-1) Realizar el testing y depuración de código en vivo. Nos ayuda a aprender de nuestros errores y compartiendo la perspectiva desde donde se escribió.
+Stop doing: 
 
-- Less of
-1) Reducir el tiempo de reuniones entre "dailys".
-2) Dejar de crear tantas Branches y optimizar su uso.
-
-- Stop doing: 
-1) 
 
 
 
