@@ -17,6 +17,10 @@ const productController = {
       edit:function(req,res,next){
         res.render('products/create', {product:product});},
       save: function(req,res,next){
-        res.redirect('/products/detail/:id');}
+        res.redirect('/products/detail/:id');},
+
+        tienda:function(req,res,next){
+          res.render('products/list');}
+        
 }
 module.exports = productController;

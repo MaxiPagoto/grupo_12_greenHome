@@ -21,5 +21,8 @@ router.post('/edit/:id', productController.save)
 //Ruta hacia carrito de compras
 router.get('/cart', productController.cart);
 
+//Ruta hacia tienda --- Maxi
+router.get('/list', productController.tienda);
+
 module.exports = router;
 
