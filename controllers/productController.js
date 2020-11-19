@@ -15,7 +15,7 @@ const productController = {
         res.render('cart')
       },
       edit:function(req,res,next){
-        res.render('products/create', {product:product});},
+        res.render('products/edit');},  
       save: function(req,res,next){
         res.redirect('/products/detail/:id');},
 
