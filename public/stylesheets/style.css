@@ -248,6 +248,7 @@ padding-bottom: 12px;
 font-weight: 200;
 font-size: 1.2em;
 color: black;
+text-align: center
 }
 .sale-box-price{
 display: flex;
@@ -808,7 +809,7 @@ FONT-WEIGHT: 500;
     "selection01 selection02 selection03"
     "selection01 selection04 selection04";
 }
-.selection01 { grid-area: selection01; height: 100%;}
+.selection01 { grid-area: selection01; height: 100%}
 .selection02 { grid-area: selection02; height: 100%}
 .selection03 { grid-area: selection03; height: 100%}
 .selection04 { grid-area: selection04; height: 100%}
