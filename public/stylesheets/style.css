@@ -248,6 +248,7 @@ padding-bottom: 12px;
 font-weight: 200;
 font-size: 1.2em;
 color: black;
+text-align: center
 }
 .sale-box-price{
 display: flex;
@@ -321,39 +322,72 @@ width: 500px;
       display: flex;
     flex-direction: column;
     width: 100%;
+    height: 385vw;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
     }
-
+/*
     .item5025{
       width: 90%;
     height: 90vw;
     margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
+    }*/
+
+    .grid-container {
+      width: 90%;
+      padding: 0% 5%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 2.5% 0%;
+      grid-template-areas:
+        "selection01"
+        "selection02"
+        "selection03"
+        "selection04";
+    }
+    .selection01 { grid-area: selection01; height: 100%;}
+    .selection02 { grid-area: selection02; height: 100%}
+    .selection03 { grid-area: selection03; height: 100%}
+    .selection04 { grid-area: selection04; height: 100%}
+
+    .shop-category-title {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 500;
+      text-decoration: none;
+      text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 1px 3px rgba(0,0,0,0.8);
     }
 
     .categoria-img-interior{
     background: url(../images/inspire/categoria-img-interior.jpg) center center;
     background-size: cover;
+    height: 90vw;
     
     }
     .categoria-img-exterior{
       background: url(../images/inspire/categoria-img-exterior.jpg) center center;
       background-size: cover;
+      height: 90vw;
       
     }
     .categoria-img-cactus{
       background: url(../images/inspire/categoria-img-cactus.jpg) center center;
       background-size: cover;
+      height: 90vw;
         
     }
     .categoria-img-macetas{
       background: url(../images/inspire/categoria-img-macetas.jpg) center center;
       background-size: cover;
+      height: 90vw;
     }
+
+
 
     .shop-category{ 
     font-size: 1.5em;
@@ -370,6 +404,8 @@ width: 500px;
       left: 5%;
       width: 90%;
     }
+
+   
 
     .art-tienda1,.art-tienda2, .art-tienda3, .art-tienda4 {
       width: 100%;
@@ -694,12 +730,16 @@ FONT-WEIGHT: 500;
   justify-content: space-between;
   padding-top: 5px;
 }
+
+
 .item5025{
   width: 50%;
   height: 25%;
   box-sizing: border-box;
   padding: 0%;
 }
+
+ 
 
 
 
@@ -746,8 +786,8 @@ FONT-WEIGHT: 500;
 
 .shop-container{
   width: 100%;
-  box-sizing: border-box;    
- margin:0% 2.5%;
+  height: auto;
+  box-sizing: border-box;
  flex-direction: row;
  display: flex;
  flex-wrap: wrap;
@@ -755,78 +795,52 @@ FONT-WEIGHT: 500;
  align-items: space-around;
 }
 
-.art-tienda1{
-  background-image: url(../images/plantas-de-interior-830x538.jpg);
-  background-size: cover;
-  
-  width: 45%;
-  height: 45%;
-  background-color: #447977;
-  margin: 1%;
-  
+/* GRIDS DESTACADOS */
+
+.grid-container {
+  width: 100%;
+  height: 680px;
+  padding: 0%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.5% 2.5%;
+  grid-template-areas:
+    "selection01 selection02 selection03"
+    "selection01 selection04 selection04";
+}
+.selection01 { grid-area: selection01; height: 100%}
+.selection02 { grid-area: selection02; height: 100%}
+.selection03 { grid-area: selection03; height: 100%}
+.selection04 { grid-area: selection04; height: 100%}
+
+.categoria-img-interior, .categoria-img-exterior,.categoria-img-cactus,.categoria-img-macetas {
+  height: 100%;
+}
+.categoria-img-interior{
+  background-position: 45% 100%;
 }
 
-.art-tienda2{
-  background-image: url(../images/plantas-de-exterior-resistentes-al-frío-y-al-calor-1.jpg);
-  background-size: cover;
-  width: 45%;
-  height: 45%;
-  background-color: #447977;
-  margin: 1%;
-  
+.categoria-img-macetas{
+  background-size: 125%;
+  background-position: 30% 40%;
 }
 
-.art-tienda3{
-  background-image: url(../images/suculentas.jpg);
-  background-size: cover;
-  width: 45%;
-  height: 45%;
-  background-color: #447977;
-  margin: 1%;
-  
-  
+.categoria-img-interior:hover, .categoria-img-exterior:hover,.categoria-img-cactus:hover,.categoria-img-macetas:hover{
+    filter: opacity(0.7);
 }
 
-.art-tienda4{
-  background-image: url(../images/image-not-found.png);
-  background-size: cover;
-  width: 45%;
-  height: 45%;
-  background-color: #447977;
-  margin: 1%;
-  
-}
 
-.nombre-tipo-tienda{
-  color: rgb(26, 64, 167);
-  text-decoration: none;
-  font-size: 5vh;
-  
-  
-}
-
-.shop-category{
-
-width: 450px;
-height: 450px;
-padding: 5%;
-margin: 5%;
-box-sizing: border-box;
-
-
-}
-
-.shop-category:hover {
-  -webkit-box-shadow: 3px 2px 12px 1px rgba(0,0,0,0.38); 
-box-shadow: 3px 2px 12px 1px rgba(0,0,0,0.38);
-}
-
-.shop-category div{
+.shop-category-title {
   color: #fff;
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
   text-decoration: none;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 1px 3px rgba(0,0,0,0.8);
 }
+
+/*-------------------*/
+
 
 .subscribe-container{
   display: none;

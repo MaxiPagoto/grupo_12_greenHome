@@ -7,245 +7,178 @@
     <link href="/stylesheets/cargaProducto.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/37f1eb6e83.js" crossorigin="anonymous"></script>
     <title>GreenHome</title>
 </head>
 <body>
     <%-include('../partials/header')%>
     <main>
                                                             <!-- CARGA DE ITEMS  --> 
+        <form action="/products/create" method="POST">
+            <section class="carga-visuales-container">
+                <div class="carga-titulo-principal"><h2>Estás editando: </h1></div>
+                <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
+                <div class="visual-selector-container">
+                    <div class="visual-selector">
+                        <div class="main-photo"><input class="visual-selector-input"type="file" name="image"><div>Foto principal</div></div>
+                        <div class="slider-photo"><input class="visual-selector-input" type="file" name="slider_photo"><div>Fotos slider</div></div>
+                        <div class="complements"><i class="fas fa-list-alt"></i><div>Complementos</div>
 
-        <section class="carga-visuales-container">
-            <div class="carga-titulo-principal"><h2>Editando producto: </h1></div>
-
-                <form action="" method="">
-
-            <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
-
-            <div class="carga-productos-img-artic">
-                <div class="carga-items">
-                    <input type="file">
-                    
-                </div>
-
-                <div class="carga-items">
-                    <input type="file">
-                    
-                </div>
-
-                <div class="carga-items">
-                    
-                </div>
-
-                <div class="carga-items">
-                    
-                </div>
-            </div>
-        </section>
-
-                                                              <!-- NOMBRE Y DISCRIPCION --> 
-
-        <section class="carga-discripcion-container">
-            <div class="carga-sub-titulos">
-                <h3>Descripción</h3>
-            </div>
-
-            <div class="carga-discripcion-60-40">
-
-                <div class="discripcion-60">
-
-                    <div class="nombre-discripcion-producto">
-
-                        
-                        <div>
-                            <label for="nombre-planta"> </label>
-                            <input type="text" name="nombre-producto" id="nombre-producto" placeholder="Nombre de planta">
                         </div>
+                        <div class="plantpot"><i class="fas fa-seedling"></i><div>Relacionadas</div></div>
                     </div>
-                        
+                </div>
+            </section>
 
+                                                                    <!-- NOMBRE Y DISCRIPCION --> 
 
-                        <div class="precios-discripcion-producto">
-                            <div class="precio-precio">
+            <section class="carga-descripcion-container">
+                <div class="carga-sub-titulos">
+                    <h3>Descripción</h3>
+                </div>
 
-                            <label for="precio-producto"> </label>
-                            <input type="text" name="precio-producto" id="precio-producto" placeholder="Precio">
-
-                            </div>
-
-                            <div class="precio-promocional">
-
-                            <label for="precio-promo-producto"> </label>
-                            <input type="text" name="precio-promo-producto" id="precio-promo-producto" placeholder="Precio promocional">
-
+                <div class="carga-descripcion-60-40">
+                    <div class="descripcion-60">
+                        <div class="desciption-input-box">                     
+                            <div class="desciption-input-box">
+                                <label for="name" class="descripcion-input">Nombre de Producto</label>
+                                <input type="text" name="name" class="descripcion-input" placeholder="Ej: Árbol de Jade">
                             </div>
                         </div>
-
-                            <div class="categoria-select">
-                                <select name="categoria-producto" id="categoria-producto-select">
-                                    <option value="planta-interior">Planta interior</option>
-                                    <option value="planta-exterior">Planta exterior </option>
-                                    <option value="cactus-suculentas">Cactus o suculentas</option>
-                                    <option value="macetas-complementos">Macetas y complementos</option>
-                                   
-                                </select>
-                            </div> 
-
-                            <div class="discripcion-corta-producto">
-
-                                <label for="discripcion-corta"> </label>
-                                <input type="text" name="discripcion-corta-producto" id="barra-carga-discripcion-corta-producto" placeholder="Discripcion breve">
-    
+                        <div class="desciption-input-box">
+                            <div class="descripcion-input">
+                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio</label></div>
+                                <div class="descripcion-input-row">
+                                    <input type="text" name="price" class="descripcion-input-mid" placeholder="Ej: 2000">
+                                    <input type="text" name="discount" class="descripcion-input-mid"  placeholder="Ej: 10">
                                 </div>
-
-                                <div class="discripcion-producto">
-
-                                    <label for="discripcion-producto"> </label>
-                                    <input type="text" name="discripcion-producto" id="barra-carga-discripcion-producto" placeholder="Discripcion">
-        
-                                    </div>
-
+                            </div>
                         </div>
-
-                        <div class="discripcion-40">
-
-                            <div class="titulo-caracteristica"> Caracteristicas</div>
-
-                            <div class="select-caracteristicas-box">
-    
-
+                            <div class="desciption-input-box">
+                                <label for="prop_category" class="descripcion-input">Categoría</label>
+                                <select name="prop_category" class="descripcion-input">
+                                    <option value="Plantas de Interior">Plantas de Interior</option>
+                                    <option value="Plantas de Exterior">Plantas de Exterior</option>
+                                    <option value="Plantas Florales">Plantas Florales</option>
+                                    <option value="Cáctus y Crasas">Cáctus y Crasas</option>
+                                    <option value="Orquideas">Orquideas</option>
+                                    <option value="Kokedamas">Kokedamas</option>
+                                    <option value="Macetas">Macetas</option>
+                                    <option value="Accesorios">Accesorios</option>
+                                </select>
+                            </div>
+                            <div class="desciption-input-box">
+                                <label for="name" class="descripcion-input">Descripción</label>
+                                <input type="text" name="line" class="descripcion-input" placeholder="Descripcion una linea">
+                                <input type="text" name="copy" class="descripcion-input" placeholder="Copywriting">
+                                <input type="text" name="desciption" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto">
+                            </div>
+                    </div>
+                    <div class="descripcion-40">
+                        <div class="titulo-caracteristica">
+                            Caracteristicas
+                        </div>
+                        <div class="select-caracteristicas-box">
                             <div class="caracteristica-producto">
                                 <label>Luz</label>
-                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
-                                    
-                                    <option value="muy-poca">Muy poca</option>
-                                    <option value="poca">Poca</option>
-                                    <option value="mucha">Mucha</option>                                   
+                                <select name="prop_light" class="caracteristicas-select">
+                                    <option value="Luz reflejada">Luz reflejada</option>
+                                    <option value="Luz directa">Luz directa</option>                                     
                                 </select>
-
                             </div> 
-
                             <div class="caracteristica-producto">
                                 <label>Riego</label>
-
-                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
-                                    <option value="una-por-semana">1 vez por semana</option>
-                                    <option value="dos-por-semana">2 veces por semana</option>
-                                    <option value="tres-por-semana">3 veces por semana</option>                                    
+                                <select name="prop_water" class="caracteristicas-select" >
+                                    <option value="1">1 vez por semana</option>
+                                    <option value="2">2 veces por semana</option> 
+                                    <option value="3">3 veces por semana</option>                                  
                                 </select>
-
                             </div> 
-
-                            <div class="caracteristica-producto">
-                                <label>Espacio</label>
-
-                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
-                                    <option value="poco-espacio">Poco espacio</option>
-                                    <option value="mucho-espacio">Mucho espacio</option>                                                                     
-                                </select>
-
-                            </div> 
-
                             <div class="caracteristica-producto">
                                 <label>Maceta</label>
-
-                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
-                                    <option value="maceta-pequeña">Maceta pequeña</option>
-                                    <option value="maceta-mediana">Maceta mediana</option>
-                                    <option value="maceta-grande">Maceta Grande</option>    
-                                    <option value="maceta-muy-grande">Maceta muy grande</option>                                                                         
+                                <select name="prop_plantpot" class="caracteristicas-select">
+                                    <option value="Pequeña">Pequeña</option>
+                                    <option value="Mediana">Mediana</option>
+                                    <option value="Grande">Grande</option>    
+                                    <option value="Muy grande">Muy grande</option>                                                                         
                                 </select>
-
                             </div> 
-
                             <div class="caracteristica-producto">
-                                <label>Resistencia</label>
-
-                                <select name="caracteristicas-carga-producto" id="caracteristicas-select" >
-                                    <option value="plagas-poco-res">Poco resistencia</option>
-                                    <option value="plagas-res">Resistente mediana</option>
-                                    <option value="plagas-muy-res">Mucha resistencia</option>                                                                           
+                                <label>Plagas</label>
+                                <select name="prop_plague" class="caracteristicas-select" >
+                                    <option value="Resistente">Resistente</option>
+                                    <option value="Débil">Débil</option>                                                                       
                                 </select>
-
-                            </div> 
-
+                            </div>
+                            <div class="caracteristica-producto">
+                                <label>Altura</label>
+                                <input type="number" name="prop_height" list="height-list" step="0.25">
+                                <datalist id="height-list">
+                                    <option value="0.25">
+                                    <option value="0.50">
+                                    <option value="0.75">
+                                    <option value="1.00">
+                                    <option value="1.25">
+                                    <option value="1.50">
+                                    <option value="1.75">
+                                    <option value="2.00">
+                                    <option value="2.25">
+                                    <option value="2.50">
+                                </datalist>
+                            </div>
+                            <div class="caracteristica-producto">
+                                <label>Mascotas</label>
+                                <select name="prop_pet" class="caracteristicas-select">
+                                    <option value="true">Pet Friendly</option>
+                                    <option value="false">Venenosa</option>                                                                       
+                                </select>
+                            </div>
                         </div>
-    
-                        </div>
-
                     </div>
-
-                
-                
-
+                </div>
             </div>            
-        </section>
+            </section>
 
-                                                          <!-- FILTROS --> 
-                                                          
-        <section class="carga-filtros-container">
+                                                          <!-- FILTROS -->
 
             <div class="carga-sub-titulos">
                 <h3>Filtros</h3>
             </div>
-
-            <div class="carga-filtros-60-40">
-                <div class="filtros-60">
-
-                    <div class="beneficio-check">
-                        <label>Beneficio</label><br>
-                        <input type="checkbox" name="beneficios" value="Trae-buena-suerte"> Trae buena suerte.<br>
-                        <input type="checkbox" name="beneficios" value="apta-mascota"> Apta para mascota.<br>
-                        <input type="checkbox" name="beneficios" value="ayuda-ansiedad"> Ayuda a la ansiedad.<br>
-                        <input type="checkbox" name="beneficios" value="absorbe-humedad">Absorban la humedad.<br>
-                    </div>
-                    <div class="cuidado-select">
-                        <label>Dificultad</label>
-                    <select name="Cuidado" id="">
-                        <option value="Facil-cuidado">Facil</option>
-                        <option value="requiere-atencion">Reqeuiere atencion </option>
-                        <option value="cuidado-especial">Cuidado especial</option>
-                    </select>
-                    </div>      
-
-                    <div class="ubicacion-check">
-                        <label>Ubicacion</label><br>
-                        <input type="checkbox" name="ubicacion" value="Exterior"> Exterior<br>
-                        <input type="checkbox" name="ubicacion" value="Interior"> Interior<br>
-                        <input type="checkbox" name="ubicacion" value="Dormitorio"> Dormitorio<br>
-                        <input type="checkbox" name="ubicacion" value="Living">Living<br>
-                    </div>
-
+            <div class="filter-container">
+                <div class="filter-benefit">
+                    <div><label>Beneficio</label></div>
+                    <div><input type="checkbox" name="filter_benefit" value="Trae buena suerte"> Trae buena suerte</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Ayuda a la ansiedad"> Ayuda a la ansiedad</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Absorbe la humedad"> Absorbe la humedad</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Aromatizante"> Aromatizante</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Mejora la productividad"> Mejora la productividad</div>
+                    <div><input type="checkbox" name="filter-benefit" value="Reducen el estrés"> Reducen el estrés</div>
                 </div>
-
-                <div class="filtros-40">
-
-                    <div class="altura-planta-select">
-                        <label>Altura</label><br>
-                        <select name="altura-planta" id="">
-                            <option value="hasta-10cm">Hasta 10 cm</option>
-                            <option value="hasta-20cm">Hasta 20 cm </option>
-                            <option value="hasta-50cm">Hasta 50 cm</option>
-                        </select>
-                        </div>      
-
-                        <div class="maceta-select">
-                            <label>Maceta</label><br>
-                            <select name="maceta-complemento" id="">
-                                <option value="maceta-5">Maceta n° 5</option>
-                                <option value="maceta-10">Maceta n° 10 </option>
-                                <option value="maceta-15">Maceta n° 15</option>
-                            </select>
-                            </div>      
-
+                <div class="filter-room">
+                    <div><label>Espacio</label></div>
+                    <div><input type="checkbox" name="filter_room" value="Dormitorio"> Dormitorio</div>
+                    <div><input type="checkbox" name="filter_room" value="Living"> Living</div>
+                    <div><input type="checkbox" name="filter_room" value="Baño"> Oficina</div>
+                    <div><input type="checkbox" name="filter_room" value="Balcón"> Balcón</div>
+                    <div><input type="checkbox" name="filter_room" value="Jardín"> Jardín</div>
+                    <div><input type="checkbox" name="filter_room" value="Terraza"> Terraza</div>
+                </div>
+                <div class="filter-dificult">
+                    <div><label>Dificultad</label></div>
+                    <select name="filter_dificult">
+                        <option value="Poco cuidado">Poco cuidado</option>
+                        <option value="Requiere atención">Requiere atención</option>
+                        <option value="Cuidado especial">Cuidado especial</option>                                                                       
+                    </select>
+                </div>
+                <div class="submit-button">
+                    <div class="cancel-button">ID de producto: </div>
+                    <a href="/products/delete" class="delete-button">Eliminar producto</a>
+                    <button type="submit" class="save-button">Modificar producto</button>
                 </div>
             </div>
-        </section>
-        <button type="submit" class="save-button">Guardar producto</button>
-    </form>
-
+        </form>
     </main>
- 
-  
     <%-include('../partials/footer')%>
 </body>
 </html>

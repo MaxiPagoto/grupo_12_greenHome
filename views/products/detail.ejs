@@ -18,12 +18,12 @@
         <div class="gallery">
             <div class="mini-gallery"></div>
             <div class="main-photo">
-                <div class="main-photo-title">Nombre de Planta</div>
+                <div class="main-photo-title"><%=product.name%></div>
                 <img class="main-photo-img" src="\img\5f5a3f467c7b8245310611.jpg" alt="Nombre de Planta">
             </div>
         </div>
         <div class="product-title">
-            Nombre de Planta
+            <%=product.id%>
         </div>
         
         <div class="main-description">
@@ -97,10 +97,10 @@
     <div class="product-info-container">
         <div class="top-content">
             <div class="product-title-row">
-            <div>Nombre de Planta</div>
-            <div class="product-title-price">$100</div>
+            <div><%=product.name%></div>
+            <div class="product-title-price">$ <%=product.price%></div>
             </div>
-            <p class="product-shortline">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium cupiditate impedit recusandae in ut, ab consequatur numquam fuga at sed nesciunt illum voluptate facere?</p> 
+            <p class="product-shortline"><%=product.copy%></p> 
         </div>
             <div class="recomend-articles-container">
                     <h5>Macetas Recomendadas</h5>

@@ -29,80 +29,48 @@
     <h2>Destacados</h2>
 
     <section class="sale-container">
-        
-        <a class="sale-box" href="/products">
+        <% for (product of products) { %>
+        <a class="sale-box" href="/products/detail/<%=product.id%>">
             <img class= "sale-box-image" src="/images/inspire/product-001.jpg" alt="">
             <div class="sale-box-column">
-                <div class="sale-box-title">Nombre Planta</div>
-                <div class="sale-box-price">$100</div>    
+                <div class="sale-box-title"><%=product.name%></div>
+                <div class="sale-box-price">$ <%=product.price%></div>    
             </div>
         
         </a>
-        
-
-        <a class="sale-box" href="/products">
-            <img class= "sale-box-image" src="/images/inspire/product-002.jpg" alt="">
-            <div class="sale-box-column">
-                <div class="sale-box-title">Nombre Planta</div>
-                <div class="sale-box-price">$100</div>    
-            </div>
-        
-        </a>
-            
-        
-        <a class="sale-box" href="/products">
-            <img class= "sale-box-image" src="/images/inspire/product-003.jpg" alt="">
-            <div class="sale-box-column">
-                <div class="sale-box-title">Nombre Planta</div>
-                <div class="sale-box-price">$100</div>    
-            </div>
-        
-        </a>
-
-        <a class="sale-box" href="/products">
-            <img class= "sale-box-image" src="/images/inspire/product-004.jpg" alt="">
-            <div class="sale-box-column">
-                <div class="sale-box-title">Nombre Planta</div>
-                <div class="sale-box-price">$100</div>    
-            </div>
-        
-        </a>
+        <%}%>
 
     </section>
 
                                             <!-- TIENDA -->
         <h2>Tienda</h2>
-
         <section class="shop-container">
-            
-            <a href="" class= "item5025">
-                <div class="shop-category categoria-img-interior">
+        <div class="grid-container">
+            <a href="#" class="selection01">
+                <div class="categoria-img-interior">
                     <div class="shop-category-title">Plantas de Interior</div>
 
                 </div>
             </a>
-
-            <a href="" class= "item5025">
-                <div class="shop-category categoria-img-exterior">
+            <a class="selection02">
+                <div class="categoria-img-exterior">
                     <div class="shop-category-title">Plantas de Exterior</div>
 
                 </div>
             </a>
-
-            <a href="" class= "item5025">
-                <div class="shop-category categoria-img-cactus">
+            <a href="#" class="selection03">
+                <div class="categoria-img-cactus">
                     <div class="shop-category-title">Cactus y Suculentas</div>
 
                 </div>
             </a>
-
-            <a href="" class= "item5025">
-                <div class="shop-category categoria-img-macetas">
+            <a href="#" class="selection04">
+                <div class="categoria-img-macetas">
                     <div class="shop-category-title">Maceta y complementos</div>
 
                 </div>
             </a>
-
+          </div>
         </section>
         
 
