@@ -20,8 +20,8 @@
                 <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
                 <div class="visual-selector-container">
                     <div class="visual-selector">
-                        <div class="main-photo"><input class="visual-selector-input"type="file" name="photo"><div>Foto principal</div></div>
-                        <div class="slider-photo"><input class="visual-selector-input" type="file" name="slider-photo"><div>Fotos slider</div></div>
+                        <div class="main-photo"><input class="visual-selector-input"type="file" name="image"><div>Foto principal</div></div>
+                        <div class="slider-photo"><input class="visual-selector-input" type="file" name="slider_photo"><div>Fotos slider</div></div>
                         <div class="complements"><i class="fas fa-list-alt"></i><div>Complementos</div>
 
                         </div>
@@ -55,8 +55,8 @@
                             </div>
                         </div>
                             <div class="desciption-input-box">
-                                <label for="prop-category" class="descripcion-input">Categoría</label>
-                                <select name="prop-category" class="descripcion-input">
+                                <label for="prop_category" class="descripcion-input">Categoría</label>
+                                <select name="prop_category" class="descripcion-input">
                                     <option value="Plantas de Interior">Plantas de Interior</option>
                                     <option value="Plantas de Exterior">Plantas de Exterior</option>
                                     <option value="Plantas Florales">Plantas Florales</option>
@@ -81,14 +81,14 @@
                         <div class="select-caracteristicas-box">
                             <div class="caracteristica-producto">
                                 <label>Luz</label>
-                                <select name="prop-light" class="caracteristicas-select">
+                                <select name="prop_light" class="caracteristicas-select">
                                     <option value="Luz reflejada">Luz reflejada</option>
                                     <option value="Luz directa">Luz directa</option>                                     
                                 </select>
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Riego</label>
-                                <select name="prop-water" class="caracteristicas-select" >
+                                <select name="prop_water" class="caracteristicas-select" >
                                     <option value="1">1 vez por semana</option>
                                     <option value="2">2 veces por semana</option> 
                                     <option value="3">3 veces por semana</option>                                  
@@ -96,7 +96,7 @@
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Maceta</label>
-                                <select name="prop-plantpot" class="caracteristicas-select">
+                                <select name="prop_plantpot" class="caracteristicas-select">
                                     <option value="Pequeña">Pequeña</option>
                                     <option value="Mediana">Mediana</option>
                                     <option value="Grande">Grande</option>    
@@ -105,14 +105,14 @@
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Plagas</label>
-                                <select name="prop-plague" class="caracteristicas-select" >
+                                <select name="prop_plague" class="caracteristicas-select" >
                                     <option value="Resistente">Resistente</option>
                                     <option value="Débil">Débil</option>                                                                       
                                 </select>
                             </div>
                             <div class="caracteristica-producto">
                                 <label>Altura</label>
-                                <input type="number" name="prop-height" list="height-list" step="0.25">
+                                <input type="number" name="prop_height" list="height-list" step="0.25">
                                 <datalist id="height-list">
                                     <option value="0.25">
                                     <option value="0.50">
@@ -128,7 +128,7 @@
                             </div>
                             <div class="caracteristica-producto">
                                 <label>Mascotas</label>
-                                <select name="prop-pet" class="caracteristicas-select">
+                                <select name="prop_pet" class="caracteristicas-select">
                                     <option value="true">Pet Friendly</option>
                                     <option value="false">Venenosa</option>                                                                       
                                 </select>
@@ -147,25 +147,25 @@
             <div class="filter-container">
                 <div class="filter-benefit">
                     <div><label>Beneficio</label></div>
-                    <div><input type="checkbox" name="filter-benefit" value="Trae buena suerte"> Trae buena suerte</div>
-                    <div><input type="checkbox" name="filter-benefit" value="Ayuda a la ansiedad"> Ayuda a la ansiedad</div>
-                    <div><input type="checkbox" name="filter-benefit" value="Absorbe la humedad"> Absorbe la humedad</div>
-                    <div><input type="checkbox" name="filter-benefit" value="Aromatizante"> Aromatizante</div>
-                    <div><input type="checkbox" name="filter-benefit" value="Mejora la productividad"> Mejora la productividad</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Trae buena suerte"> Trae buena suerte</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Ayuda a la ansiedad"> Ayuda a la ansiedad</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Absorbe la humedad"> Absorbe la humedad</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Aromatizante"> Aromatizante</div>
+                    <div><input type="checkbox" name="filter_benefit" value="Mejora la productividad"> Mejora la productividad</div>
                     <div><input type="checkbox" name="filter-benefit" value="Reducen el estrés"> Reducen el estrés</div>
                 </div>
                 <div class="filter-room">
                     <div><label>Espacio</label></div>
-                    <div><input type="checkbox" name="filter-room" value="Dormitorio"> Dormitorio</div>
-                    <div><input type="checkbox" name="filter-room" value="Living"> Living</div>
-                    <div><input type="checkbox" name="filter-room" value="Baño"> Oficina</div>
-                    <div><input type="checkbox" name="filter-room" value="Balcón"> Balcón</div>
-                    <div><input type="checkbox" name="filter-room" value="Jardín"> Jardín</div>
-                    <div><input type="checkbox" name="filter-room" value="Terraza"> Terraza</div>
+                    <div><input type="checkbox" name="filter_room" value="Dormitorio"> Dormitorio</div>
+                    <div><input type="checkbox" name="filter_room" value="Living"> Living</div>
+                    <div><input type="checkbox" name="filter_room" value="Baño"> Oficina</div>
+                    <div><input type="checkbox" name="filter_room" value="Balcón"> Balcón</div>
+                    <div><input type="checkbox" name="filter_room" value="Jardín"> Jardín</div>
+                    <div><input type="checkbox" name="filter_room" value="Terraza"> Terraza</div>
                 </div>
                 <div class="filter-dificult">
                     <div><label>Dificultad</label></div>
-                    <select name="filter-dificult">
+                    <select name="filter_dificult">
                         <option value="Poco cuidado">Poco cuidado</option>
                         <option value="Requiere atención">Requiere atención</option>
                         <option value="Cuidado especial">Cuidado especial</option>                                                                       

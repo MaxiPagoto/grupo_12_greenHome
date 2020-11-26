@@ -26,6 +26,7 @@ const productController = {
         res.render('products/create')
       },
       store: function(req,res,next){
+        console.log(req.body.price)
         res.send('Store');
       },
       cart: function (req,res,next){
