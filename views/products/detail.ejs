@@ -28,7 +28,7 @@
         
         <div class="main-description">
             <div class="product-longline">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eveniet hic veritatis explicabo, nam voluptatum distinctio numquam suscipit molestias, sint magnam. Exercitationem libero placeat mollitia vero repellendus repellat necessitatibus obcaecati, dolores magni, nihil omnis illo.
+                <%=product.description%>
             
             <hr>
         </div>
@@ -51,7 +51,7 @@
                 </ul>
                 <h3>Beneficios</h3>
                 <ul>
-                    <li>Lorem ipsum</li>
+                    <li><%=product.filter_benefit%></li>
                     <li>Lorem ipsum</li>
                     <li>Lorem ipsum</li>
                     <li>Lorem ipsum</li>
@@ -150,7 +150,7 @@
         <div class="resume-container">
             <div class="resume-list">
                 <div class="row-simple-item">
-                    <span class="row-simple-item-text">Nombre Planta</span>
+                    <span class="row-simple-item-text"><%=product.name%></span>
                     <span class="row-simple-item-value">$100</span>
                 </div>
                 <div class="row-simple-item">

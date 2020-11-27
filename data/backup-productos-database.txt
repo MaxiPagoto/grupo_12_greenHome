@@ -1,12 +1,11 @@
-[
- {
+[{
   "id": 1,
   "name": "Auricled Twayblade",
   "image": "nonummy.tiff",
   "price": 1243,
   "discount": 5,
   "line": "Vivamus vel nulla eget eros elementum pellentesque.",
-  "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.",
+  "desciption": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.",
   "copy": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
   "prop_light": "Luz directa",
   "prop_water": 1,
@@ -18,8 +17,7 @@
   "filter_benefit": "Ayuda a la ansiedad",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Jardin"
- },
- {
+}, {
   "id": 2,
   "name": "Greenland Primrose",
   "image": "suspendissePotenti.png",
@@ -38,8 +36,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Baño"
- },
- {
+}, {
   "id": 3,
   "name": "Charleston Mountain Angelica",
   "image": "blanditLacinia.tiff",
@@ -58,8 +55,7 @@
   "filter_benefit": "Reducen el estrés",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Oficina"
- },
- {
+}, {
   "id": 4,
   "name": "Coastal Plain Honeycombhead",
   "image": "ultrices.jpeg",
@@ -78,8 +74,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Terraza"
- },
- {
+}, {
   "id": 5,
   "name": "Montagne's Cartilage Lichen",
   "image": "gravida.tiff",
@@ -98,8 +93,7 @@
   "filter_benefit": "Absorbe la humedad",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Baño"
- },
- {
+}, {
   "id": 6,
   "name": "Mountain Silverbell",
   "image": "cubilia.tiff",
@@ -118,8 +112,7 @@
   "filter_benefit": "Reducen el estrés",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Baño"
- },
- {
+}, {
   "id": 7,
   "name": "Hoover's Biscuitroot",
   "image": "auctorSedTristique.gif",
@@ -138,8 +131,7 @@
   "filter_benefit": "Mejora la productividad",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Balcon"
- },
- {
+}, {
   "id": 8,
   "name": "Island Lacefern",
   "image": "aliquam.jpeg",
@@ -158,8 +150,7 @@
   "filter_benefit": "Mejora la productividad",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Oficina"
- },
- {
+}, {
   "id": 9,
   "name": "Mountainmint",
   "image": "magnis.png",
@@ -178,8 +169,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Jardin"
- },
- {
+}, {
   "id": 10,
   "name": "Caribbean Beaksedge",
   "image": "aFeugiat.gif",
@@ -198,8 +188,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Living"
- },
- {
+}, {
   "id": 11,
   "name": "Fragile Maidenhair",
   "image": "odioCondimentumId.jpeg",
@@ -218,8 +207,7 @@
   "filter_benefit": "Reducen el estrés",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Balcon"
- },
- {
+}, {
   "id": 12,
   "name": "Simpleleaf Bushweed",
   "image": "vitae.gif",
@@ -238,8 +226,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Oficina"
- },
- {
+}, {
   "id": 13,
   "name": "Silvery Lupine",
   "image": "sapien.png",
@@ -258,8 +245,7 @@
   "filter_benefit": "Mejora la productividad",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Oficina"
- },
- {
+}, {
   "id": 14,
   "name": "Thelidium Lichen",
   "image": "eratTortorSollicitudin.gif",
@@ -278,8 +264,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Living"
- },
- {
+}, {
   "id": 15,
   "name": "Justiceweed",
   "image": "luctusNec.jpeg",
@@ -298,8 +283,7 @@
   "filter_benefit": "Mejora la productividad",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Balcon"
- },
- {
+}, {
   "id": 16,
   "name": "Yerba De Cabra",
   "image": "sapienNon.tiff",
@@ -318,8 +302,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Jardin"
- },
- {
+}, {
   "id": 17,
   "name": "Skin Lichen",
   "image": "nuncPurus.jpeg",
@@ -338,8 +321,7 @@
   "filter_benefit": "Reducen el estrés",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Terraza"
- },
- {
+}, {
   "id": 18,
   "name": "Nepalese Firethorn",
   "image": "pretium.tiff",
@@ -358,8 +340,7 @@
   "filter_benefit": "Mejora la productividad",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Terraza"
- },
- {
+}, {
   "id": 19,
   "name": "California Entosthodon Moss",
   "image": "magnaVestibulumAliquet.gif",
@@ -378,8 +359,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Jardin"
- },
- {
+}, {
   "id": 20,
   "name": "Carolina Wild Petunia",
   "image": "nonummyMaecenasTincidunt.tiff",
@@ -398,8 +378,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Terraza"
- },
- {
+}, {
   "id": 21,
   "name": "Blue Mountain Buckwheat",
   "image": "ut.tiff",
@@ -418,8 +397,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Baño"
- },
- {
+}, {
   "id": 22,
   "name": "Rim Lichen",
   "image": "idConsequat.tiff",
@@ -438,8 +416,7 @@
   "filter_benefit": "Absorbe la humedad",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Oficina"
- },
- {
+}, {
   "id": 23,
   "name": "White Crownbeard",
   "image": "namCongueRisus.tiff",
@@ -458,8 +435,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Baño"
- },
- {
+}, {
   "id": 24,
   "name": "Lingonberry",
   "image": "nonummy.tiff",
@@ -478,8 +454,7 @@
   "filter_benefit": "Ayuda a la ansiedad",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Living"
- },
- {
+}, {
   "id": 25,
   "name": "Albertville Hawthorn",
   "image": "risusAuctor.jpeg",
@@ -498,8 +473,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Dormitorio"
- },
- {
+}, {
   "id": 26,
   "name": "Grassleaf Rush",
   "image": "sitAmet.tiff",
@@ -518,8 +492,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Balcon"
- },
- {
+}, {
   "id": 27,
   "name": "New Mexican Stonecrop",
   "image": "sit.tiff",
@@ -538,8 +511,7 @@
   "filter_benefit": "Reducen el estrés",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Baño"
- },
- {
+}, {
   "id": 28,
   "name": "Camellia",
   "image": "felisSedLacus.tiff",
@@ -558,8 +530,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Living"
- },
- {
+}, {
   "id": 29,
   "name": "Rocket",
   "image": "hacHabitasse.tiff",
@@ -578,8 +549,7 @@
   "filter_benefit": "Ayuda a la ansiedad",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Balcon"
- },
- {
+}, {
   "id": 30,
   "name": "Alkali Marsh Aster",
   "image": "nullaNisl.png",
@@ -598,8 +568,7 @@
   "filter_benefit": "Aromatizante",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Dormitorio"
- },
- {
+}, {
   "id": 31,
   "name": "Mojave Mound Cactus",
   "image": "luctusNec.png",
@@ -618,8 +587,7 @@
   "filter_benefit": "Ayuda a la ansiedad",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Terraza"
- },
- {
+}, {
   "id": 32,
   "name": "Caracus Wigandia",
   "image": "ultrices.jpeg",
@@ -638,8 +606,7 @@
   "filter_benefit": "Ayuda a la ansiedad",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Oficina"
- },
- {
+}, {
   "id": 33,
   "name": "Siberian Melicgrass",
   "image": "quamTurpisAdipiscing.gif",
@@ -658,8 +625,7 @@
   "filter_benefit": "Absorbe la humedad",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Dormitorio"
- },
- {
+}, {
   "id": 34,
   "name": "Graceful Wattle",
   "image": "tortor.png",
@@ -678,8 +644,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Poco cuidado",
   "filter_room": "Terraza"
- },
- {
+}, {
   "id": 35,
   "name": "Paiute Suncup",
   "image": "pharetra.tiff",
@@ -698,8 +663,7 @@
   "filter_benefit": "Mejora la productividad",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Jardin"
- },
- {
+}, {
   "id": 36,
   "name": "Jepson's Monkeyflower",
   "image": "ligulaSuspendisseOrnare.tiff",
@@ -718,8 +682,7 @@
   "filter_benefit": "Ayuda a la ansiedad",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Baño"
- },
- {
+}, {
   "id": 37,
   "name": "Gulf Swampweed",
   "image": "egetEleifendLuctus.jpeg",
@@ -738,8 +701,7 @@
   "filter_benefit": "Trae buena suerte",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Living"
- },
- {
+}, {
   "id": 38,
   "name": "Variableleaf Evening Primrose",
   "image": "parturient.jpeg",
@@ -758,8 +720,7 @@
   "filter_benefit": "Absorbe la humedad",
   "filter_dificult": "Requiere atencion",
   "filter_room": "Balcon"
- },
- {
+}, {
   "id": 39,
   "name": "Nose Skullcap",
   "image": "estQuamPharetra.tiff",
@@ -778,8 +739,7 @@
   "filter_benefit": "Reducen el estrés",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Jardin"
- },
- {
+}, {
   "id": 40,
   "name": "Cumberland Rhododendron",
   "image": "tellusSemper.gif",
@@ -798,29 +758,4 @@
   "filter_benefit": "Reducen el estrés",
   "filter_dificult": "Cuidado especial",
   "filter_room": "Jardin"
- },
- {
-  "id": 41,
-  "name": "Potus",
-  "image": "",
-  "price": "350",
-  "discount": "0",
-  "line": "Planta de interior facil",
-  "description": "El potus se caraterisa por su facil cuidado y gran resistencia condiciones adversas, por eso es una planta ideal para personas inexpertas. ",
-  "copy": "Planta de interior facil",
-  "prop_light": "Luz reflejada",
-  "prop_water": "1",
-  "prop_category": "Plantas de Interior",
-  "prop_plantpot": "Pequeña",
-  "prop_plague": "Resistente",
-  "prop_height": "",
-  "prop_pet": "true",
-  "filter_benefit": "Mejora la productividad",
-  "filter_dificult": "Poco cuidado",
-  "filter_room": [
-   "Dormitorio",
-   "Living",
-   "Baño"
-  ]
- }
-]
+}]
