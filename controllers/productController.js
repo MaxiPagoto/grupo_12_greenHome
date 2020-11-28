@@ -29,14 +29,18 @@ const productController = {
         });
         return res.render('products/detail',{product: productDetail})
       },
+
       create: function(req,res, next){
         res.render('products/create')
       },
+
       store: function(req,res,next){
+
+        
         const newProduct = {
           id: GenerarNuevoID(),
           name: req.body.name,
-          image: '',
+          image: req.files[0].filename,
           price: req.body.price,
           discount: req.body.discount,
           line: req.body.line,
@@ -63,7 +67,7 @@ const productController = {
 
 
         
-        res.send('Store');
+        res.redirect('/products');
       },
       cart: function (req,res,next){
         res.render('cart')
