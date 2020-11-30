@@ -28,62 +28,40 @@
         
         <div class="main-description">
             <div class="product-longline">
-                <%=product.description%>
-            
+                <p><%=product.desciption%></p>
             <hr>
         </div>
-
-            <div class="product-description">
-                
-                <h3>Recomendacion</h3>
-                <ul>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                </ul>
-                <h3>Cuidados</h3>
-                <ul>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                </ul>
-                <h3>Beneficios</h3>
-                <ul>
-                    <li><%=product.filter_benefit%></li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                    <li>Lorem ipsum</li>
-                </ul>
-            </div>
             <div class="plant-prop">
                 <div class="plant-prop-row">
                     <div class="prop">
                         <img class="prop-icon color-fill" src="\icon\gardening\svg\nublado.svg" alt="">
-                        <p class="prop-text">Luz</p>
+                        <p class="prop-text"><%=product.prop_light%></p>
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\041-watering-can.svg" alt="">
-                        <p class="prop-text">Riego</p>
+                        <p class="prop-text"><%=product.prop_water%> 
+                            <% if(product.prop_water<2){%>vez por semana<%} else { %> veces por semana<%}%>
+                        </p>
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\020-house-1.svg" alt="">
-                        <p class="prop-text">Int-Ext</p>
+                        <p class="prop-text">
+                            <% if(product.prop_pet){%>Pet friendly<%} else { %> Venenosa <%}%>
+                        </p>
                     </div>
                 </div>
                 <div class="plant-prop-row">
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\015-tree.svg" alt="">
-                        <p class="prop-text">Altura</p>
+                        <p class="prop-text"><%=product.prop_height%> Mts</p>
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\037-plant.svg" alt="">
-                        <p class="prop-text">Tamaño <br> Maceta</p>
+                        <p class="prop-text"><%=product.prop_plantpot%></p>
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\error.svg" alt="">
-                        <p class="prop-text">Plagas</p>
+                        <p class="prop-text"><%=product.prop_plague%></p>
                     </div>
                 </div>
         </div>
@@ -167,7 +145,7 @@
                 </div>
             </div>
         </div>
-        <a href="products/edit/"><div class="edit-button">Editar Producto</div></a> 
+        <a href="/products/edit/<%=product.id%>"><div class="edit-button">Editar Producto</div></a> 
     </div>  
     <div class="product-shop-fixed">
     <a class="product-shop-button" href="#">

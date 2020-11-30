@@ -14,9 +14,9 @@
     <%-include('../partials/header')%>
     <main>
                                                             <!-- CARGA DE ITEMS  --> 
-        <form action="/products/create" method="POST">
+        <form action="/products/edit/<%= productToEdit.id %>" method="POST" enctype="multipart/form-data">
             <section class="carga-visuales-container">
-                <div class="carga-titulo-principal"><h2>Estás editando: </h1></div>
+                <div class="carga-titulo-principal"><h2>Estás editando:<%= productToEdit.name %>  </h1></div>
                 <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
                 <div class="visual-selector-container">
                     <div class="visual-selector">
@@ -42,21 +42,21 @@
                         <div class="desciption-input-box">                     
                             <div class="desciption-input-box">
                                 <label for="name" class="descripcion-input">Nombre de Producto</label>
-                                <input type="text" name="name" class="descripcion-input" placeholder="Ej: Árbol de Jade">
+                                <input type="text" name="name" value="<%= productToEdit.name %>" class="descripcion-input" placeholder="Ej: Árbol de Jade">
                             </div>
                         </div>
                         <div class="desciption-input-box">
                             <div class="descripcion-input">
                                 <div class="descripcion-input"><label for="name" class="descripcion-input">Precio</label></div>
                                 <div class="descripcion-input-row">
-                                    <input type="text" name="price" class="descripcion-input-mid" placeholder="Ej: 2000">
-                                    <input type="text" name="discount" class="descripcion-input-mid"  placeholder="Ej: 10">
+                                    <input type="text" name="price" value="<%= productToEdit.price %>" class="descripcion-input-mid" placeholder="Ej: 2000">
+                                    <input type="text" name="discount" value="<%= productToEdit.discount %>" class="descripcion-input-mid"  placeholder="Ej: 10">
                                 </div>
                             </div>
                         </div>
                             <div class="desciption-input-box">
                                 <label for="prop_category" class="descripcion-input">Categoría</label>
-                                <select name="prop_category" class="descripcion-input">
+                                <select name="prop_category"  class="descripcion-input">
                                     <option value="Plantas de Interior">Plantas de Interior</option>
                                     <option value="Plantas de Exterior">Plantas de Exterior</option>
                                     <option value="Plantas Florales">Plantas Florales</option>
@@ -69,9 +69,9 @@
                             </div>
                             <div class="desciption-input-box">
                                 <label for="name" class="descripcion-input">Descripción</label>
-                                <input type="text" name="line" class="descripcion-input" placeholder="Descripcion una linea">
-                                <input type="text" name="copy" class="descripcion-input" placeholder="Copywriting">
-                                <input type="text" name="desciption" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto">
+                                <input type="text" name="line" value="<%= productToEdit.line %>" class="descripcion-input" placeholder="Descripcion una linea">
+                                <input type="text" name="copy" value="<%= productToEdit.copy %>" class="descripcion-input" placeholder="Copywriting">
+                                <input type="text" name="desciption" value="<%= productToEdit.desciption %>" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto">
                             </div>
                     </div>
                     <div class="descripcion-40">
@@ -172,8 +172,8 @@
                     </select>
                 </div>
                 <div class="submit-button">
-                    <div class="cancel-button">ID de producto: </div>
-                    <a href="/products/delete" class="delete-button">Eliminar producto</a>
+                    <div class="cancel-button">ID de producto: <%= productToEdit.id %></div>
+                    <a href="/products/delete/<%= productToEdit.id %>" class="delete-button">Eliminar producto</a>
                     <button type="submit" class="save-button">Modificar producto</button>
                 </div>
             </div>

@@ -16,7 +16,7 @@ function getAllProducts(){
 
 const productController = {
       shop: function (req,res,next){
-        res.render('products/list',{products:products})
+        res.render('products/admin-list',{products:products})
       },
       adminShop: function (req,res,next){
         res.render('products/admin-list',{products:products})
@@ -29,6 +29,8 @@ const productController = {
         });
         return res.render('products/detail',{product: productDetail})
       },
+
+      // Creacion de producto
 
       create: function(req,res, next){
         res.render('products/create')
@@ -62,23 +64,79 @@ const productController = {
         AllProducts.push(newProduct);
 
         const productsToStringify = JSON.stringify(AllProducts, null, ' ');
-
-        fs.writeFileSync('./data/products-GreenHome.json', productsToStringify)
-
-
-        
-        res.redirect('/products');
+/*
+        fs.writeFileSync(productsFilePath, productsToStringify)*/
+        res.redirect('/products');  
       },
+      
+      //Agregar a Carrito de compra
+
       cart: function (req,res,next){
         res.render('cart')
       },
+
+      // Editar Producto
+
       edit:function(req,res,next){
-        res.render('products/edit');},  
+
+        const product = getAllProducts();
+        const id = req.params.id;
+        const result  = products.find((product)=> product.id == id);
+
+        
+
+        res.render('products/edit',{productToEdit: result});
+      },  
+           
       save: function(req,res,next){
-        res.redirect('/products/detail/:id');},
+      const productsToStore =  [...products];
+      const id = req.params.id;
+
+        const edition = productsToStore.map((product) =>{
+          
+          if(id == product.id){
+            product.name = req.body.name,
+            product.image = req.files[0] ? req.files[0].filename : product.image, 
+            product.price = req.body.price,
+            product.discount = req.body.discount,
+            product.line =  req.body.line,
+            product.description =  req.body.description,
+            product.copy =  req.body.copy,
+            product.prop_light =  req.body.prop_light,
+            product.prop_water =  req.body.prop_water,
+            product.prop_category = req.body.prop_category,
+            product.prop_plantpot = req.body.prop_plantpot,
+            product.prop_plague = req.body.prop_plague,
+            product.prop_height = req.body.prop_height,
+            product.prop_pet = req.body.prop_pet,
+            product.filter_benefit = req.body.filter_benefit,
+            product.filter_dificult = req.body.filter_dificult,
+            product.filter_room = req.body.filter_room
+          }    
+          return product 
+        }   
+        );    
+        const newAllProductsToStringify = JSON.stringify(edition, null, ' ');
+
+        
+        fs.writeFileSync('./data/products-GreenHome.json', newAllProductsToStringify)
+        res.redirect('/products/detail/'+id);
+      },
+
+
 
         tienda:function(req,res,next){
-          res.render('products/list');}
+          res.render('products/list');},
+
+          //Eliminar producto
+
+          delete: (req, res,next) => {
+            const AllProducts = getAllProducts();
+            let productsList = AllProducts.filter(product=>product.id != req.params.id);
+            productListString = JSON.stringify(productsList,null,1);
+            fs.writeFileSync(productsFilePath, productListString)
+            res.redirect('/products');
+          }
         
 }
 module.exports = productController;

@@ -28,10 +28,14 @@ router.post('/create', upload.any(), productController.store);
 
 //Ruta hacia Modificar y guardar producto existente
 router.get('/edit/:id', productController.edit)
-router.post('/edit', productController.save)
+router.post('/edit/:id',upload.any(), productController.save)
 
 //Ruta hacia carrito de compras
 router.get('/cart', productController.cart);
+
+//Ruta de eliminacion de producto
+
+router.get('/delete/:id', productController.delete)
 
 //Ruta hacia tienda --- Maxi
 router.get('/list', productController.tienda);
