@@ -65,7 +65,7 @@
         <% for (product of products) { %>
         <div class= "img-articulo-tienda">
             <div class="grid-container">
-                <a href="/products/detail/<%=product.id%>"><img class="img-articulo-tienda" src="\img\product-example.jpg" alt="" class="image"></a>
+                <a href="/products/detail/<%=product.id%>"><img class="img-articulo-tienda" src="\images\products/<%=product.image%>" alt="" class="image"></a>
               </div>   
             <% let finalPrice=0; 
             if (product.discount>0){

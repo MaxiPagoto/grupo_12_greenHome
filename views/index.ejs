@@ -31,7 +31,7 @@
     <section class="sale-container">
         <% for (product of products) { %>
         <a class="sale-box" href="/products/detail/<%=product.id%>">
-            <img class= "sale-box-image" src="/images/inspire/product-001.jpg" alt="">
+            <img class= "sale-box-image" src="\images\products/<%=product.image%>" alt="">
             <div class="sale-box-column">
                 <div class="sale-box-title"><%=product.name%></div>
                 <div class="sale-box-price">$ <%=product.price%></div>    

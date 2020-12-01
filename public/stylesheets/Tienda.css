@@ -94,6 +94,11 @@
     cursor: pointer;
     text-align: center;
 }
+.form-delete-button {
+    color: white;
+    background-color: transparent;
+    border: 0px;
+}
 
 .img-articulo-tienda{
     width: 300px;    

@@ -65,9 +65,11 @@
         <% for (product of products) { %>
         <div class= "img-articulo-tienda">
             <div class="grid-container">
-                <a href="/products/detail/<%=product.id%>"><img class="img-articulo-tienda" src="\img\product-example.jpg" alt="" class="image"></a>
+                <a href="/products/detail/<%=product.id%>"><img class="img-articulo-tienda" src="\images\products/<%=product.image%>" alt="" class="image"></a>
                 <a href="/products/edit/<%=product.id%>" class="edit"><i class="fas fa-pen"></i></a>
-                <a href="/products/delete/<%=product.id%>" class="delete"><i class="far fa-trash-alt"></i></a>
+                <form action="/products/delete/<%=product.id%>" method="post" class="delete">
+                    <button type="submit" class="far fa-trash-alt form-delete-button"></button>
+                </form>
               </div>   
             <% let finalPrice=0; 
             if (product.discount>0){
