@@ -35,7 +35,7 @@ router.get('/cart', productController.cart);
 
 //Ruta de eliminacion de producto
 
-router.get('/delete/:id', productController.delete)
+router.post('/delete/:id', productController.delete)
 
 //Ruta hacia tienda --- Maxi
 router.get('/list', productController.tienda);

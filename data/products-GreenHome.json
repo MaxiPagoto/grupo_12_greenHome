@@ -13,7 +13,7 @@
   "prop_plantpot": "Mediana",
   "prop_plague": "Resistente",
   "prop_height": "",
-  "prop_pet": "true",
+  "prop_pet": true,
   "filter_dificult": "Poco cuidado",
   "description": "El poto o potus, es una planta colgante o trepadora. Su uso es común en muchos hogares.  El potus tiene unas hojas anchas de color verde y con manchas claras (amarillas o blancas) que florecen cuando están bien cuidadas. A menudo, se utiliza como elemento decorativo en lugares comunes porque es una planta atractiva, resistente y requiere de pocos cuidados."
  },
@@ -32,7 +32,7 @@
   "prop_plantpot": "Grande",
   "prop_plague": "Resistente",
   "prop_height": "",
-  "prop_pet": "true",
+  "prop_pet": true,
   "filter_dificult": "Poco cuidado"
  },
  {
@@ -50,7 +50,7 @@
   "prop_plantpot": "Mediana",
   "prop_plague": "Resistente",
   "prop_height": "0.50",
-  "prop_pet": "true",
+  "prop_pet": true,
   "filter_benefit": "Ayuda a la ansiedad",
   "filter_dificult": "Requiere atención",
   "filter_room": [
@@ -74,7 +74,7 @@
   "prop_plantpot": "Pequeña",
   "prop_plague": "Resistente",
   "prop_height": "2.50",
-  "prop_pet": "true",
+  "prop_pet": false,
   "filter_dificult": "Poco cuidado"
  },
  {
@@ -92,7 +92,7 @@
   "prop_plantpot": "Pequeña",
   "prop_plague": "Débil",
   "prop_height": "0.25",
-  "prop_pet": "true",
+  "prop_pet": true,
   "filter_dificult": "Poco cuidado",
   "filter_room": [
    "Living",
@@ -116,7 +116,7 @@
   "prop_plantpot": "Grande",
   "prop_plague": "Resistente",
   "prop_height": "0.75",
-  "prop_pet": "true",
+  "prop_pet": true,
   "filter_benefit": [
    "Ayuda a la ansiedad",
    "Aromatizante"
@@ -126,5 +126,23 @@
    "Jardín",
    "Terraza"
   ]
+ },
+ {
+  "id": 47,
+  "name": "Árbol de Jade",
+  "image": "arbol-jade.jpg",
+  "price": "2000",
+  "discount": "5",
+  "line": "Fácil y resistente",
+  "description": "Carassula ovata también conocida como arbol de Jade. Es la variedad de suculentas más elegante que hay. ¡Dar un toque elegante a cualquier rincón nunca había sido tan fácil!",
+  "copy": "Si tus amigos están muy seguros de que no podrías cuidar ni a tus propios hijos, esta es tu planta perfecta.",
+  "prop_light": "Luz reflejada",
+  "prop_water": "1",
+  "prop_category": "Plantas de Interior",
+  "prop_plantpot": "Pequeña",
+  "prop_plague": "Resistente",
+  "prop_height": "",
+  "prop_pet": "true",
+  "filter_dificult": "Poco cuidado"
  }
 ]

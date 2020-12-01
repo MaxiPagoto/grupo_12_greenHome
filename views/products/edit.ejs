@@ -16,7 +16,7 @@
                                                             <!-- CARGA DE ITEMS  --> 
         <form action="/products/edit/<%= productToEdit.id %>" method="POST" enctype="multipart/form-data">
             <section class="carga-visuales-container">
-                <div class="carga-titulo-principal"><h2>Estás editando:<%= productToEdit.name %>  </h1></div>
+                <div class="carga-titulo-principal"><h2>Estás editando: <%= productToEdit.name %>  </h1></div>
                 <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
                 <div class="visual-selector-container">
                     <div class="visual-selector">
@@ -173,11 +173,13 @@
                 </div>
                 <div class="submit-button">
                     <div class="cancel-button">ID de producto: <%= productToEdit.id %></div>
-                    <a href="/products/delete/<%= productToEdit.id %>" class="delete-button">Eliminar producto</a>
-                    <button type="submit" class="save-button">Modificar producto</button>
+                    <button type="submit" class="save-button">Guardar cambios</button>
+                </form>
+                    <form action="/products/delete/<%= productToEdit.id %>" method="POST"><button type="submit" class="delete-button">Eliminar producto</button></form>
+                    
                 </div>
             </div>
-        </form>
+        
     </main>
     <%-include('../partials/footer')%>
 </body>
