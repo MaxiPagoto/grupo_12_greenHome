@@ -57,21 +57,21 @@
                             <div class="desciption-input-box">
                                 <label for="prop_category" class="descripcion-input">Categoría</label>
                                 <select name="prop_category"  class="descripcion-input">
-                                    <option value="Plantas de Interior">Plantas de Interior</option>
-                                    <option value="Plantas de Exterior">Plantas de Exterior</option>
-                                    <option value="Plantas Florales">Plantas Florales</option>
-                                    <option value="Cáctus y Crasas">Cáctus y Crasas</option>
-                                    <option value="Orquideas">Orquideas</option>
-                                    <option value="Kokedamas">Kokedamas</option>
-                                    <option value="Macetas">Macetas</option>
-                                    <option value="Accesorios">Accesorios</option>
+                                    <option value="Plantas de Interior" <% if (productToEdit.prop_category == "Plantas de Interior"){ %>selected<%}%>>Plantas de Interior</option>
+                                    <option value="Plantas de Exterior" <% if (productToEdit.prop_category == "Plantas de Exterior"){ %>selected<%}%>>Plantas de Exterior</option>
+                                    <option value="Plantas Florales" <% if (productToEdit.prop_category == "Plantas Florales"){ %>selected<%}%>>Plantas Florales</option>
+                                    <option value="Cáctus y Crasas" <% if (productToEdit.prop_category == "Cáctus y Crasas"){ %>selected<%}%>>Cáctus y Crasas</option>
+                                    <option value="Orquideas" <% if (productToEdit.prop_category == "Orquideasr"){ %>selected<%}%>>Orquideas</option>
+                                    <option value="Kokedamas" <% if (productToEdit.prop_category == "Kokedamas"){ %>selected<%}%>>Kokedamas</option>
+                                    <option value="Macetas" <% if (productToEdit.prop_category == "Macetasr"){ %>selected<%}%>>Macetas</option>
+                                    <option value="Accesorios" <% if (productToEdit.prop_category == "Accesorios"){ %>selected<%}%>>Accesorios</option>
                                 </select>
                             </div>
                             <div class="desciption-input-box">
                                 <label for="name" class="descripcion-input">Descripción</label>
                                 <input type="text" name="line" value="<%= productToEdit.line %>" class="descripcion-input" placeholder="Descripcion una linea">
                                 <input type="text" name="copy" value="<%= productToEdit.copy %>" class="descripcion-input" placeholder="Copywriting">
-                                <input type="text" name="desciption" value="<%= productToEdit.desciption %>" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto">
+                                <input type="text" name="description" value="<%= productToEdit.description %>" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto">
                             </div>
                     </div>
                     <div class="descripcion-40">
@@ -82,48 +82,48 @@
                             <div class="caracteristica-producto">
                                 <label>Luz</label>
                                 <select name="prop_light" class="caracteristicas-select">
-                                    <option value="Luz reflejada">Luz reflejada</option>
-                                    <option value="Luz directa">Luz directa</option>                                     
+                                    <option value="Luz reflejada" <% if (productToEdit.prop_light == "Luz reflejada"){ %>selected<%}%>>Luz reflejada</option>
+                                    <option value="Luz directa" <% if (productToEdit.prop_light == "Luz directa"){ %>selected<%}%>>Luz directa</option>                                     
                                 </select>
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Riego</label>
                                 <select name="prop_water" class="caracteristicas-select" >
-                                    <option value="1">1 vez por semana</option>
-                                    <option value="2">2 veces por semana</option> 
-                                    <option value="3">3 veces por semana</option>                                  
+                                    <option value="1" <% if (productToEdit.prop_water == "1"){ %>selected<%}%>>1 vez por semana</option>
+                                    <option value="2" <% if (productToEdit.prop_water == "2"){ %>selected<%}%>>2 veces por semana</option> 
+                                    <option value="3" <% if (productToEdit.prop_water == "3"){ %>selected<%}%>>3 veces por semana</option>                                  
                                 </select>
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Maceta</label>
                                 <select name="prop_plantpot" class="caracteristicas-select">
-                                    <option value="Pequeña">Pequeña</option>
-                                    <option value="Mediana">Mediana</option>
-                                    <option value="Grande">Grande</option>    
-                                    <option value="Muy grande">Muy grande</option>                                                                         
+                                    <option value="Pequeña" <% if (productToEdit.prop_plantpot == "Pequeña"){ %>selected<%}%>>Pequeña</option>
+                                    <option value="Mediana" <% if (productToEdit.prop_plantpot == "Mediana"){ %>selected<%}%>>Mediana</option>
+                                    <option value="Grande"  <% if (productToEdit.prop_plantpot == "Grande"){ %>selected<%}%>>Grande</option>    
+                                    <option value="Muy grande" <% if (productToEdit.prop_plantpot == "Muy grande"){ %>selected<%}%>>Muy grande</option>                                                                         
                                 </select>
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Plagas</label>
                                 <select name="prop_plague" class="caracteristicas-select" >
-                                    <option value="Resistente">Resistente</option>
-                                    <option value="Débil">Débil</option>                                                                       
+                                    <option value="Resistente" <% if (productToEdit.prop_plague == "Resistente"){ %>selected<%}%>>Resistente</option>
+                                    <option value="Débil" <% if (productToEdit.prop_plague == "Débil"){ %>selected<%}%>>Débil</option>                                                                       
                                 </select>
                             </div>
                             <div class="caracteristica-producto">
                                 <label>Altura</label>
                                 <input type="number" name="prop_height" list="height-list" step="0.25">
                                 <datalist id="height-list">
-                                    <option value="0.25">
-                                    <option value="0.50">
-                                    <option value="0.75">
-                                    <option value="1.00">
-                                    <option value="1.25">
-                                    <option value="1.50">
-                                    <option value="1.75">
-                                    <option value="2.00">
-                                    <option value="2.25">
-                                    <option value="2.50">
+                                    <option value="0.25" <% if (productToEdit.prop_height == "0.25"){ %>selected<%}%> >
+                                    <option value="0.50" <% if (productToEdit.prop_height == "0.50"){ %>selected<%}%> >
+                                    <option value="0.75" <% if (productToEdit.prop_height == "0.75"){ %>selected<%}%> >
+                                    <option value="1.00" <% if (productToEdit.prop_height == "1.00"){ %>selected<%}%> >
+                                    <option value="1.25" <% if (productToEdit.prop_height == "1.25"){ %>selected<%}%> >
+                                    <option value="1.50" <% if (productToEdit.prop_height == "1.50"){ %>selected<%}%> >
+                                    <option value="1.75" <% if (productToEdit.prop_height == "1.75"){ %>selected<%}%> >
+                                    <option value="2.00" <% if (productToEdit.prop_height == "2.00"){ %>selected<%}%> >
+                                    <option value="2.25" <% if (productToEdit.prop_height == "2.25"){ %>selected<%}%> >
+                                    <option value="2.50" <% if (productToEdit.prop_height == "2.50"){ %>selected<%}%> >
                                 </datalist>
                             </div>
                             <div class="caracteristica-producto">
@@ -146,7 +146,7 @@
             </div>
             <div class="filter-container">
                 <div class="filter-benefit">
-                    <div><label>Beneficio</label></div>
+                    <div><label>Beneficio</label></div><p style="color: red; font-size: xx-small;">Volver a seleccionar</p>
                     <div><input type="checkbox" name="filter_benefit" value="Trae buena suerte"> Trae buena suerte</div>
                     <div><input type="checkbox" name="filter_benefit" value="Ayuda a la ansiedad"> Ayuda a la ansiedad</div>
                     <div><input type="checkbox" name="filter_benefit" value="Absorbe la humedad"> Absorbe la humedad</div>
@@ -155,7 +155,7 @@
                     <div><input type="checkbox" name="filter-benefit" value="Reducen el estrés"> Reducen el estrés</div>
                 </div>
                 <div class="filter-room">
-                    <div><label>Espacio</label></div>
+                    <div><label>Espacio</label></div><p style="color: red; font-size: xx-small;">Volver a seleccionar</p>
                     <div><input type="checkbox" name="filter_room" value="Dormitorio"> Dormitorio</div>
                     <div><input type="checkbox" name="filter_room" value="Living"> Living</div>
                     <div><input type="checkbox" name="filter_room" value="Baño"> Oficina</div>
@@ -166,9 +166,9 @@
                 <div class="filter-dificult">
                     <div><label>Dificultad</label></div>
                     <select name="filter_dificult">
-                        <option value="Poco cuidado">Poco cuidado</option>
-                        <option value="Requiere atención">Requiere atención</option>
-                        <option value="Cuidado especial">Cuidado especial</option>                                                                       
+                        <option value="Poco cuidado" <% if (productToEdit.filter_dificult == "Poco cuidado"){ %>selected<%}%> >Poco cuidado</option>
+                        <option value="Requiere atención" <% if (productToEdit.filter_dificult == "Requiere atención"){ %>selected<%}%>>Requiere atención</option>
+                        <option value="Cuidado especial" <% if (productToEdit.filter_dificult == "Cuidado especial"){ %>selected<%}%> >Cuidado especial</option>                                                                       
                     </select>
                 </div>
                 <div class="submit-button">

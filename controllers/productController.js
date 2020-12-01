@@ -64,8 +64,8 @@ const productController = {
         AllProducts.push(newProduct);
 
         const productsToStringify = JSON.stringify(AllProducts, null, ' ');
-/*
-        fs.writeFileSync(productsFilePath, productsToStringify)*/
+
+        fs.writeFileSync(productsFilePath, productsToStringify)
         res.redirect('/products');  
       },
       
@@ -140,3 +140,5 @@ const productController = {
         
 }
 module.exports = productController;
+
+

@@ -28,7 +28,7 @@
         
         <div class="main-description">
             <div class="product-longline">
-                <p><%=product.desciption%></p>
+                <p><%=product.description%></p>
             <hr>
         </div>
             <div class="plant-prop">
@@ -46,14 +46,14 @@
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\020-house-1.svg" alt="">
                         <p class="prop-text">
-                            <% if(product.prop_pet){%>Pet friendly<%} else { %> Venenosa <%}%>
+                            <% if(product.prop_pet == true){%>Pet friendly<%} else { %> Venenosa <%}%>
                         </p>
                     </div>
                 </div>
                 <div class="plant-prop-row">
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\015-tree.svg" alt="">
-                        <p class="prop-text"><%=product.prop_height%> Mts</p>
+                        <p class="prop-text"> Hasta <%=product.prop_height%> Mts</p>
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\037-plant.svg" alt="">
