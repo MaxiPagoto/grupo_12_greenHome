@@ -2,6 +2,8 @@
 
     GREEN HOME
 
+   ** Pagina del Tablero de trabajo (Trello) https://trello.com/b/Mq9gPgFB/green-home **
+
 Somos una tienda online de plantas. Promovemos un mejor estilo de vida incorporando la naturaleza en nuestro propio hogar. Creemos que generan un efecto positivo en la salud física y mental, enriquecen la estética de nuestros espacios y mejoran la calidad del aire en el hogar. Nos apasiona que nuestros usuarios puedan transformar sus espacios para vivir en paz y calma.
 
     ¿Qué productos o servicios brindará nuestro sitio?

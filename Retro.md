@@ -32,6 +32,27 @@ Less of
 
 Stop doing: 
 
+|| Retro Sprint 4
+
+Start Doing:
+- Mostrar a terceros para corregir el diseño UX.
+- Codear in live. Podria ser una buena herramienta para avanzar sincronizadamente y despejar dudas que puedan surgir en el momento.
+- Planificar calendario de desarrollo 
+
+More of: 
+- Avanzar en "paginas" EJS secundarias a las solicitadas 
+
+Keep Doing : 
+- Realizar el testing y depuración de código en vivo. Nos ayuda a aprender de nuestros errores y compartiendo la perspectiva desde donde se escribió.
+
+Less of:
+- Dejar mas legible el código para el compañero.
+
+Stop doing: 
+
+- Dejar el testeo y verificacion muy cerca del deadline.
+
+
 
 
 
