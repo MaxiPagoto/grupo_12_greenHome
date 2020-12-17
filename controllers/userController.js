@@ -24,12 +24,10 @@ const userController = {
         let errors = validationResult(req);
           
         if (!errors.isEmpty()){
-            console.log(errors.errors)
             return res.render('users/register', {errors:errors.errors})
         } else {
-            newUserID = newID();
             let newUser ={
-                id: newUserID,
+                id: newID(),
                 email:req.body.email,
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,

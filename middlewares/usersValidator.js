@@ -31,7 +31,7 @@ const usersValidator= {
 
         body('avatar')
         .custom(function(value,{req}){
-            if (req.files[0]){return true} else {return false}
+            return req.files[0];
         }).withMessage('El avatar es obligatorio')
         .bail()
         .custom(function(value,{req}){
