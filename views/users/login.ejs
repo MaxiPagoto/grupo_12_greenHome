@@ -15,9 +15,14 @@
 <main>
         <section class="login-cont">
             <h2 class="titulo-login">Login</h2>
+            <ul class = "errors-ul">
+                <%if (typeof errors != 'undefined'){ for (error of errors){%>
+                <li class="errors-li"><%=error.msg%></li>
+                <%}}%>
+            </ul>
         <div class="login-post">
             <div class="login-form">
-                <form action="" method="POST">
+                <form action="/users/login" method="POST">
                     <div>
                         <label for="correo"></label>
                         <input class="contraseña-login" type="email" name="email" id="email" placeholder="Correo electronico">
@@ -26,9 +31,14 @@
                         <label for="contraseña"></label>
                         <input class="contraseña-login" type="password" name="password" id="password" placeholder="Contraseña">
                     </div>
-                    <div class="ingresa-div">
-                        <input class="ingresa-buttom" type="submit" value="Ingresa">
+                    <div>
+                        <label for="remember" class="form-label">Recuérdame</label>
+                        <input type="checkbox" id="remember" name="remember" class="form-check">
                     </div>
+                    <div class="ingresa-div">
+                        <button type="submit" class="ingresa-buttom">Ingresar</button>
+                    </div>
+                </form>
             </div>
             <div class="crear-cuenta-cont">
                 <p>No tienes cuenta?</p>

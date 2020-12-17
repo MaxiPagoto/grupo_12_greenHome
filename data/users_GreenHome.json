@@ -1,81 +1,20 @@
-[{
+[
+ {
   "id": 1,
   "email": "maxipagoto@gmail.com",
   "first_name": "Maximiliano",
   "last_name": "Pagoto",
-  "paswoord": "12345678",
   "category": "admin",
-  "avatar": "https://robohash.org/eteablanditiis.jpg?size=50x50&set=set1"
-}, {
+  "password": "$2b$10$itMMKtPu86UVnJgNgP/leeKlCJ7OrIBG0DhQ44PhaDzSKANrbuAUO",
+  "avatar": "avatar_user_1608165845325.jpg"
+ },
+ {
   "id": 2,
   "email": "alepizarro32@gmail.com",
-  "first_name": "Iván",
+  "first_name": "Iván Alejandro",
   "last_name": "Pizarro",
-  "paswoord": "12345678",
-  "category": "admin",
-  "avatar": "https://robohash.org/voluptatesaut.jpg?size=50x50&set=set1"
-}, {
-  "id": 3,
-  "email": "tyakov2@thetimes.co.uk",
-  "first_name": "Tandie",
-  "last_name": "Yakov",
-  "paswoord": "TXKb0Ht17O2o",
-  "category": "user",
-  "avatar": "https://robohash.org/accusamusfugitest.jpg?size=50x50&set=set1"
-}, {
-  "id": 4,
-  "email": "acawcutt3@cargocollective.com",
-  "first_name": "Anneliese",
-  "last_name": "Cawcutt",
-  "paswoord": "YceJcR",
-  "category": "user",
-  "avatar": "https://robohash.org/deserunttemporeut.jpg?size=50x50&set=set1"
-}, {
-  "id": 5,
-  "email": "lmcrobert4@ox.ac.uk",
-  "first_name": "Luisa",
-  "last_name": "McRobert",
-  "paswoord": "xu3kKnHh",
-  "category": "user",
-  "avatar": "https://robohash.org/doloribusquasiexpedita.jpg?size=50x50&set=set1"
-}, {
-  "id": 6,
-  "email": "nhellis5@tripod.com",
-  "first_name": "Ned",
-  "last_name": "Hellis",
-  "paswoord": "qiCq8PFtIODY",
-  "category": "user",
-  "avatar": "https://robohash.org/quibusdamiustolibero.jpg?size=50x50&set=set1"
-}, {
-  "id": 7,
-  "email": "jonoulane6@house.gov",
-  "first_name": "Jaine",
-  "last_name": "O'Noulane",
-  "paswoord": "qAC7otfql",
-  "category": "user",
-  "avatar": "https://robohash.org/fugitomnisfacere.jpg?size=50x50&set=set1"
-}, {
-  "id": 8,
-  "email": "wbattram7@nifty.com",
-  "first_name": "Windy",
-  "last_name": "Battram",
-  "paswoord": "OHK4fvJ4fX",
-  "category": "user",
-  "avatar": "https://robohash.org/velitametqui.jpg?size=50x50&set=set1"
-}, {
-  "id": 9,
-  "email": "mtegeller8@yahoo.com",
-  "first_name": "Munroe",
-  "last_name": "Tegeller",
-  "paswoord": "jBL0nuuR",
-  "category": "user",
-  "avatar": "https://robohash.org/utquidemat.jpg?size=50x50&set=set1"
-}, {
-  "id": 10,
-  "email": "mvampouille9@epa.gov",
-  "first_name": "Marsh",
-  "last_name": "Vampouille",
-  "paswoord": "YQqfWa3I",
-  "category": "user",
-  "avatar": "https://robohash.org/evenietvoluptatemvel.jpg?size=50x50&set=set1"
-}]
+  "category": "guest",
+  "password": "$2b$10$qWcHxaJ6v8EFWNDiNyv9bOB2adW4KEQM276zuveGQq4fKEuFy.hTO",
+  "avatar": "avatar_user_1608165891076.jpg"
+ }
+]

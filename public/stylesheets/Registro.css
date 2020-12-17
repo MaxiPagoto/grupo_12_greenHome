@@ -36,6 +36,17 @@
     justify-items: center;
 }
 
+.errors-ul{
+    margin: 0px 0px 25px 0px;
+    box-sizing: border-box;
+    width: 70%;
+}
+.errors-li{
+    font-size: 0.8em;
+    color: #E11A1A;
+    list-style: inside;
+}
+
 @media(min-width: 1023px){
 
     main{

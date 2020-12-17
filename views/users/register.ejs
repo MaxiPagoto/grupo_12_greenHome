@@ -17,30 +17,36 @@
         <section class="registro-container">
             <h2 class="titulo-registro">Registrarse</h2>
             <div class="post-container">
-                <form action="" method="POST">
+                <ul class = "errors-ul">
+                    <%if (typeof errors != 'undefined'){ for (error of errors){%>
+                    <li class="errors-li"><%=error.msg%></li>
+                    <%}}%>
+                </ul>
+           
+                <form action="/users/register" method="POST" enctype="multipart/form-data">
                     <div class="registro-input">
-                        <label for="Nombre"></label>
-                        <input class="box-container" type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+                        <input class="box-container" type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="registro-input">
+                        <input class="box-container" type="text" name="first_name" id="first_name" placeholder="Nombre">
                     </div>
                     <div class="registro-input"> 
-                        <label for="Apellido"></label>
-                        <input class="box-container" type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+                        <input class="box-container" type="text" name="last_name" id="last_name" placeholder="Apellido">
                     </div>
                     <div class="registro-input">
-                        <label for="correo"></label>
-                        <input class="box-container" type="email" name="email" id="email" placeholder="Correo electronico">
+                        <label for="image" class="form-label col-12">Avatar:</label>
+						<input type="file" id="image" name="avatar" class="">
                     </div>
                     <div class="registro-input registro-contraseña">
-                        <label for="contraseña"></label>
                         <input class="box-container" type="password" name="password" id="password" placeholder="Contraseña">
                     </div>
                     <div class="registro-input">
-                        <label for="Confirmacioncontraseña"></label>
-                        <input class="box-container" type="password" name="Confirmacioncontraseña" id="Confirmacioncontraseña" placeholder="Confirmacioncontraseña">
+                        <input class="box-container" type="password" name="retype" id="retype" placeholder="Confirmación contraseña">
                     </div>
                     <div class="registro-input">
-                        <input class="box-container-buttom" type="submit" value="Registrate">
+                        <button type="submit" class="box-container-buttom">Registrarse</button>
                     </div>
+                </form>
             </div>
         </section>
 
