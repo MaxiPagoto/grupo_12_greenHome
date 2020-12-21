@@ -13,7 +13,7 @@ const indexController = {
     index: function (req,res,next){
         //Guardar en una variable 4 productos
         let homeList = products.filter(product=>product.id<5)
-        res.render('index', {products:homeList})
+        res.render('index', {products:homeList, user: req.params.user})
       },
     inspire: function (req,res,next){
         res.render('inspire')

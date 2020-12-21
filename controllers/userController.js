@@ -56,12 +56,30 @@ const userController = {
             let userFound = usersList.find(function(user){return user.email == req.body.email})
             req.session.userLogged = userFound.email;
             if (req.body.remember!=undefined){
-            res.cookie('userEmail',userFound.email,{maxAge:1000*60});
+            res.cookie('userEmail',userFound.email,{maxAge:10000*60});
+            
             };
-            return res.send("Listo")//res.render('user/profile', {user:userFound})
+            return res.redirect('/users/profile' )//res.render('user/profile', {user:userFound})
         }
-    }
+    },
 
+    profile:(req,res,next)=>{     
+        const user = usersList.find((user)=>{
+            return user.email == req.session.userLogged;
+        });
+        
+        res.render('users/profile',{
+            name: user.first_name,
+            email: user.email,
+            avatar: user.avatar
+        });
+    },
+
+    logout:(req,res)=>{
+        req.session.destroy();
+        res.cookie('userEmail',null,{maxAge:-1});
+        res.redirect('/')
+    }
 }
 
 module.exports = userController;

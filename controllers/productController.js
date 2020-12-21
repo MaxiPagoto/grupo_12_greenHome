@@ -16,7 +16,7 @@ function getAllProducts(){
 
 const productController = {
       shop: function (req,res,next){
-        res.render('products/admin-list',{products:products})
+        res.render('products/list',{products:products})
       },
       adminShop: function (req,res,next){
         res.render('products/admin-list',{products:products})
@@ -123,10 +123,6 @@ const productController = {
         res.redirect('/products/detail/'+id);
       },
 
-
-
-        tienda:function(req,res,next){
-          res.render('products/list');},
 
           //Eliminar producto
 

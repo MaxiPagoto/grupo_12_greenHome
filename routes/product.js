@@ -14,20 +14,21 @@ const storage = multer.diskStorage({
     })
     const upload = multer({ storage: storage })
 
+const authMiddleware = require('../middlewares/authMiddleware')
 
 //Ruta hacia la tienda
-router.get('/', productController.shop);
-router.get('/admin', productController.adminShop)
+router.get('/',productController.shop);
+router.get('/admin',authMiddleware.shop,productController.adminShop)
 
 //Ruta hacia detalle de product
 router.get('/detail/:id', productController.article);
 
 //Ruta hacia Crear y guardar nuevo producto
-router.get('/create', productController.create);
+router.get('/create',authMiddleware.create, productController.create);
 router.post('/create', upload.any(), productController.store);
 
 //Ruta hacia Modificar y guardar producto existente
-router.get('/edit/:id', productController.edit)
+router.get('/edit/:id',authMiddleware.create, productController.edit)
 router.post('/edit/:id',upload.any(), productController.save)
 
 //Ruta hacia carrito de compras
@@ -37,8 +38,7 @@ router.get('/cart', productController.cart);
 
 router.post('/delete/:id', productController.delete)
 
-//Ruta hacia tienda --- Maxi
-router.get('/list', productController.tienda);
+
 
 module.exports = router;
 
