@@ -40,9 +40,7 @@ const userController = {
             }
             let usersToSave = [...usersList, newUser];
             writeData(usersToSave, usersFilePath);
-            //return res.render('user/profile', {user:newUser})};
-            return res.send(usersToSave)
-        }
+            return res.redirect('/')};
     },
 
     login: function (req,res,next){
@@ -56,10 +54,9 @@ const userController = {
             let userFound = usersList.find(function(user){return user.email == req.body.email})
             req.session.userLogged = userFound.email;
             if (req.body.remember!=undefined){
-            res.cookie('userEmail',userFound.email,{maxAge:10000*60});
-            
+            res.cookie('userEmail',userFound.email,{maxAge:1000*60*60});
             };
-            return res.redirect('/users/profile' )//res.render('user/profile', {user:userFound})
+            return res.redirect('/users/profile')
         }
     },
 

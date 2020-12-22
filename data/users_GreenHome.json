@@ -16,5 +16,23 @@
   "category": "guest",
   "password": "$2b$10$qWcHxaJ6v8EFWNDiNyv9bOB2adW4KEQM276zuveGQq4fKEuFy.hTO",
   "avatar": "avatar_user_1608165891076.jpg"
+ },
+ {
+  "id": 3,
+  "email": "unemail@gmail.com",
+  "first_name": "Nombre",
+  "last_name": "Apellido",
+  "category": "guest",
+  "password": "$2b$10$TMsiQvzao87PH01gIAwoQeldMLVE1Zp8BMpJo4t4fKROSAMWbyZEW",
+  "avatar": "avatar_user_1608557287061.jpg"
+ },
+ {
+  "id": 4,
+  "email": "otroemail@gmail.com",
+  "first_name": "Nombre",
+  "last_name": "Apellido",
+  "category": "guest",
+  "password": "$2b$10$3C5Lz1PgCvBbtS/G3iPYEe3BG.J4ZnVQy.t5vULHkdBHaasfF4kCa",
+  "avatar": "avatar_user_1608557427542.jpg"
  }
 ]

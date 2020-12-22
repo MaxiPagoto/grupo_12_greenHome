@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="\stylesheets\style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="/stylesheets/profile.css" rel="stylesheet" />
+
+    <title>login</title>
 </head>
 <body>
-    <h1>Hola <%= name  %>  </h1>
-    <img src="\images\users/<%=avatar%>" alt="">
-    <a href="/">Home</a> <br>
-    <form action="/users/logout" method="POST"><button type="submit">Cerrar sesion</button></form>
+    <%-include('../partials/header')%> 
+    <main>
+        <div class="profile-section">
+            <div class="profile-title">Hola <%= name  %> <br><a class="profile-logout"href="/users/logout">Cerrar sesión</a></div>
+            <div class="profile-container">
+                <div class="item01">Estado de mi jardín</div>
+                <div class="item02">Mis datos personales</div>
+                <div class="item03">Inspirar +</div>
+                <div class="item04">Recomendados para ti</div>
+            </div>
+        </div>
+    <%-include('../partials/footer')%>
 
-  
+    </main>
+   
 </body>
 </html>
