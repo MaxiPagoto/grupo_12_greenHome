@@ -16,6 +16,16 @@
     color: #447977;
 
 }
+
+.profile-avatar {
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
 .profile-container {
     padding: auto;
     box-sizing: border-box;

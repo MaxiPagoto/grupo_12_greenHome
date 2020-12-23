@@ -54,6 +54,15 @@ Stop doing:
 
 
 
+|| Retro Sprint 5
 
+Start Doing:
+- Ser mas extricos en los tiempos internos del sprint.
+- Codear in live. 
+- Avanzar en "paginas" EJS secundarias a las solicitadas 
+- Realizar el testing y depuración de código en vivo. Nos ayuda a aprender de nuestros errores y compartiendo la perspectiva desde donde se escribió.
 
+Stop doing: 
 
+- Dejar el testeo y verificacion muy cerca del deadline.
+- Nombrar mejor las branches y commit más claros.
