@@ -1,0 +1,114 @@
+.profile-section{
+    width: 100%;
+    padding: auto;
+    padding-bottom: 5%;
+}
+.profile-title{
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    padding: auto;
+    margin: 5% 0% 1% 6%;
+}
+.profile-logout{
+    font-size: 0.5em;
+    font-weight: 300;
+    color: #447977;
+
+}
+
+.profile-avatar {
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
+.profile-container {
+    padding: auto;
+    box-sizing: border-box;
+    padding: 0% 5% 0% 5%;;
+    width: 101%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 250px 250px;
+    gap: 0% 0px;
+    grid-template-areas:
+      "item01 item02"
+      "item03 item04";
+  }
+  .item01 { 
+    grid-area: item01;
+    background-image: url(../images/desing/inspire-009.jpg);
+    }
+  .item02 { grid-area: item02; 
+    background-image: url(../images/desing/datospersonales.jpg)
+}
+  .item03 { grid-area: item03; 
+    background-image: url(../images/desing/inspire_001.jpg);
+    background-position: 51% 0px   
+}
+  .item04 { grid-area: item04; 
+    background-image: url(../images/desing/inspire-007.jpg);
+    background-position: 50% 70%   
+}
+
+  .item01, .item02, .item03, .item04 {
+    box-sizing: border-box;
+    padding: 5%;
+    margin: 2.5%;
+    
+    background-size: cover;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px 1px 3px rgba(0,0,0,0.8)
+  }
+  .item01:hover, .item02:hover, .item03:hover, .item04:hover{
+    filter: opacity(0.7);
+  }
+
+  @media(max-width: 1025px){
+
+    .profile-section{
+        width: 100%;
+    box-sizing: border-box;
+    padding: 2.5%
+    }
+    .profile-container {
+      display: grid;
+      grid-template-columns: 90vw;
+      grid-template-rows: 90vw 90vw 90vw 90vw;
+      gap: 0px 0px;
+      padding: 0%;
+      grid-template-areas:
+        "item01"
+        "item02"
+        "item03"
+        "item04";
+    }
+    .item01 { grid-area: item01; }
+    .item02 { grid-area: item02; }
+    .item03 { grid-area: item03; }
+    .item04 { grid-area: item04; }
+
+    .item01, .item02, .item03, .item04{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5%;
+        margin: 2.5%;
+        font-size: 1.5em
+
+    }
+    .profile-title{
+        font-size: 2em;
+        font-weight: bold;
+        width: 100%;
+        padding: 0%;
+        margin: 0% 0% 0% 7%;
+        
+    }
+  } 

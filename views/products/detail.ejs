@@ -76,8 +76,14 @@
         <div class="top-content">
             <div class="product-title-row">
             <div><%=product.name%></div>
-            <div class="product-title-price">$ <%=product.price%></div>
+            <% let finalPrice=0; 
+            if (product.discount>0){
+                finalPrice = Math.round(product.price*(1-(product.discount/100)))
+                } else { 
+                finalPrice = product.price} %>
+            <div class="product-title-price">$ <%=finalPrice%></div>
             </div>
+            <% if (product.discount>0){%><span class="detail-product-discount"><%=product.discount%>% OFF</span> <%}%>
             <p class="product-shortline"><%=product.copy%></p> 
         </div>
             <div class="recomend-articles-container">
@@ -145,7 +151,9 @@
                 </div>
             </div>
         </div>
+        <% if (typeof userLocal != 'undefined') { %> 
         <a href="/products/edit/<%=product.id%>"><div class="edit-button">Editar Producto</div></a> 
+        <% } %> 
     </div>  
     <div class="product-shop-fixed">
     <a class="product-shop-button" href="#">

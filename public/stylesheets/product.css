@@ -111,6 +111,12 @@
     border-radius: 5px;
   }
   
+.detail-product-discount {
+  text-align: end;
+  color: #447977;
+  font-weight: 300;
+}
+  
   .product-button-text{
   position: absolute;
   right: auto;
