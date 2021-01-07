@@ -17,9 +17,11 @@ function getAllProducts(){
 
 const productController = {
       shop: async function (req,res,next){
-       const modeloPrueba = await db.Benefit.findAll()
-       console.log(modeloPrueba)
-       return res.send(modeloPrueba)
+       const modeloPrueba = await db.Product.findAll({
+        include: ['category', 'rooms', 'benefits']
+      })
+       console.log(modeloPrueba[0].rooms)
+       return res.send(modeloPrueba[0].benefits[0].name)
         //return res.render('products/list',{products:products})
       },
       adminShop: function (req,res,next){
