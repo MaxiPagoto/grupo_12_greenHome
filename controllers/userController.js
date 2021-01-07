@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path')
 const usersFilePath = path.join(__dirname,'../data/users_GreenHome.json');
 const usersList = JSON.parse(fs.readFileSync(usersFilePath, {encoding:'utf-8'}));
+const db = require('../database/models/index.js')
 
 const writeData = function(data,filePath){
     let stringUsers = JSON.stringify(data, null," ");

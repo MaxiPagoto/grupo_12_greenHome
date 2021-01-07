@@ -2,6 +2,7 @@ const { EDESTADDRREQ } = require('constants');
 const { render } = require('ejs');
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models/index.js')
 
 const productsFilePath = path.join(__dirname, '../data/products-GreenHome.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -15,11 +16,14 @@ function getAllProducts(){
       }
 
 const productController = {
-      shop: function (req,res,next){
-        res.render('products/list',{products:products})
+      shop: async function (req,res,next){
+       const modeloPrueba = await db.Benefit.findAll()
+       console.log(modeloPrueba)
+       return res.send(modeloPrueba)
+        //return res.render('products/list',{products:products})
       },
       adminShop: function (req,res,next){
-        res.render('products/admin-list',{products:products})
+        return res.render('products/admin-list',{products:products})
       } ,
 
       article: function (req,res,next){
