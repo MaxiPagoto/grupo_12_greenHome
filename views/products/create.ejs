@@ -57,6 +57,10 @@
                             <div class="desciption-input-box">
                                 <label for="prop_category" class="descripcion-input">Categoría</label>
                                 <select name="prop_category" class="descripcion-input">
+                                    <% for (category of categories) { %> 
+                                         <option value="<%=category.id%>"><%=category.name%></option>
+                                        <% } %> 
+                                <!--
                                     <option value="Plantas de Interior">Plantas de Interior</option>
                                     <option value="Plantas de Exterior">Plantas de Exterior</option>
                                     <option value="Plantas Florales">Plantas Florales</option>
@@ -65,6 +69,7 @@
                                     <option value="Kokedamas">Kokedamas</option>
                                     <option value="Macetas">Macetas</option>
                                     <option value="Accesorios">Accesorios</option>
+                                    -->
                                 </select>
                             </div>
                             <div class="desciption-input-box">
@@ -147,28 +152,38 @@
             <div class="filter-container">
                 <div class="filter-benefit">
                     <div><label>Beneficio</label></div>
+                    <% for (benefit of benefits) { %>
+                        <div><input type="checkbox" name="filter_room" value="<%=benefit.id%>"><%=benefit.name%></div>
+                        <% } %>  
+                    <!--
                     <div><input type="checkbox" name="filter_benefit" value="Trae buena suerte"> Trae buena suerte</div>
                     <div><input type="checkbox" name="filter_benefit" value="Ayuda a la ansiedad"> Ayuda a la ansiedad</div>
                     <div><input type="checkbox" name="filter_benefit" value="Absorbe la humedad"> Absorbe la humedad</div>
                     <div><input type="checkbox" name="filter_benefit" value="Aromatizante"> Aromatizante</div>
                     <div><input type="checkbox" name="filter_benefit" value="Mejora la productividad"> Mejora la productividad</div>
                     <div><input type="checkbox" name="filter-benefit" value="Reducen el estrés"> Reducen el estrés</div>
+                     -->
                 </div>
                 <div class="filter-room">
                     <div><label>Espacio</label></div>
+                    <% for (room of rooms) { %>
+                        <div><input type="checkbox" name="filter_room" value="<%=room.id%>"><%=room.name%></div>
+                        <% } %>  
+                        <!--
                     <div><input type="checkbox" name="filter_room" value="Dormitorio"> Dormitorio</div>
                     <div><input type="checkbox" name="filter_room" value="Living"> Living</div>
                     <div><input type="checkbox" name="filter_room" value="Baño"> Oficina</div>
                     <div><input type="checkbox" name="filter_room" value="Balcón"> Balcón</div>
                     <div><input type="checkbox" name="filter_room" value="Jardín"> Jardín</div>
                     <div><input type="checkbox" name="filter_room" value="Terraza"> Terraza</div>
+                    -->
                 </div>
                 <div class="filter-dificult">
                     <div><label>Dificultad</label></div>
                     <select name="filter_dificult">
-                        <option value="Poco cuidado">Poco cuidado</option>
-                        <option value="Requiere atención">Requiere atención</option>
-                        <option value="Cuidado especial">Cuidado especial</option>                                                                       
+                        <option value="1">Poco cuidado</option>
+                        <option value="2">Requiere atención</option>
+                        <option value="3">Cuidado especial</option>                                                                       
                     </select>
                 </div>
                 <div class="submit-button">
