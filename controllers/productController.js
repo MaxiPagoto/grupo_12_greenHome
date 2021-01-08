@@ -19,8 +19,8 @@ const productController = {
       shop: async function (req,res,next){
        const modeloPrueba = await db.Benefit.findAll()
        console.log(modeloPrueba)
-       return res.send(modeloPrueba)
-        //return res.render('products/list',{products:products})
+      // return res.send(modeloPrueba)
+        return res.render('products/list',{products:products})
       },
       adminShop: function (req,res,next){
         return res.render('products/admin-list',{products:products})
@@ -137,7 +137,6 @@ const productController = {
             fs.writeFileSync(productsFilePath, productListString)
             res.redirect('/products');
           }
-        
 }
 module.exports = productController;
 
