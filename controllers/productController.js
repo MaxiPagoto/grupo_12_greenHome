@@ -45,11 +45,13 @@ const productController = {
         res.render('products/create', {categories:categories,rooms:rooms,benefits:benefits})
       },
 
-      store: function(req,res,next){
-        db.Product.create({
+      store: async function(req,res,next){
+        const rooms = req.body.filter_room;
+        const benefits = req.body.filter_benefit;
+        await db.Product.create({
           name:req.body.name,
           image: req.files[0].filename,
-          price: 1000,
+          price: req.body.price,
           discount: req.body.discount,
           line: req.body.line,
           description: req.body.description,
@@ -64,18 +66,25 @@ const productController = {
           filter_dificult: req.body.filter_dificult
         });
 
-        
-       /* const Products = await db.Product.findAll();
-        const lastID = Products[Products.length-1].id;
-        const rooms = req.body.room;
-        for (room of rooms){
+        let Products = await db.Product.findAll();
+
+        newProductID = Products[Products.length-1].id;
+
+        console.log(newProductID);
+        for (room of rooms) {
           await db.Product_room.create({
-            product_id: lastID++,
-            room_id: room
-          }) 
-        }*/
+            product_id: newProductID,
+            room_id:room
+          })
+        };
 
-
+        for (benefit of benefits) {
+          console.log("Pasó por acá " + room.id)
+          await db.Product_benefit.create({
+            product_id: newProductID,
+            benefit_id: benefit
+          })
+        }
 /*
        console.log(req.body.filter_room) 
         const newProduct = {
