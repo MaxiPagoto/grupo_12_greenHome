@@ -79,7 +79,6 @@ const productController = {
         };
 
         for (benefit of benefits) {
-          console.log("Pasó por acá " + room.id)
           await db.Product_benefit.create({
             product_id: newProductID,
             benefit_id: benefit
