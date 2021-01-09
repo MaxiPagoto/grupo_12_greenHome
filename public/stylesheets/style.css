@@ -370,9 +370,10 @@ width: 500px;
     
     }
     .categoria-img-exterior{
-      background: url(../images/inspire/categoria-img-exterior.jpg) center center;
+      background: url(../images/inspire/categoria-img-exterior2.jpg.jpg) center center;
       background-size: cover;
       height: 90vw;
+      filter:saturate(40%)
       
     }
     .categoria-img-cactus{

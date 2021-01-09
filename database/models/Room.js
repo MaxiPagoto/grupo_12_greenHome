@@ -15,7 +15,19 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
 
-    const User = sequelize.define(alias, cols, config);
 
-    return User;
+    const Room = sequelize.define(alias, cols, config);
+
+    Room.associate = function (models) {
+        Room.belongsToMany(models.Product, {
+            as: 'products',
+            through: 'product_room',
+            otherKey: 'product_id',
+            foreignKey: 'room_id',
+            timestamps: false
+        }) 
+    }
+
+  
+    return Room;
 }

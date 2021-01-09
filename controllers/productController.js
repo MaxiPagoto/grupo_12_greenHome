@@ -17,10 +17,12 @@ function getAllProducts(){
 
 const productController = {
       shop: async function (req,res,next){
-       const modeloPrueba = await db.Benefit.findAll()
-       console.log(modeloPrueba)
-      // return res.send(modeloPrueba)
-        return res.render('products/list',{products:products})
+       const modeloPrueba = await db.Product.findAll({
+        include: ['category', 'rooms', 'benefits']
+      })
+       //console.log(modeloPrueba[0].rooms)
+       return res.send(modeloPrueba[0].benefits[0].name)
+        //return res.render('products/list',{products:products})
       },
       adminShop: function (req,res,next){
         return res.render('products/admin-list',{products:products})
@@ -36,13 +38,46 @@ const productController = {
 
       // Creacion de producto
 
-      create: function(req,res, next){
-        res.render('products/create')
+      create: async function(req,res, next){
+        const categories = await db.Category.findAll()
+        const rooms = await db.Room.findAll()
+        const benefits = await db.Benefit.findAll()
+        res.render('products/create', {categories:categories,rooms:rooms,benefits:benefits})
       },
 
       store: function(req,res,next){
+        db.Product.create({
+          name:req.body.name,
+          image: req.files[0].filename,
+          price: 1000,
+          discount: req.body.discount,
+          line: req.body.line,
+          description: req.body.description,
+          copy: req.body.copy,
+          prop_light: req.body.prop_light,
+          prop_water: req.body.prop_water,
+          category_id: req.body.prop_category,
+          prop_plantpot: req.body.prop_plantpot,
+          prop_plague: req.body.prop_plague,
+          prop_height: req.body.prop_height,
+          prop_pet: req.body.prop_pet,
+          filter_dificult: req.body.filter_dificult
+        });
 
         
+       /* const Products = await db.Product.findAll();
+        const lastID = Products[Products.length-1].id;
+        const rooms = req.body.room;
+        for (room of rooms){
+          await db.Product_room.create({
+            product_id: lastID++,
+            room_id: room
+          }) 
+        }*/
+
+
+/*
+       console.log(req.body.filter_room) 
         const newProduct = {
           id: GenerarNuevoID(),
           name: req.body.name,
@@ -69,8 +104,8 @@ const productController = {
 
         const productsToStringify = JSON.stringify(AllProducts, null, ' ');
 
-        fs.writeFileSync(productsFilePath, productsToStringify)
-        res.redirect('/products');  
+        fs.writeFileSync(productsFilePath, productsToStringify)*/
+        res.redirect('/');  
       },
       
       //Agregar a Carrito de compra

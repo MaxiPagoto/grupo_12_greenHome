@@ -15,7 +15,17 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
 
-    const User = sequelize.define(alias, cols, config);
+    const Benefit = sequelize.define(alias, cols, config);
 
-    return User;
+    Benefit.associate = function (models) {
+        Benefit.belongsToMany(models.Product, {
+            as: 'products',
+            through: 'product_benefit',
+            otherKey: 'product_id',
+            foreignKey: 'benefit_id',
+            timestamps: false
+        }) 
+    }
+
+    return Benefit;
 }
