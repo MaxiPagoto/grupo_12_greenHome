@@ -35,7 +35,7 @@
                 <div class="plant-prop-row">
                     <div class="prop">
                         <img class="prop-icon color-fill" src="\icon\gardening\svg\nublado.svg" alt="">
-                        <p class="prop-text"><%=product.prop_light%></p>
+                        <p class="prop-text"><% if (product.prop_light == 2) { %>Sol Directo <% } else {%> Luz Reflejada <% } %>   </p>
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\041-watering-can.svg" alt="">
@@ -46,7 +46,7 @@
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\huella.svg" alt="">
                         <p class="prop-text">
-                            <% if(product.prop_pet){%>Pet Friendly<%} else { %> Venenosa <%}%> 
+                            <% if(product.prop_pet == 1){%>Pet Friendly<%} else { %> Venenosa <%}%> 
                         </p>
                     </div>
                 </div>
@@ -57,11 +57,14 @@
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\037-plant.svg" alt="">
-                        <p class="prop-text"><%=product.prop_plantpot%></p>
+                        <p class="prop-text">
+                            <% let macetas = ['Pequeña', 'Mediana', 'Grande', 'Muy Grande'] %>
+                            <%= macetas[product.prop_plantpot-1] %> 
+                        </p>
                     </div>
                     <div class="prop">
                         <img class="prop-icon" src="\icon\gardening\svg\error.svg" alt="">
-                        <p class="prop-text"><%=product.prop_plague%></p>
+                        <p class="prop-text"><% if(product.prop_plague == 1){%>Resistente<%} else { %> Débil <%}%> </p>
                     </div>
                 </div>
         </div>
