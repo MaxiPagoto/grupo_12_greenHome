@@ -2,6 +2,7 @@
 
 .filtros-container{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 0% 1% 2.5% 1%;
@@ -14,11 +15,25 @@
     
 }
 
+.filtros{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.search-product {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 2.5%;
+    box-sizing: border-box;
+    padding: 0% 5%;
+}
+
 .filtros-button{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 5%;
     height: 100%;
     align-items: flex-end;
     justify-content: flex-end;

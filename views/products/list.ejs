@@ -15,53 +15,10 @@
     <%-include('../partials/header')%>
    <main>
        <div><h2>Tienda</h2></div>
-       <form action="/products/list" method="GET">
-                <div class="filtros-container">
-            
-               
-                <div>
-
-                    <label>Tipo</label><br>
-                    <select class="filtro-select" name="category" id="">
-                        <option value="Todas">Todas</option>
-                        <option value="Todas">Plantas de Interior</option>
-                        <option value="Todas">Plantas de Exterior</option>
-                        <option value="Todas">Cáctus y Suculentas</option>
-                        <option value="Todas">Plantas Florales</option>
-                        <option value="Todas">Orquideas</option>
-                        <option value="Todas">Frutales</option>
-                        <option value="Todas">Kokedamas</option>
-                    </select>
-
-                </div>
-                <div>
-
-                    <label>Ambiente</label><br>
-                    <select class="filtro-select" name="filter-room" id="">
-                        <option value="Todas">Todas</option>
-                        <option value="dormitorio">Dormitorio</option>
-                        <option value="cocina">Cocina</option>
-                        <option value="baño">Baño </option>
-                        <option value="balcon">Balcón</option>
-                        <option value="oficina">Oficina </option>
-                    </select>
-
-                </div>
-                <div>
-                    <label>Cuidados</label><br>
-                        <select class="filtro-select" name="prop-space" id="">
-                            <option value="todos">Todos</option>
-                            <option value="bajo">Poco cuidado</option>
-                            <option value="medio">Requiere atencion</option>
-                            <option value="alto">Cuidado especial</option>
-                        </select>
-                </div>
-                <div class="filtros-button"><button type="submit">Filtrar</button></div> 
-            </div>
-        </form>
- 
+                
+       <%-include('../partials/filters')%>
     
-       <section class="container-tienda">
+       <section class="container-tienda">   
         <% for (product of products) { %>
         <div class= "img-articulo-tienda">
             <div class="grid-container">

@@ -20,6 +20,12 @@ const authMiddleware = require('../middlewares/authMiddleware')
 router.get('/',productController.shop);
 router.get('/admin',authMiddleware.shop,productController.adminShop)
 
+//Filtrar productos
+router.get("/filter", productController.filter)
+
+//Ruta hacia la búsqueda del producto
+router.get('/search', productController.search)
+
 //Ruta hacia detalle de product
 router.get('/detail/:id', productController.article);
 
