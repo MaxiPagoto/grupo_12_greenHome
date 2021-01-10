@@ -46,6 +46,14 @@
     color: #E11A1A;
     list-style: inside;
 }
+.profile-avatar {
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
 
 @media(min-width: 1023px){
 

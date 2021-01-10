@@ -44,7 +44,8 @@
     background-image: url(../images/desing/inspire-009.jpg);
     }
   .item02 { grid-area: item02; 
-    background-image: url(../images/desing/datospersonales.jpg)
+    background-image: url(../images/desing/datospersonales.jpg);
+    background-position: 0% -30px;
 }
   .item03 { grid-area: item03; 
     background-image: url(../images/desing/inspire_001.jpg);

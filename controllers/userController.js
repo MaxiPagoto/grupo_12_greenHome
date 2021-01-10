@@ -1,70 +1,57 @@
 const {check, validationResult, body} = require('express-validator');
 const bycrypt = require('bcrypt');
-
 const fs = require('fs');
 const path = require('path')
 const usersFilePath = path.join(__dirname,'../data/users_GreenHome.json');
 const usersList = JSON.parse(fs.readFileSync(usersFilePath, {encoding:'utf-8'}));
-const db = require('../database/models/index.js')
+const db = require('../database/models/index.js');
 
-const writeData = function(data,filePath){
-    let stringUsers = JSON.stringify(data, null," ");
-    fs.writeFileSync(filePath, stringUsers)
-};
-const newID = function(){
-    let lastID = (usersList[usersList.length-1].id)
-    return ++lastID
-;}
 
 
 const userController = {
-    register: function (req,res,next){
+
+    //Register
+    register: (req,res,next)=>{
         res.render('users/register')
     },
-    processRegister: function(req,res,next){
+    processRegister: async(req,res,next)=>{
         let errors = validationResult(req);
           
         if (!errors.isEmpty()){
             return res.render('users/register', {errors:errors.errors})
         } else {
-            let newUser ={
-                id: newID(),
-                email:req.body.email,
+            await db.User.create({
+                email: req.body.email,
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
-                category: "guest",
-                password:bycrypt.hashSync(req.body.password, 10),
-                avatar:'default-image.png'
-            }
-            if (req.files[0]){
-                newUser.avatar=req.files[0].filename; 
-            }
-            let usersToSave = [...usersList, newUser];
-            writeData(usersToSave, usersFilePath);
+                password: bycrypt.hashSync(req.body.password, 10),
+                avatar: req.files[0].filename
+            });
             return res.redirect('/')};
     },
-
-    login: function (req,res,next){
+    
+    //Login
+    login: (req,res,next)=>{
         res.render('users/login')
     },
-    processLogin: (req, res) => {
+    processLogin: async (req, res) => {
         let errors = validationResult(req);
         if (!errors.isEmpty()){
             return res.render('users/login', {errors:errors.errors})
         }else{
-            let userFound = usersList.find(function(user){return user.email == req.body.email})
+            let userFound = await db.User.findOne({where:{email:req.body.email}});
             req.session.userLogged = userFound.email;
             if (req.body.remember!=undefined){
-            res.cookie('userEmail',userFound.email,{maxAge:1000*60*60});
-            };
-            return res.redirect('/users/profile')
+                res.cookie('userEmail',userFound.email,{maxAge:1000*60*60});
+                };
+           return res.redirect('/users/profile')
         }
     },
-
-    profile:(req,res,next)=>{     
-        const user = usersList.find((user)=>{
-            return user.email == req.session.userLogged;
-        });
+    
+    //Read
+    profile: async (req,res,next)=>{     
+        
+        let user = await db.User.findOne({where:{email:req.session.userLogged}})
         
         res.render('users/profile',{
             name: user.first_name,
@@ -72,7 +59,32 @@ const userController = {
             avatar: user.avatar
         });
     },
+    //Edit
+    edit: async (req,res,next)=>{
+        let user = await db.User.findOne({where:{email:req.session.userLogged}});
+        return res.render('users/edit',{user:user});
+    },
+    processEdit: async(req,res,next)=>{
+        let errors = validationResult(req);
+          
+        if (!errors.isEmpty()){
+            let user = await db.User.findOne({where:{email:req.session.userLogged}});
+            return res.render('users/edit', {errors:errors.errors, user:user})
+        } else {
+            await db.User.update({  
+                password: bycrypt.hashSync(req.body.password, 10),
+            },{where:{email:req.session.userLogged}});
+            if (typeof req.files[0] !== 'undefined'){
+                await db.User.update({
+                avatar: req.files[0].filename},
+                {where:{email:req.session.userLogged}}
+                )
+            }
+        }
+            return res.redirect("/users/profile")
+    },
 
+    //Logout
     logout:(req,res)=>{
         req.session.destroy();
         res.cookie('userEmail',null,{maxAge:-1});

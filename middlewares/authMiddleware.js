@@ -20,17 +20,24 @@ const authMiddleware = {
     },
 
     profile: function(req,res,next){
-        if(req.session.userLogged ){
+        if(req.session.userLogged){
             return (next());
         }res.redirect('/users/login');
 
     },
+    edit: function(req,res,next){
+        if(req.session.userLogged){
+            return (next());
+        }res.redirect('/users/login');
 
+    },
     login:function(req,res,next){
-        if(!req.session.userLogged ){
+        if(!req.session.userLogged){
             return (next());
         }res.redirect('/');
     }
+
+
 
 }
 
