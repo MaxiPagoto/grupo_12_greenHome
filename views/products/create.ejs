@@ -17,6 +17,9 @@
         <form action="/products/create" method="POST" enctype="multipart/form-data">
             <section class="carga-visuales-container">
                 <div class="carga-titulo-principal"><h2> Agregar producto</h1></div>
+                    <%if (typeof errors != 'undefined'){ for (error of errors){%>
+                        <li class="errors-li"><%=error.msg%></li>
+                        <%}}%>
                 <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
                 <div class="visual-selector-container">
                     <div class="visual-selector">

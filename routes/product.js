@@ -15,6 +15,7 @@ const storage = multer.diskStorage({
     const upload = multer({ storage: storage })
 
 const authMiddleware = require('../middlewares/authMiddleware')
+const productValidator = require('../middlewares/productValidator')
 
 //Ruta hacia la tienda
 router.get('/',productController.shop);
@@ -31,11 +32,11 @@ router.get('/detail/:id', productController.article);
 
 //Ruta hacia Crear y guardar nuevo producto
 router.get('/create',authMiddleware.create, productController.create);
-router.post('/create', upload.any(), productController.store);
+router.post('/create', upload.any(),productValidator.create, productController.store);
 
 //Ruta hacia Modificar y guardar producto existente
 router.get('/edit/:id',authMiddleware.create, productController.edit)
-router.post('/edit/:id',upload.any(), productController.save)
+router.post('/edit/:id',upload.any(), productValidator.edit ,productController.save)
 
 //Ruta hacia carrito de compras
 router.get('/cart', productController.cart);

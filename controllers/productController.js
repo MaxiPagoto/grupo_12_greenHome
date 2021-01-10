@@ -1,3 +1,4 @@
+const {check, validationResult, body} = require('express-validator');
 const { EDESTADDRREQ } = require('constants');
 const { render } = require('ejs');
 const fs = require('fs');
@@ -81,6 +82,13 @@ const productController = {
       },
 
       store: async function(req,res,next){
+        const categories = await db.Category.findAll()
+        const rooms = await db.Room.findAll()
+        const benefits = await db.Benefit.findAll()
+        let errors = validationResult(req);
+        if (!errors.isEmpty()){
+          return res.render('products/create', {errors:errors.errors,categories:categories,rooms:rooms,benefits:benefits})
+        }else{
         const rooms = req.body.filter_room;
         const benefits = req.body.filter_benefit;
         await db.Product.create({
@@ -119,7 +127,7 @@ const productController = {
           })
         }
         res.redirect('/');  
-      },
+      }},
       
       //Agregar a Carrito de compra
 
@@ -139,6 +147,15 @@ const productController = {
       }, 
         
       save: async function(req,res,next){
+        const categories = await db.Category.findAll()
+        const rooms = await db.Room.findAll()
+        const benefits = await db.Benefit.findAll()
+        const productoSQL = await db.Product.findByPk(req.params.id,{
+          include: ['category', 'rooms', 'benefits']})
+        let errors = validationResult(req);
+        if (!errors.isEmpty()){
+          return res.render('products/edit', {errors:errors.errors,product:productoSQL,categories:categories,rooms:rooms,benefits:benefits})
+        }else{
 
         const rooms = req.body.filter_room;
         const benefits = req.body.filter_benefit;
@@ -197,7 +214,8 @@ const productController = {
         image: req.files[0].filename},
         {where:{id:req.params.id}}
         )
-    }
+      }
+    } 
 
      res.redirect('/')
       },
