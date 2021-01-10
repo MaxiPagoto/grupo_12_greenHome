@@ -30,6 +30,10 @@ router.post('/login', upload.any(),usersValidator.login ,userController.processL
 router.get('/register',authMiddleware.login, userController.register);
 router.post('/register', upload.any(),usersValidator.register ,userController.processRegister)
 router.get('/Profile', upload.any(),authMiddleware.profile, userController.profile)
+router.get('/edit/', upload.any(),authMiddleware.edit, userController.edit)
+router.post('/edit', upload.any(),usersValidator.edit ,userController.processEdit)
+
 router.get('/logout', userController.logout)
+
 
 module.exports = router;

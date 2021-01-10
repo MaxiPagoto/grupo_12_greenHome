@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="\stylesheets\style.css" rel="stylesheet" />
+    <link href="/stylesheets/Registro.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body>
+    <%-include('../partials/header')%>                
+    </section>
+    </header>
+    <main>
+        <section class="registro-container">
+            <img src="/images/users/<%=user.avatar%> " alt=""class="profile-avatar" >
+            <h2 class="titulo-registro">Editando <%=user.first_name%> <%=user.last_name%></h2>
+            <div class="post-container">
+                <ul class = "errors-ul">
+                    <%if (typeof errors != 'undefined'){ for (error of errors){%>
+                    <li class="errors-li"><%=error.msg%></li>
+                    <%}}%>
+                </ul>
+           
+                <form action="/users/edit" method="POST" enctype="multipart/form-data">
+                    <div class="registro-input">
+                        <input class="box-container" type="email" name="email" id="email" placeholder="Email" disabled="disabled" value="<%=user.email%>">
+                    </div>
+                    <div class="registro-input">
+                        <input class="box-container" type="text" name="first_name" id="first_name" placeholder="Nombre"disabled="disabled" value="<%=user.first_name%>">
+                    </div>
+                    <div class="registro-input"> 
+                        <input class="box-container" type="text" name="last_name" id="last_name" placeholder="Apellido"disabled="disabled" value="<%=user.last_name%>">
+                    </div>
+                    <div class="registro-input">
+                        <label for="image" class="form-label col-12">Avatar:</label>
+						<input type="file" id="image" name="avatar" class="">
+                    </div>
+                    <div class="registro-input registro-contraseña">
+                        <input class="box-container" type="password" name="password" id="password" placeholder="Contraseña">
+                    </div>
+                    <div class="registro-input">
+                        <input class="box-container" type="password" name="retype" id="retype" placeholder="Confirmación contraseña">
+                    </div>
+                    <div class="registro-input">
+                        <button type="submit" class="box-container-buttom">Actualizar datos</button> <br>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>  
+    
+</body>
+</html>

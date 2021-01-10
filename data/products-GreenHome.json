@@ -144,28 +144,5 @@
   "prop_height": "",
   "prop_pet": "true",
   "filter_dificult": "Poco cuidado"
- },
- {
-  "id": 48,
-  "name": "Planta",
-  "image": "kisspng-hairstyle-long-hair-portable-network-graphics-wig-25-top-cb-hair-png-hd-collection-2-18-for-picsart-5cbfb4fb6c6656.387819821556067579444.png",
-  "price": "10000",
-  "discount": "10",
-  "line": "Linea",
-  "description": "Descrpi",
-  "copy": "Copy",
-  "prop_light": "Luz reflejada",
-  "prop_water": "1",
-  "prop_category": "1",
-  "prop_plantpot": "Pequeña",
-  "prop_plague": "Resistente",
-  "prop_height": "0.25",
-  "prop_pet": "true",
-  "filter_dificult": "1",
-  "filter_room": [
-   "1",
-   "2",
-   "3"
-  ]
  }
 ]
