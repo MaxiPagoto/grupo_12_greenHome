@@ -18,24 +18,6 @@
   "description": "El poto o potus, es una planta colgante o trepadora. Su uso es común en muchos hogares.  El potus tiene unas hojas anchas de color verde y con manchas claras (amarillas o blancas) que florecen cuando están bien cuidadas. A menudo, se utiliza como elemento decorativo en lugares comunes porque es una planta atractiva, resistente y requiere de pocos cuidados."
  },
  {
-  "id": 2,
-  "name": "Costilla de Adan",
-  "image": "Costilla de Adan.jpg",
-  "price": "8000",
-  "discount": "0",
-  "line": "Elegante Y resistente ",
-  "description": "La Monstera deliciosa, conocida popularmente como Costilla de Adán por sus hojas en forma de costillar, es una de las plantas de interior resistentes (y aptas para negados) más apreciadas. Entre las múltiples razones, destaca que, además de ser muy resistente (y fácil de cuidar), sus hojas resultan muy decorativas; tanto que se han usado hasta la saciedad como detalle decorativo en la revistas de arquitectura y diseño convirtiéndola en una planta tan cool como todoterreno.  Originaria de la frondosa selva, la monstera es una planta trepadora que vive bien con poca luz, motivo por el que se suele ver en porterías y rincones sombríos. Le gusta la humedad, pero no tolera el encharcamiento. Y no es muy exigente en cuanto cuidados. Pero, eso sí, conviene mantenerla alejada de perros y gatos, ya que todas las partes de la planta pueden ser tóxicas.  ",
-  "copy": "Es una planta de interior muy resistente y requiere pocos cuidados, además es perfecta para decorar grandes espacios",
-  "prop_light": "Luz reflejada",
-  "prop_water": "1",
-  "prop_category": "Plantas de Interior",
-  "prop_plantpot": "Grande",
-  "prop_plague": "Resistente",
-  "prop_height": "",
-  "prop_pet": true,
-  "filter_dificult": "Poco cuidado"
- },
- {
   "id": 3,
   "name": "Croton fideo",
   "image": "Croton.png",

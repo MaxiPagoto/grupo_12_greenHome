@@ -21,7 +21,7 @@ const productController = {
         include: ['category', 'rooms', 'benefits']
       })
        //console.log(modeloPrueba[0].rooms)
-       return res.send(modeloPrueba[0].benefits[0].name)
+       return res.render('products/list',{product:modeloPrueba})
         //return res.render('products/list',{products:products})
       },
       adminShop: function (req,res,next){
@@ -70,7 +70,6 @@ const productController = {
 
         newProductID = Products[Products.length-1].id;
 
-        console.log(newProductID);
         for (room of rooms) {
           await db.Product_room.create({
             product_id: newProductID,
@@ -124,19 +123,71 @@ const productController = {
 
       // Editar Producto
 
-      edit:function(req,res,next){
+      edit:async function(req,res,next){
 
         const product = getAllProducts();
         const id = req.params.id;
         const result  = products.find((product)=> product.id == id);
+        
+        //const productoToEdit = await db.product.findBypPk(req.params.id).then((result)=>{
+          //return result;
+        //})
+        const categories = await db.Category.findAll()
+        const rooms = await db.Room.findAll()
+        const benefits = await db.Benefit.findAll()
+        const productoSQL = await db.Product.findAll({
+          include: ['category', 'rooms', 'benefits']
+        })
+
+        console.log('esto',productoSQL)
+
+        const busqueda = await db.Product.findByPk(req.params.id,{
+          include:['category', 'rooms', 'benefits']
+        })
+        .then(function(resutado){
+          return resutado;
+        })
+
+      
+
+    /*   await db.product.update({
+           name:'nombre-cambiado',
+          image: 'img-cambiada',
+          price: req.body.price,
+          discount: req.body.discount,
+          line: req.body.line,
+          description: req.body.description,
+          copy: req.body.copy,
+          prop_light: req.body.prop_light,
+          prop_water: req.body.prop_water,
+          category_id: req.body.prop_category,
+          prop_plantpot: req.body.prop_plantpot,
+          prop_plague: req.body.prop_plague,
+          prop_height: req.body.prop_height,
+          prop_pet: req.body.prop_pet,
+          filter_dificult: req.body.filter_dificult
+        },{
+          where:{
+            id: req.params.id
+          }
+        })*/
+
+     //   res.redirect('/')
+
+       
+
+        // include: ['category', 'rooms', 'benefits']
+        
+
+    // res.send(productoSQL)
 
         
 
-        res.render('products/edit',{productToEdit: result});
+       res.render('products/edit',{productToEdit: result,categories:categories,rooms:rooms,benefits:benefits,busqueda:busqueda});
       },  
            
-      save: function(req,res,next){
-      const productsToStore =  [...products];
+      save:  function(req,res,next){
+   /*   const productsToStore =  [...products];
       const id = req.params.id;
 
         const edition = productsToStore.map((product) =>{
@@ -167,7 +218,31 @@ const productController = {
 
         
         fs.writeFileSync('./data/products-GreenHome.json', newAllProductsToStringify)
-        res.redirect('/products/detail/'+id);
+        res.redirect('/products/detail/'+id); */
+
+         db.product.update({
+          name:'nombre-cambiado',
+         image: 'img-cambiada',
+         price: req.body.price,
+         discount: req.body.discount,
+         line: req.body.line,
+         description: req.body.description,
+         copy: req.body.copy,
+         prop_light: req.body.prop_light,
+         prop_water: req.body.prop_water,
+         category_id: req.body.prop_category,
+         prop_plantpot: req.body.prop_plantpot,
+         prop_plague: req.body.prop_plague,
+         prop_height: req.body.prop_height,
+         prop_pet: req.body.prop_pet,
+         filter_dificult: req.body.filter_dificult
+       },{
+        where:{
+           id: req.params.id
+         }
+       })
+
+     res.redirect('/')
       },
 
 
