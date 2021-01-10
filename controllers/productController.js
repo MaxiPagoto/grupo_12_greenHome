@@ -129,9 +129,6 @@ const productController = {
         const id = req.params.id;
         const result  = products.find((product)=> product.id == id);
         
-        //const productoToEdit = await db.product.findBypPk(req.params.id).then((result)=>{
-          //return result;
-        //})
         const categories = await db.Category.findAll()
         const rooms = await db.Room.findAll()
         const benefits = await db.Benefit.findAll()
@@ -139,20 +136,9 @@ const productController = {
           include: ['category', 'rooms', 'benefits']
         })
 
-        console.log('esto',productoSQL)
-
-        const busqueda = await db.Product.findByPk(req.params.id,{
-          include:['category', 'rooms', 'benefits']
-        })
-        .then(function(resutado){
-          return resutado;
-        })
-
-      
-
-    /*   await db.product.update({
-           name:'nombre-cambiado',
-          image: 'img-cambiada',
+        await db.Product.create({
+          name:req.body.name,
+          image: req.files[0].filename,
           price: req.body.price,
           discount: req.body.discount,
           line: req.body.line,
@@ -166,31 +152,34 @@ const productController = {
           prop_height: req.body.prop_height,
           prop_pet: req.body.prop_pet,
           filter_dificult: req.body.filter_dificult
-        },{
-          where:{
-            id: req.params.id
-          }
-        })*/
+        });
 
-     //   res.redirect('/')
+        let Products = await db.Product.findAll();
 
-       
+        newProductID = Products[Products.length-1].id;
 
-        // include: ['category', 'rooms', 'benefits']
-        
+        for (room of rooms) {
+          await db.Product_room.create({
+            product_id: newProductID,
+            room_id:room
+          })
+        };
 
-    // res.send(productoSQL)
-
-        
+        for (benefit of benefits) {
+          await db.Product_benefit.create({
+            product_id: newProductID,
+            benefit_id: benefit
+          })
+        }
 
        res.render('products/edit',{productToEdit: result,categories:categories,rooms:rooms,benefits:benefits,busqueda:busqueda});
       },  
            
       save:  function(req,res,next){
-   /*   const productsToStore =  [...products];
+   /* const productsToStore =  [...products];
       const id = req.params.id;
 
-        const edition = productsToStore.map((product) =>{
+      const edition = productsToStore.map((product) =>{
           
           if(id == product.id){
             product.name = req.body.name,
@@ -219,10 +208,16 @@ const productController = {
         
         fs.writeFileSync('./data/products-GreenHome.json', newAllProductsToStringify)
         res.redirect('/products/detail/'+id); */
+        const categories = await db.Category.findAll()
+        const rooms = await db.Room.findAll()
+        const benefits = await db.Benefit.findAll()
+        const productoSQL = await db.Product.findAll({
+          include: ['category', 'rooms', 'benefits']
+        })
 
          db.product.update({
-          name:'nombre-cambiado',
-         image: 'img-cambiada',
+         name:req.body.name,
+         image: req.files[0] ? req.files[0].filename : product.image,
          price: req.body.price,
          discount: req.body.discount,
          line: req.body.line,
@@ -236,17 +231,34 @@ const productController = {
          prop_height: req.body.prop_height,
          prop_pet: req.body.prop_pet,
          filter_dificult: req.body.filter_dificult
-       },{
+        },{
         where:{
            id: req.params.id
-         }
+          }
        })
+
+       for (room of rooms) {
+        await db.Product_room.update({
+          room_id:room
+        },{
+          where:{
+            product_id:req.params.id
+          }
+        })
+      };
+
+      for (benefit of benefits) {
+        await db.Product_benefit.update({
+          product_id: newProductID,
+          benefit_id: benefit
+        })
+      }
 
      res.redirect('/')
       },
 
 
-          //Eliminar producto
+        //Eliminar producto
 
           delete: (req, res,next) => {
             const AllProducts = getAllProducts();
