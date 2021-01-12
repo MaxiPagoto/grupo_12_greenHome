@@ -66,3 +66,20 @@ Stop doing:
 
 - Dejar el testeo y verificacion muy cerca del deadline.
 - Nombrar mejor las branches y commit más claros.
+
+|| Retro Sprint 6
+
+Start Doing:
+- Ser mas extricos en los tiempos internos del sprint.
+- Avanzar en "paginas" EJS secundarias a las solicitadas 
+
+More of: 
+- Usar mas el Trello.
+
+
+Keep Doing : 
+- Codear in live.
+- Realizar el testing y depuración de código en vivo. Nos ayuda a aprender de nuestros errores y compartiendo la perspectiva desde donde se escribió.
+
+Stop doing: 
+- Dejar el testeo y verificacion muy cerca del deadline.
