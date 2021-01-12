@@ -112,6 +112,7 @@ INSERT INTO `greenhome`.`rooms` (`name`) VALUES ('Balcón');
 INSERT INTO `greenhome`.`rooms` (`name`) VALUES ('Oficina');
 INSERT INTO `greenhome`.`rooms` (`name`) VALUES ('Jardín');
 INSERT INTO `greenhome`.`rooms` (`name`) VALUES ('Terraza');
+INSERT INTO `greenhome`.`rooms` (`name`) VALUES ('Living');
 
 INSERT INTO `greenhome`.`benefits` (`name`) VALUES ('Trae buena suerte');
 INSERT INTO `greenhome`.`benefits` (`name`) VALUES ('Ayuda a la ansiedad');

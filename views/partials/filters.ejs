@@ -1,40 +1,40 @@
 <div class="filtros-container">
             
-                <form action="/products/filter" class= "filtros">
-                <div>
-                    <label>Tipo</label><br>
-                    <select class="filtro-select" name="category_id" id="">
-                        <option value="">Todas</option>
-                        <% for (category of categories) { %>               
-                        <option value="<%=category.id%>"><%=category.name%></option>
-                        <% } %> 
-                    </select>
+    <form action="/products/filter" class= "filtros">
+    <div>
+        <label>Tipo</label><br>
+        <select class="filtro-select" name="category_id" id="">
+            <option value="">Todas</option>
+            <% for (category of categories) { %>               
+            <option value="<%=category.id%>"><%=category.name%></option>
+            <% } %> 
+        </select>
 
-                </div>
-                <div>
+    </div>
+    <div>
 
-                    <label>Ambiente</label><br>
-                    <select class="filtro-select" name="filter_room" id="">
-                        <option value="">Todas</option>
-                        <% for (room of rooms) { %> 
-                            <option value="<%=room.id%>"><%=room.name%></option>
-                            <% } %> 
-                    </select>
+        <label>Ambiente</label><br>
+        <select class="filtro-select" name="filter_room" id="">
+            <option value="">Todas</option>
+            <% for (room of rooms) { %> 
+                <option value="<%=room.id%>"><%=room.name%></option>
+                <% } %> 
+        </select>
 
-                </div>
-                <div>
-                    <label>Cuidados</label><br>
-                        <select class="filtro-select" name="filter_dificult" id="">
-                            <option value="">Todos</option>
-                            <option value="1">Poco cuidado</option>
-                            <option value="2">Requiere atencion</option>
-                            <option value="3">Cuidado especial</option>
-                        </select>
-                </div>
-                <div class="filtros-button"><button type="submit">Filtrar</button></div>
-                </form> 
-                <form action="products/search" method="GET" class="search-product">
-                    <input type="search" name="search_query">
-                    <button type="submit"class="filtros-button">Buscar</button>
-                </form>
-            </div>
+    </div>
+    <div>
+        <label>Cuidados</label><br>
+            <select class="filtro-select" name="filter_dificult" id="">
+                <option value="">Todos</option>
+                <option value="1">Poco cuidado</option>
+                <option value="2">Requiere atencion</option>
+                <option value="3">Cuidado especial</option>
+            </select>
+    </div>
+    <div class="filtros-button"><button type="submit">Filtrar</button></div>
+    </form> 
+    <form action="/products/search" method="GET" class="search-product">
+        <input type="search" name="search_query">
+        <button type="submit"class="filtros-button">Buscar</button>
+    </form>
+</div>

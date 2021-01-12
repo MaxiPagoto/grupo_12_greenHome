@@ -9,7 +9,7 @@ const productValidator= {
         .notEmpty().withMessage('Nombre de producto obligatorio')
         .bail(),
         body('price')
-        .notEmpty().withMessage('El precio debe ser obligatorio')
+        .notEmpty().withMessage('El precio es obligatorio')
         .bail(),
         body('discount')
         .custom((value)=>{
@@ -64,7 +64,7 @@ const productValidator= {
         .notEmpty().withMessage('Nombre de producto obligatorio')
         .bail(),
         body('price')
-        .notEmpty().withMessage('El precio debe ser obligatorio')
+        .notEmpty().withMessage('El precio es obligatorio')
         .bail(),
         body('discount')
         .custom((value)=>{

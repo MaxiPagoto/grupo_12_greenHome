@@ -45,7 +45,9 @@ const productController = {
         },{
           include: ['category', 'rooms', 'benefits']
         });
-        return res.render('products/list',{products:productList})
+        const categories = await db.Category.findAll()
+        const rooms = await db.Room.findAll()
+        return res.render('products/list',{products:productList,rooms:rooms,categories:categories})
       }
       ,
       filter: async function (req,res,next){
