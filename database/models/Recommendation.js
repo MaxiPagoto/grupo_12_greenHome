@@ -21,6 +21,16 @@ module.exports = (sequelize, DataTypes) => {
 
     const Recommendation = sequelize.define(alias, cols, config);
 
+
+    Recommendation.associate = function (models) {
+        Recommendation.belongsToMany(models.Product, {
+            as: 'products',
+            through: 'product_Recommendation',
+            otherKey: 'product_id',
+            foreignKey: 'Recommendation_id',
+            timestamps: false
+        }) 
+    }
 /*
 
     Product.associate = function (models) {

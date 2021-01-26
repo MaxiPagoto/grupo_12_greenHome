@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="\stylesheets\style.css" rel="stylesheet" />
+    <link href="/stylesheets/Registro.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body>
+    <%-include('../partials/header')%>                
+    </section>
+    </header>
+    <main>
+        <section class="registro-container">
+            <h2 class="titulo-registro">Post</h2>
+            <div class="post-container">
+                <ul class = "errors-ul">
+                    <%if (typeof errors != 'undefined'){ for (error of errors){%>
+                    <li class="errors-li"><%=error.msg%></li>
+                    <%}}%>
+                </ul>
+           
+                <form action="/inspire/create" method="POST" enctype="multipart/form-data">
+                    <div class="registro-input">
+                        <label for="image" class="form-label col-12">Fotografía:</label>
+						<input type="file" id="image" name="image" class="">
+                    </div>
+                    <div class="registro-input">
+                        <input class="box-container" type="text" name="text" id="text" placeholder="¿Qué quieres transmitir?">
+                    </div>
+                    <div class="desciption-input-box">
+                        <label for="prop_category" class="descripcion-input" >Producto</label>
+                        <select name="product" class="descripcion-input" id="product"> 
+                            <% for (product of products){%> 
+                                <option value="<%=product.id%>"><%=product.name%></option>
+                               <% } %>                           
+                        </select>
+                    </div>
+                    <div class="registro-input">
+                        <button type="submit" class="box-container-buttom">Inspirar!</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>  
+    
+</body>
+</html>

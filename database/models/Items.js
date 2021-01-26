@@ -44,6 +44,16 @@ module.exports = (sequelize, DataTypes) => {
 
     const Item = sequelize.define(alias, cols, config);
 
+    Item.associate = function (models){
+        Item.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'user_id'
+        });
+        Item.belongsTo(models.Order, {
+            as: 'order',
+            foreignKey: 'order_id'
+        });
+    }
 /*
 
     Product.associate = function (models) {

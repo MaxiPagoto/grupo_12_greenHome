@@ -27,6 +27,18 @@ module.exports = (sequelize, DataTypes) => {
 
     const Post = sequelize.define(alias, cols, config);
 
+
+    Post.associate = function (models){
+        Post.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'user_id'
+        });
+
+        Post.belongsTo(models.Product, {
+            as: 'product',
+            foreignKey: 'product_id'
+        });
+    }
 /*
 
     Product.associate = function (models) {

@@ -81,6 +81,17 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'product_id',
             otherKey: 'benefit_id',
             timestamps: false
+        });
+        Product.belongsToMany(models.Recommendation, {
+            as: 'recommendations',
+            through: 'product_recommendation',
+            foreignKey: 'product_id',
+            otherKey: 'recommendation_id',
+            timestamps: false
+        });
+        Product.hasMany(models.Post, {
+            as: 'posts',
+            foreignKey: 'user_id'
         })
     }
 

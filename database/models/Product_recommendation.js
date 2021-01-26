@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
         product_id: {
             type: DataTypes.INTEGER
         },
-        recommendation_id: {
+        recommendationn_id: {
             type: DataTypes.INTEGER
         }
     }
