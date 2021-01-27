@@ -9,7 +9,7 @@ const methodOverride = require('method-override'); // Para usar Metodos PUT y DE
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');
-const apisRouter = require('./routes/apis');
+const apisUsersRouter = require('./routes/api/apiUsersRouter');
 const cookiesCheck = require('./middlewares/cookiesCheck')
 const sessionCheck = require('./middlewares/sessionCheck')
 
@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
-app.use('/api', apisRouter);
+app.use('/api/users', apisUsersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
