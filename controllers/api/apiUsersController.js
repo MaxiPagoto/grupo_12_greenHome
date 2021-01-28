@@ -20,12 +20,11 @@ const apisUsersController = {
             }
         },
     delete: async(req,res,next)=>{
-        const id = req.body.id
         try{
             await db.User.destroy(
                 {
                   where:{
-                    id:id
+                    id:req.body.id
                   }
                 });
             return res.json({
