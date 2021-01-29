@@ -17,6 +17,7 @@ let formulario = document.querySelector('#register-form')
  let apellido = document.querySelector('#last_name');
  let password = document.querySelector('#password');
  let retype = document.querySelector('#retype');
+ let avatar = document.querySelector('#image')
 
 // Verificador de email
  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
@@ -136,15 +137,43 @@ retype.onkeyup = function(){
 
 
  formulario.addEventListener('submit', function(e){ 
-    e.preventDefault();
-    let nombre = document.querySelector('#first_name');
-
+    
+const error = []
    
 
     if(nombre.value == ''){
         alert('El campo Nombre es obligatorio')
+        error.push(1)
     }
+     if (!email.value.match(pattern)){
+         alert('El campo Email es incorrecto o vacio')
+         error.push(1)
+     }
 
+     if(apellido.value == ''){
+         alert('El apellido es obligatorio')
+         error.push (1)
+     }
+
+     if(!avatar.value.length > 0){
+         alert('El avatar es obligatorio')
+         error.push(1)
+     }
+    
+     if(password.value.length < 6){
+         alert('La contraseña es demasiado corta')
+         error.push(1)
+     }
+
+        if(retype.value !== password.value){
+            alert('Las contraseñas no coinciden')
+            error.push(1)
+        }
+
+        if(error.length >0 ){
+            e.preventDefault()
+        }
+    
  })
 
 })
