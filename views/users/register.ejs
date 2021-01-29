@@ -23,30 +23,37 @@
                     <%}}%>
                 </ul>
            
-                <form action="/users/register" method="POST" enctype="multipart/form-data">
+                <form action="/users/register" id="register-form" method="POST" enctype="multipart/form-data">
                     <div class="registro-input">
-                        <input class="box-container" type="email" name="email" id="email" placeholder="Email">
+                        <input class="box-container" type="email" name="email" id="email" placeholder="Email*" >
+                        <div class="js-validation-email" >Asegurate de tener acceso a este e-mail.</div>
                     </div>
                     <div class="registro-input">
-                        <input class="box-container" type="text" name="first_name" id="first_name" placeholder="Nombre">
+                        <input class="box-container" type="text" name="first_name" id="first_name" placeholder="Nombre*">
+                        <div class="js-validation-first-name">El nombre es obligatorio</div>
                     </div>
                     <div class="registro-input"> 
-                        <input class="box-container" type="text" name="last_name" id="last_name" placeholder="Apellido">
+                        <input class="box-container" type="text" name="last_name" id="last_name" placeholder="Apellido*">
+                        <div class="js-validation-last-name">El apellido es obligatorio</div>
                     </div>
                     <div class="registro-input">
                         <label for="image" class="form-label col-12">Avatar:</label>
-						<input type="file" id="image" name="avatar" class="">
+                        <input type="file" id="image" name="avatar" class="">
+                        <div class="js-validation">El campo es obligatorio</div>
                     </div>
                     <div class="registro-input registro-contraseña">
                         <input class="box-container" type="password" name="password" id="password" placeholder="Contraseña">
+                        <div class="js-validation-password">La contraseña debe tener minimo 6 caracteres</div>
                     </div>
                     <div class="registro-input">
                         <input class="box-container" type="password" name="retype" id="retype" placeholder="Confirmación contraseña">
+                        <div class="js-validation-retype">La contraseña no coincide</div>
                     </div>
                     <div class="registro-input">
                         <button type="submit" class="box-container-buttom">Registrarse</button>
                     </div>
                 </form>
+                <script src="/js/js-register.js"></script>
             </div>
         </section>
 
