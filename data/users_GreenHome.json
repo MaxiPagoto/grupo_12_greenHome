@@ -34,5 +34,14 @@
   "category": "guest",
   "password": "$2b$10$3C5Lz1PgCvBbtS/G3iPYEe3BG.J4ZnVQy.t5vULHkdBHaasfF4kCa",
   "avatar": "avatar_user_1608557427542.jpg"
+ },
+ {
+  "id": 5,
+  "email": "maxipagoto@hotmail.com",
+  "first_name": "maxi ",
+  "last_name": "pagoto",
+  "category": "guest",
+  "password": "$2b$10$kU6NWJPUs/InXeqXb9ddLOIg1UKH56PAQgY2UwIb2Fo6oYNMn0Huy",
+  "avatar": "avatar_d6b572cc9141a65e71aecbc2920595dd_1611784882577.jpg"
  }
 ]

@@ -10,6 +10,9 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');
 const inspireRouter = require('./routes/inspire');
+const apisUsersRouter = require('./routes/api/apiUsersRouter');
+const apisPostsRouter = require('./routes/api/apiPostRouter');
+const apisCartRouter = require('./routes/api/apiPostRouter');
 const cookiesCheck = require('./middlewares/cookiesCheck')
 const sessionCheck = require('./middlewares/sessionCheck')
 
@@ -40,6 +43,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
 app.use('/inspire', inspireRouter);
+app.use('/api/users', apisUsersRouter);
+app.use('/api/posts', apisPostsRouter);
+app.use('/api/cart', apisCartRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

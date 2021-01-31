@@ -22,7 +22,7 @@
             </ul>
         <div class="login-post">
             <div class="login-form">
-                <form action="/users/login" method="POST">
+                <form action="/users/login" id="login-form" method="POST">
                     <div>
                         <label for="correo"></label>
                         <input class="contraseña-login" type="email" name="email" id="email" placeholder="Correo electronico">
@@ -49,6 +49,7 @@
         </div>
 
         </section>
+        <script src="/js/js-login.js"></script>
     </main>
     
     <%-include('../partials/footer')%>
