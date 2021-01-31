@@ -3,7 +3,9 @@ var router = express.Router();
 const apisController = require('../../controllers/api/apiItemsController')
 
 
-router.get('/:userID/list', apisController.list);
+router.post('/create', apisController.store);
+router.get('/:id', apisController.list);
+router.post('/destroy', apisController.delete);
 
 
 module.exports = router;

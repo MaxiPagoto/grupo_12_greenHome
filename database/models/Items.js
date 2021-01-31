@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
         quantity: {
             type: DataTypes.INTEGER
         },
-        total: {
+        subtotal: {
             type: DataTypes.DECIMAL
         },
         discount: {

@@ -40,9 +40,9 @@ const userController = {
             return res.render('users/login', {errors:errors.errors})
         }else{
             let userFound = await db.User.findOne({where:{email:req.body.email}});
-            req.session.userLogged = userFound.email;
+            req.session.userLogged = {id:userFound.id, email: userFound.email};
             if (req.body.remember!=undefined){
-                res.cookie('userEmail',userFound.email,{maxAge:1000*60*60});
+                res.cookie('userLogged',{id:userFound.id, email: userFound.email},{maxAge:1000*60*60});
                 };
            return res.redirect('/users/profile')
         }
@@ -51,7 +51,7 @@ const userController = {
     //Read
     profile: async (req,res,next)=>{     
         
-        let user = await db.User.findOne({where:{email:req.session.userLogged}})
+        let user = await db.User.findOne({where:{id:req.session.userLogged.id}})
         
         res.render('users/profile',{
             name: user.first_name,
