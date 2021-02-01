@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const itemsRouter = require('./apiItemsRouter');
-const apisController = require('../../controllers/api/apiUsersController')
+const apisController = require('../../controllers/api/apiOrdersController')
 
 router.use('/items', itemsRouter);
-router.get('/', apisController.list);
-
+router.post('/buy', apisController.buy);
+router.get('/:id', apisController.list)
 
 
 module.exports = router;
