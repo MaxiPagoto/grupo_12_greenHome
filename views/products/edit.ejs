@@ -14,7 +14,7 @@
     <%-include('../partials/header')%>
     <main>
                                                             <!-- CARGA DE ITEMS  --> 
-        <form action="/products/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
+        <form action="/products/edit/<%= product.id %>" id="create-form" method="POST" enctype="multipart/form-data">
             <section class="carga-visuales-container">
                 <div class="carga-titulo-principal"><h2>Estás editando: <%=product.name%> </h1></div>
                     <%if (typeof errors != 'undefined'){ for (error of errors){%>
@@ -23,7 +23,7 @@
                 <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
                 <div class="visual-selector-container">
                     <div class="visual-selector">
-                        <div class="main-photo"><input class="visual-selector-input"type="file" name="image"><div>Foto principal</div></div>
+                        <div class="main-photo" id="image-form-border"><input class="visual-selector-input"type="file"  id="image-form"  name="image" ><div>Foto principal</div></div>
                         <div class="slider-photo"><input class="visual-selector-input" type="file" name="slider_photo"><div>Fotos slider</div></div>
                         <div class="complements"><i class="fas fa-list-alt"></i><div>Complementos</div>
 
@@ -44,22 +44,22 @@
                     <div class="descripcion-60">
                         <div class="desciption-input-box">                     
                             <div class="desciption-input-box">
-                                <label for="name" class="descripcion-input">Nombre de Producto</label>
-                                <input type="text" name="name" class="descripcion-input" placeholder="Ej: Árbol de Jade" value="<%=product.name%>">
+                                <label for="name" class="descripcion-input">Nombre de Producto <span id="name-error-text" class="msj-error">Este campo es obligatorio</span></label>
+                                <input type="text" id="form-name" name="name" class="descripcion-input" placeholder="Ej: Árbol de Jade" value="<%=product.name%>">
                             </div>
                         </div>
                         <div class="desciption-input-box">
                             <div class="descripcion-input">
-                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio</label></div>
+                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio <span id="price-error-text"class="msj-error" >Este campo es obligatorio</span></label></div>
                                 <div class="descripcion-input-row">
-                                      <input type="text" name="price"class="descripcion-input-mid" placeholder="Ej: 2000" value="<%=product.price%>">
-                                    <input type="text" name="discount" class="descripcion-input-mid"  placeholder="Ej: 10" value="<%=product.discount%>">
+                                      <input type="text"  id="form-price" name="price"class="descripcion-input-mid" placeholder="Ej: 2000" value="<%=product.price%>">
+                                    <input type="text" id="form-discount" name="discount" class="descripcion-input-mid"  placeholder="Ej: 10" value="<%=product.discount%>">
                                 </div>
                             </div>
                         </div>
                             <div class="desciption-input-box">
-                                <label for="prop_category" class="descripcion-input">Categoría</label>
-                                <select name="prop_category"  class="descripcion-input">
+                                <label for="prop_category" class="descripcion-input">Categoría <span id="category-error-text"class="msj-error" >Este campo es obligatorio</span></label>
+                                <select name="prop_category"  id="form-category" class="descripcion-input">
                                     <% for (category of categories) { %> 
                                         <% if (category.id == product.category_id) { %> 
                                         <option value="<%=category.id%>" selected><%=category.name%></option>
@@ -78,10 +78,10 @@
                                 </select>
                             </div>
                             <div class="desciption-input-box">
-                                <label for="name" class="descripcion-input">Descripción</label>
-                                <input type="text" name="line" class="descripcion-input" placeholder="Descripcion una linea" value="<%=product.line%>">
-                                <input type="text" name="copy" class="descripcion-input" placeholder="Copywriting" value="<%=product.copy%>">
-                                <input type="text" name="description" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto"
+                                <label for="name" class="descripcion-input">Descripción <span id="description-error-text" class="msj-error">Estos campos son obligatorios</span></label>
+                                <input type="text" name="line" id="form-line" class="descripcion-input" placeholder="Descripcion una linea" value="<%=product.line%>">
+                                <input type="text" name="copy" id="form-copy" class="descripcion-input" placeholder="Copywriting" value="<%=product.copy%>">
+                                <input type="text" name="description" id="form-description" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto"
                                 value="<%=product.description%>">
                             </div>
                     </div>
@@ -92,14 +92,14 @@
                         <div class="select-caracteristicas-box">
                             <div class="caracteristica-producto">
                                 <label>Luz</label>
-                                <select name="prop_light" class="caracteristicas-select">
-                                    <option value="1"<% if (product.prop_light == 1) {%>selected <% } %>>Luz reflejada</option>
-                                    <option value="2"<% if (product.prop_light == 2) {%>selected <% } %>>Sol direct</option>                          
+                                <select name="prop_light" id="form-prop-ligth" class="caracteristicas-select">
+                                    <option value="0"<% if (product.prop_light == 0) {%>selected <% } %>>Luz reflejada</option>
+                                    <option value="1"<% if (product.prop_light == 1) {%>selected <% } %>>Sol directo</option>                          
                                 </select>
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Riego</label>
-                                <select name="prop_water" class="caracteristicas-select" >
+                                <select name="prop_water" id="form-prop-water" class="caracteristicas-select" >
                                     <option value="1"<% if (product.prop_water == 1) {%>selected <% } %>>1 vez por semana</option>
                                     <option value="2"<% if (product.prop_water == 2) {%>selected <% } %>>2 veces por semana</option> 
                                     <option value="3"<% if (product.prop_water == 3) {%>selected <% } %>>3 veces por semana</option>                                  
@@ -107,7 +107,7 @@
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Maceta</label>
-                                <select name="prop_plantpot" class="caracteristicas-select">
+                                <select name="prop_plantpot" id="form-prop-planpot" class="caracteristicas-select">
                                     <option value="1"<% if (product.prop_plantpot == 1) {%>selected <% } %> >Pequeña</option>
                                     <option value="2"<% if (product.prop_plantpot == 2) {%>selected <% } %> >Mediana</option>
                                     <option value="3"<% if (product.prop_plantpot == 3) {%>selected <% } %> >Grande</option>    
@@ -116,14 +116,14 @@
                             </div> 
                             <div class="caracteristica-producto">
                                 <label>Plagas</label>
-                                <select name="prop_plague" class="caracteristicas-select" >
+                                <select name="prop_plague" id="form-propplague" class="caracteristicas-select" >
                                     <option value="0" <% if (product.prop_plague == 0) {%>selected <% } %>>Resistente</option>
                                     <option value="1" <% if (product.prop_plague == 1) {%>selected <% } %>>Débil</option>                                                                       
                                 </select>
                             </div>
                             <div class="caracteristica-producto">
-                                <label>Altura</label>
-                                <input type="number" name="prop_height" list="height-list" step="0.25" value="<%=product.prop_height%>">
+                                <label>Altura <span id="height-error-text" class="msj-error">Este campo es obligatorio</span></label>
+                                <input type="number" name="prop_height" id="form-prop-heigth" list="height-list" step="0.25" value="<%=product.prop_height%>">
                                 <datalist id="height-list" > 
                                     <option value="0.25">
                                     <option value="0.50">
@@ -140,7 +140,7 @@
                             <div class="caracteristica-producto">
                                   
                                 <label>Mascotas</label>
-                                <select name="prop_pet" class="caracteristicas-select">
+                                <select name="prop_pet" id="form-prop-pet" class="caracteristicas-select">
                                     <option value="1"<% if (product.prop_pet == 1) {%>selected <% } %>>Pet Friendly</option>
                                     <option value="0"<% if (product.prop_pet == 0) {%>selected <% } %>>Venenosa</option>                                                                       
                                 </select>
@@ -158,23 +158,25 @@
             </div>
             <div class="filter-container">
                 <div class="filter-benefit">
+                    <div id="benefit-errors"></div>
                     <div><label>Beneficio</label></div>
                     <% for (benefit of benefits) { %> 
-                        <div><input type="checkbox" name="filter_benefit" value="<%=benefit.id%>" <% for (benefitProduct of product.benefits) { if (benefitProduct.id == benefit.id){ %>checked<% } %><% } %>><%=benefit.name%></div>
+                        <div><input type="checkbox" name="filter_benefit" class="form-filter-benefit" value="<%=benefit.id%>" <% for (benefitProduct of product.benefits) { if (benefitProduct.id == benefit.id){ %>checked<% } %><% } %>><%=benefit.name%></div>
                         
                         <% } %>  
                 </div>
                 <div class="filter-room">
+                    <div id="room-errors"></div>
                     <div><label>Espacio</label></div>
                     <% for (room of rooms) { %>
-                        <div><input type="checkbox" name="filter_room" value="<%=room.id%>"<% for (roomProduct of product.rooms) { if (roomProduct.id == room.id){ %>checked <% } %> <% } %>><%=room.name%></div>
+                        <div><input type="checkbox" name="filter_room" class="form-filter-room" value="<%=room.id%>"<% for (roomProduct of product.rooms) { if (roomProduct.id == room.id){ %>checked <% } %> <% } %>><%=room.name%></div>
                         
                         <% } %> 
                     
                 </div>
                 <div class="filter-dificult">
                     <div><label>Dificultad</label></div>
-                    <select name="filter_dificult">
+                    <select id="form-filter-dificult" name="filter_dificult">
                         <option value="1" <% if (product.filter_dificult == 1) {%>selected <% } %>>Poco cuidado</option>
                         <option value="2" <% if (product.filter_dificult == 2) {%>selected <% } %>>Requiere atención</option>
                         <option value="3" <% if (product.filter_dificult == 3) {%>selected <% } %>>Cuidado especial</option>                                                                       
@@ -188,6 +190,7 @@
                     
                 </div>
             </div>
+            <script src="/js/js-edit.js"></script>
         
     </main>
     <%-include('../partials/footer')%>

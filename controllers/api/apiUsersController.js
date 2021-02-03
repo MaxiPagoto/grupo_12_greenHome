@@ -3,7 +3,7 @@ const db = require('../../database/models/index');
 
 const apisUsersController = {
     list: async (req,res)=>{
-        const Users = await db.User.findAll({attributes: ['id','email']});
+        const Users = await db.User.findAll({attributes: ['id','email','password']});
         res.json({meta:{status:"success"},data:Users})
     },
     store: async(req,res,next)=>{

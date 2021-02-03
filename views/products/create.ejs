@@ -23,7 +23,7 @@
                 <div class="carga-sub-titulos"><h3>Elementos visuales</h3></div>
                 <div class="visual-selector-container">
                     <div class="visual-selector">
-                        <div class="main-photo"><input class="visual-selector-input"type="file" id="image-form" name="image"><div>Foto principal</div></div>
+                        <div class="main-photo" id="image-form-border"><input class="visual-selector-input"type="file" id="image-form" name="image"><div>Foto principal</div></div>
                         <div class="slider-photo"><input class="visual-selector-input" type="file" name="slider_photo"><div>Fotos slider</div></div>
                         <div class="complements"><i class="fas fa-list-alt"></i><div>Complementos</div>
 
@@ -44,13 +44,13 @@
                     <div class="descripcion-60">
                         <div class="desciption-input-box">                     
                             <div class="desciption-input-box">
-                                <label for="name" class="descripcion-input">Nombre de Producto</label>
+                                <label for="name" class="descripcion-input">Nombre de Producto <span id="name-error-text" class="msj-error">Este campo es obligatorio</span></label>
                                 <input type="text" name="name" id="form-name" class="descripcion-input" placeholder="Ej: Árbol de Jade">
                             </div>
                         </div>
                         <div class="desciption-input-box">
                             <div class="descripcion-input">
-                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio</label></div>
+                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio <span id="price-error-text"class="msj-error" >Este campo es obligatorio</span></label></div>
                                 <div class="descripcion-input-row">
                                     <input type="number" name="price" id="form-price" class="descripcion-input-mid" placeholder="Ej: 2000">
                                     <input type="number" name="discount" id="form-discount" class="descripcion-input-mid"  placeholder="Ej: 10">
@@ -58,27 +58,17 @@
                             </div>
                         </div>
                             <div class="desciption-input-box">
-                                <label for="prop_category" class="descripcion-input">Categoría</label>
+                                <label for="prop_category" class="descripcion-input">Categoría <span id="category-error-text"class="msj-error" >Este campo es obligatorio</span></label>
                                 <select name="prop_category" id="form-category" class="descripcion-input">
                                     <% for (category of categories) { %> 
                                          <option value="<%=category.id%>"><%=category.name%></option>
                                         <% } %> 
-                                <!--
-                                    <option value="Plantas de Interior">Plantas de Interior</option>
-                                    <option value="Plantas de Exterior">Plantas de Exterior</option>
-                                    <option value="Plantas Florales">Plantas Florales</option>
-                                    <option value="Cáctus y Crasas">Cáctus y Crasas</option>
-                                    <option value="Orquideas">Orquideas</option>
-                                    <option value="Kokedamas">Kokedamas</option>
-                                    <option value="Macetas">Macetas</option>
-                                    <option value="Accesorios">Accesorios</option>
-                                    -->
                                 </select>
                             </div>
                             <div class="desciption-input-box">
-                                <label for="name" class="descripcion-input">Descripción</label>
-                                <input type="text" name="line" id="form-line" class="descripcion-input" placeholder="Descripcion una linea">
-                                <input type="text" name="copy" id="form-copy" class="descripcion-input" placeholder="Copywriting">
+                                <label for="name" class="descripcion-input">Descripción <span id="description-error-text" class="msj-error">Estos campos son obligatorios</span></label>
+                                <input type="text" name="line" id="form-line" class="descripcion-input" placeholder="Descripcion una linea (Máx. 30 Caracteres)">
+                                <input type="text" name="copy" id="form-copy" class="descripcion-input" placeholder="Copywriting (Máx. 130 Caracteres)">
                                 <input type="text" name="description" id="form-description" class="descripcion-input descripcion-input-long" placeholder="Descripcion completa de producto">
                             </div>
                     </div>
@@ -90,8 +80,8 @@
                             <div class="caracteristica-producto">
                                 <label>Luz</label>
                                 <select name="prop_light" id="form-prop-ligth" class="caracteristicas-select">
-                                    <option value="Luz reflejada">Luz reflejada</option>
-                                    <option value="Luz directa">Luz directa</option>                                     
+                                    <option value="0">Luz reflejada</option>
+                                    <option value="1">Luz directa</option>                                     
                                 </select>
                             </div> 
                             <div class="caracteristica-producto">
@@ -114,12 +104,12 @@
                             <div class="caracteristica-producto">
                                 <label>Plagas</label>
                                 <select name="prop_plague" id="form-propplague" class="caracteristicas-select" >
-                                    <option value="Resistente">Resistente</option>
-                                    <option value="Débil">Débil</option>                                                                       
+                                    <option value="0">Resistente</option>
+                                    <option value="1">Débil</option>                                                                       
                                 </select>
                             </div>
                             <div class="caracteristica-producto">
-                                <label>Altura</label>
+                                <label>Altura <span id="height-error-text" class="msj-error">Este campo es obligatorio</span></label>
                                 <input type="number" name="prop_height" id="form-prop-heigth" list="height-list" step="0.25">
                                 <datalist id="height-list">
                                     <option value="0.25">
@@ -137,8 +127,8 @@
                             <div class="caracteristica-producto">
                                 <label>Mascotas</label>
                                 <select name="prop_pet" id="form-prop-pet" class="caracteristicas-select">
-                                    <option value="true">Pet Friendly</option>
-                                    <option value="false">Venenosa</option>                                                                       
+                                    <option value="1">Pet Friendly</option>
+                                    <option value="2">Venenosa</option>                                                                       
                                 </select>
                             </div>
                         </div>
@@ -154,32 +144,19 @@
             </div>
             <div class="filter-container">
                 <div class="filter-benefit">
+                    <div id="benefit-errors"></div>
                     <div><label>Beneficio</label></div>
                     <% for (benefit of benefits) { %>
-                        <div><input type="checkbox" name="filter_benefit" id="form-filter-benefit" value="<%=benefit.id%>"><%=benefit.name%></div>
+                        <div><input type="checkbox" name="filter_benefit" class="form-filter-benefit" value="<%=benefit.id%>"><%=benefit.name%></div>
                         <% } %>  
-                    <!--
-                    <div><input type="checkbox" name="filter_benefit" value="Trae buena suerte"> Trae buena suerte</div>
-                    <div><input type="checkbox" name="filter_benefit" value="Ayuda a la ansiedad"> Ayuda a la ansiedad</div>
-                    <div><input type="checkbox" name="filter_benefit" value="Absorbe la humedad"> Absorbe la humedad</div>
-                    <div><input type="checkbox" name="filter_benefit" value="Aromatizante"> Aromatizante</div>
-                    <div><input type="checkbox" name="filter_benefit" value="Mejora la productividad"> Mejora la productividad</div>
-                    <div><input type="checkbox" name="filter-benefit" value="Reducen el estrés"> Reducen el estrés</div>
-                     -->
+
                 </div>
                 <div class="filter-room">
+                    <div id="room-errors"></div>
                     <div><label>Espacio</label></div>
                     <% for (room of rooms) { %>
-                        <div><input type="checkbox" id="form-filter-room" name="filter_room" value="<%=room.id%>"><%=room.name%></div>
+                        <div><input type="checkbox" class="form-filter-room" name="filter_room" value="<%=room.id%>"><%=room.name%></div>
                         <% } %>  
-                        <!--
-                    <div><input type="checkbox" name="filter_room" value="Dormitorio"> Dormitorio</div>
-                    <div><input type="checkbox" name="filter_room" value="Living"> Living</div>
-                    <div><input type="checkbox" name="filter_room" value="Baño"> Oficina</div>
-                    <div><input type="checkbox" name="filter_room" value="Balcón"> Balcón</div>
-                    <div><input type="checkbox" name="filter_room" value="Jardín"> Jardín</div>
-                    <div><input type="checkbox" name="filter_room" value="Terraza"> Terraza</div>
-                    -->
                 </div>
                 <div class="filter-dificult">
                     <div><label>Dificultad</label></div>

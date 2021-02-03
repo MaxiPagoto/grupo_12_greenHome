@@ -55,16 +55,8 @@ const usersValidator= {
         .withMessage('El usuario no existe')
         .bail(),
         body('password')
-        .isLength({min:8}).withMessage('La contraseña debe tener 8 caracteres.')
+        .isLength({min:6}).withMessage('La contraseña debe tener 6 caracteres.')
         .bail()
-        .custom(
-            async function(value,{req}){
-                let userFound = await db.User.findOne({where:{email:req.body.email}});
-                let passwordCheck = bycrypt.compareSync(req.body.password, userFound.password);
-                return (passwordCheck)
-            }
-        )
-        .withMessage('Contraseña incorrecta')
     ],
     edit: [
         body('email')

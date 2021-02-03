@@ -24,10 +24,12 @@
             <div class="login-form">
                 <form action="/users/login" id="login-form" method="POST">
                     <div>
+                        <div class="msj-error" id="email-error">Email incorrecto</div>
                         <label for="correo"></label>
                         <input class="contraseña-login" type="email" name="email" id="email" placeholder="Correo electronico">
                     </div>
                     <div>
+                        <div class="msj-error" id="password-error">Ingresa una contraseña</div>
                         <label for="contraseña"></label>
                         <input class="contraseña-login" type="password" name="password" id="password" placeholder="Contraseña">
                     </div>

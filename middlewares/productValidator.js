@@ -18,16 +18,55 @@ const productValidator= {
         .bail(),
         body('line')
         .notEmpty().withMessage('Line obligatorio')
+        .custom((value)=>{
+            return ((value.length <5 && value <31))
+        }).withMessage("Line es una descripción de mínimo 5 de máximo 30 caracteres.")
         .bail(),
         body('copy')
         .notEmpty().withMessage('Copywritting obligatorio')
+        .bail()
+        .custom((value)=>{
+            return ((value.length <5 && value <130))
+        }).withMessage("Copy es una descripción de mínimo 5 y máximo 130 caracteres.")
         .bail(),
         body('description')
         .notEmpty().withMessage('Description obligatorio')
+        .bail()
+        .custom((value)=>{
+            return (value.length <5)
+        }).withMessage("La descripción debe tener al menos 5 caracteres.")
         .bail(),
+        body('prop_light')
+        .custom((value)=>{
+            let allowedValues = ["0","1"]
+            return (allowedValues.find(function(v){return v == value}))
+        }).withMessage('Valores de Luz inválidos.'),
+        body('prop_water')
+        .custom((value)=>{
+            let allowedValues = [1,2,3]
+            return (allowedValues.find(function(v){return v== value}))
+        }).withMessage('Valores de Riego inválidos.'),
+        body('prop_plantpot')
+        .custom((value)=>{
+            let allowedValues = [1,2,3,4]
+            return (allowedValues.find(function(v){return v== value}))
+        }).withMessage('Valores de Maceta inválidos.'),
+        body('prop_plague')
+        .custom((value)=>{
+            let allowedValues = ["0","1"]
+            return (allowedValues.find(function(v){return v== value}))
+        }).withMessage('Valores de Plaga inválidos.'),
         body('prop_height')
         .notEmpty().withMessage('Altura obligatoria')
+        .custom((value)=>{
+            return (value>0)
+        }).withMessage(' No estamos hablando de raíces. La altura debe ser mayor a 0.')
         .bail(),
+        body('prop_pet')
+        .custom((value)=>{
+            let allowedValues = [0,1]
+            return (allowedValues.find(function(v){return v== value}))
+        }).withMessage('Valores de Mascota inválidos.'),
         body('image')
         .custom(function(value,{req}){
             return req.files[0];

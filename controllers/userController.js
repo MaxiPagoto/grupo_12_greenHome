@@ -2,8 +2,6 @@ const {check, validationResult, body} = require('express-validator');
 const bycrypt = require('bcrypt');
 const fs = require('fs');
 const path = require('path')
-const usersFilePath = path.join(__dirname,'../data/users_GreenHome.json');
-const usersList = JSON.parse(fs.readFileSync(usersFilePath, {encoding:'utf-8'}));
 const db = require('../database/models/index.js');
 
 
@@ -37,14 +35,29 @@ const userController = {
     processLogin: async (req, res) => {
         let errors = validationResult(req);
         if (!errors.isEmpty()){
+            console.log(errors)
             return res.render('users/login', {errors:errors.errors})
         }else{
             let userFound = await db.User.findOne({where:{email:req.body.email}});
-            req.session.userLogged = userFound.email;
-            if (req.body.remember!=undefined){
-                res.cookie('userEmail',userFound.email,{maxAge:1000*60*60});
-                };
+            let compare = bycrypt.compareSync(req.body.password, userFound.password);
+            if(!compare){
+                newError = [
+                    {
+                    msg: "Credenciales inválidas",
+                    param: 'password',
+                    location: 'body'
+                    }
+                ]
+                return res.render('users/login', {errors:newError})
+            }
+            else {
+                req.session.userLogged = userFound.email;
+                if (req.body.remember!=undefined){
+                    res.cookie('userEmail',userFound.email,{maxAge:1000*60*60});
+                    };
            return res.redirect('/users/profile')
+            }
+            
         }
     },
     

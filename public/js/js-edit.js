@@ -95,13 +95,7 @@ description.onkeyup = function(){
 formulario.addEventListener('submit', function(e){
 const errorCreate = []
 
-// Imagen
-console.log(imageBorder)
-if(imagenPrincipal.value.length == 0){
-    
-    imageBorder.style.borderColor =colorRojoText
-    errorCreate.push(1)
-}
+
 // Nombre de producto
     if(nombreProducto.value.length == 0){
         nameError.style.opacity = '100'
@@ -198,12 +192,5 @@ if(errorCreate.length > 0){
 }
 
 })
-
-
-
-
-
-
-
 
 

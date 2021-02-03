@@ -267,6 +267,21 @@
     border: none;
 }
 
+#room-errors{
+    font-size: 00.6em;
+    color:#ff0000b5;
+}
+
+#benefit-errors{
+    font-size: 00.6em;
+    color:#ff0000b5;
+}
+
+.msj-error{
+    opacity: 0;
+    font-size: 0.6em;
+}
+
 @media(max-width: 1023px){
 
     body{

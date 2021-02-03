@@ -78,6 +78,12 @@
         width: 100%;
 }
 
+.msj-error{
+    font-size: 0.6em;
+    opacity: 0;
+    color: #e13f1aa8;
+}
+
 
 @media(min-width: 1023px){
 

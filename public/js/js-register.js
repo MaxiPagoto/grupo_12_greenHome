@@ -1,4 +1,7 @@
 window.addEventListener('load', function(){
+const URL = window.location.origin;
+
+
 // Formulario
 
 let formulario = document.querySelector('#register-form')
@@ -9,6 +12,7 @@ let formulario = document.querySelector('#register-form')
  let msjFormApellido = document.querySelector('.js-validation-last-name') 
  let msjFormPassword = document.querySelector('.js-validation-password') 
  let msjFormRetype = document.querySelector('.js-validation-retype') 
+ let msjFromAvatar = document.querySelector('.js-validation')
  
 
  // Imput
@@ -21,18 +25,31 @@ let formulario = document.querySelector('#register-form')
 
 // Verificador de email
  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
- const colorVerde  = '#1080008a'
- const colorRojo = '#e1721aa8'
+ const colorVerde  = '#EAFAF1'
+ const colorRojo = '#F9EBEA'
 
 // funciones
  function msjCampo (imput,msj){
     msj.onmouseover= function(){      
-        imput.style.opacity = '100'    
+        imput.style.opacity = '100';
+        imput.style.transition = "opacity 0.15s 0s ease";    
     }
     msj.onmouseout= function(){
         imput.style.opacity = '0'
     } 
  }
+
+ let getExtension = function(value){
+    return value.slice((value.lastIndexOf(".") - 1 >>> 0) + 2)
+}
+
+let isError = function (element){
+    element.style.color = colorRojo;
+    element.style.opacity = '100'
+    
+}
+
+
 
  msjCampo(msjFormEmail,email)
  msjCampo(msjFormNombre,nombre)
@@ -44,9 +61,11 @@ let formulario = document.querySelector('#register-form')
 email.onblur = function(){
 
     if(email.value.match(pattern)){
-        email.style.backgroundColor = colorVerde
+        email.style.BorderColor = colorVerde
+        email.style.transition = "0.5s 0s ease";
     }else{
         email.style.backgroundColor = colorRojo
+        email.style.transition = "0.5s 0s ease";
     }
 }
 
@@ -54,20 +73,24 @@ email.onblur = function(){
 
 nombre.onblur = function(){
 
-    if(nombre.value.trim().length > 0){
-        nombre.style.backgroundColor = colorVerde
+    if(nombre.value.trim().length > 2){
+        nombre.style.backgroundColor = colorVerde;
+        nombre.style.transition = "0.5s 0s ease";
     }else{
-        nombre.style.backgroundColor = colorRojo
+        nombre.style.backgroundColor = colorRojo;
+        nombre.style.transition = "0.5s 0s ease"
     }
 }
 
 
 apellido.onblur = function(){
 
-    if(apellido.value.trim().length > 0){
-        apellido.style.backgroundColor = colorVerde
+    if(apellido.value.trim().length > 2){
+        apellido.style.backgroundColor = colorVerde;
+        apellido.style.transition = "0.5s 0s ease";
     }else{
-        apellido.style.backgroundColor = colorRojo
+        apellido.style.backgroundColor = colorRojo;
+        apellido.style.transition = "0.5s 0s ease";
     }
 }
 
@@ -76,21 +99,23 @@ password.onblur = function(){
 
     if(password.value.length < 6){
         password.style.backgroundColor = colorRojo
+        password.style.transition = "0.5s 0s ease";
     }else{
-        password.style.backgroundColor = colorVerde
+        password.style.backgroundColor = colorVerde;
+        password.style.transition = "0.5s 0s ease";
     }
 }
 
 
 retype.onblur = function(){
 
-    if(retype.value == password.value){
-        retype.style.backgroundColor = colorVerde
-        msjFormRetype.style.opacity='0'
+    if(retype.value == password.value && password.value >0){
+        retype.style.backgroundColor = colorVerde;
+        msjFormRetype.style.transition = "0.5s 0s ease";
 
     }else{
-        retype.style.backgroundColor = colorRojo
-        msjFormRetype.style.opacity='100'
+        retype.style.backgroundColor = colorRojo;
+        msjFormRetype.style.transition = "0.5s 0s ease";
     }
 }
 
@@ -98,25 +123,31 @@ retype.onblur = function(){
 
 email.onkeydown = function(){
     if(email.value.match(pattern)){
-        email.style.backgroundColor = colorVerde
+        email.style.backgroundColor = colorVerde;
+        email.style.transition = "0.5s 0s ease";
        
     }else
-        email.style.backgroundColor = colorRojo 
+        email.style.backgroundColor = colorRojo;
+        email.style.transition = "0.5s 0s ease";
 }
-/*nombre.onkeypress = function(){
-    if(nombre.value.length >= 0){
-        nombre.style.backgroundColor = colorVerde
+nombre.onkeypress = function(){
+    if(nombre.value.length > 2){
+        nombre.style.backgroundColor = colorVerde;
+        nombre.style.transition = "0.5s 0s ease";
        
     }else
-        nombre.style.backgroundColor = colorRojo
+        nombre.style.backgroundColor = colorRojo;
+        nombre.style.transition = "0.5s 0s ease";
     
 }
 apellido.onkeypress = function(){
-    if(apellido.value.length >= 0){
-        apellido.style.backgroundColor = colorVerde
+    if(apellido.value.length >= 2){
+        apellido.style.backgroundColor = colorVerde;
+        apellido.style.transition = "0.5s 0s ease";
        
     }else
-        apellido.style.backgroundColor = colorRojo
+        apellido.style.backgroundColor = colorRojo;
+        apellido.style.transition = "0.5s 0s ease";
 }
 password.onkeydown = function(){
     if(password.value.length >= 5){
@@ -127,12 +158,14 @@ password.onkeydown = function(){
 
 retype.onkeyup = function(){
     if(retype.value == password.value){
-        retype.style.backgroundColor = colorVerde
+        retype.style.backgroundColor = colorVerde;
+        retype.style.transition = "0.5s 0s ease";
         
 
     }else
-        retype.style.backgroundColor = colorRojo 
-}*/
+        retype.style.backgroundColor = colorRojo;
+        retype.style.transition = "0.5s 0s ease";
+}
 
 
 
@@ -141,34 +174,75 @@ retype.onkeyup = function(){
 const error = []
    
 
-    if(nombre.value == ''){
-        alert('El campo Nombre es obligatorio')
+    if(nombre.value.trim().length < 2){
+      //  alert('El campo Nombre es obligatorio')
+      msjFormNombre.innerHTML = 'El campo nombre esta vacio o es demasiado corto '
+      isError(msjFormNombre);
         error.push(1)
+    }else{
+        msjFormNombre.innerHTML = 'El campo nombre es obligatorio'
+        msjFormNombre.style.color = 'black';
     }
      if (!email.value.match(pattern)){
-         alert('El campo Email es incorrecto o vacio')
+         msjFormEmail.innerHTML = 'El campo e.mail es invalido o esta vacio'
+         isError(msjFormEmail);
          error.push(1)
+     }else{
+        msjFormEmail.innerHTML = 'El campo email es obligatorio'
+        msjFormEmail.style.color = 'black';
      }
 
-     if(apellido.value == ''){
-         alert('El apellido es obligatorio')
+     if(apellido.value.trim().length < 2){
+         msjFormApellido.innerHTML = 'El campo apellido esta vacio o es demasiado corto'
+         isError(msjFormApellido);
          error.push (1)
      }
 
-     if(!avatar.value.length > 0){
-         alert('El avatar es obligatorio')
+     
+        let validExt = ['png', 'jpg', 'jpeg']
+        let fileExt = getExtension(avatar.value);
+        let foundExt = validExt.find(function(ext){return ext===fileExt})
+    
+     if(!(avatar.value.length > 0 )|| !foundExt){
+         msjFromAvatar.innerHTML = 'Selecciona un Avatar formato .png, .jpg o jpeg'
+         isError(msjFromAvatar);
          error.push(1)
+     }else{
+        msjFromAvatar.innerHTML = ''
      }
+     
+
+    /* if(foundExt){
+        msjFromAvatar.innerHTML = 'Selecciona un Avatar'
+        msjFromAvatar.style.color = colorRojo;
+        msjFromAvatar.style.opacity= '100'
+        error.push(1)
+    }*/
+     
     
      if(password.value.length < 6){
-         alert('La contraseña es demasiado corta')
+         msjFormPassword.innerHTML = 'La contraseña es demasiado corta ( minimo 6 caracteres )'
+         isError(msjFormPassword);
          error.push(1)
      }
 
         if(retype.value !== password.value){
-            alert('Las contraseñas no coinciden')
+            isError(msjFormRetype);
             error.push(1)
         }
+
+        fetch(URL+'/api/users')
+        .then(function(response){
+            return response.json();
+        }).then(function(users){
+            const userslogged = users.data
+            for(user of userslogged){
+                if(user.email === email.value){
+                    msjFormEmail.innerHTML = 'El email ya existe'
+                    isError(msjFormEmail);
+                }
+            }
+        })
 
         if(error.length >0 ){
             e.preventDefault()
