@@ -80,7 +80,7 @@ fetch(URL+'/api/users')
 formulario.addEventListener('submit', function(e){
     const errors = []
     if(password.value.length<6){
-        passwordError.innerHTML  += " de al menos 6 caracteres"
+        passwordError.innerHTML  = "Ingrese una contraseña de al menos 6 caracteres"
         passwordError.style.opacity = '100'
         passwordError.style.color = "rgb(192, 57, 43)"
         errors.push(1)
