@@ -21,7 +21,7 @@ const usersValidator= {
         )
         .withMessage('El email ya está registrado'),
 
-        body('password').isLength({min:8}).withMessage('La contraseña debe tener al menos 8 caracteres')
+        body('password').isLength({min:6}).withMessage('La contraseña debe tener al menos 6 caracteres')
         .bail(),
 
         body('retype').custom(function(value, {req}){

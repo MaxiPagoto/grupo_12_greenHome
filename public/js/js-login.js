@@ -88,11 +88,9 @@ formulario.addEventListener('submit', function(e){
             let userFind = usersList.find((user)=>{
                 return user.email == email.value
             })
-            
             if(!userFind){
                 errors.push(2)
             }
-
             if(!userFind){
                     emailError.style.opacity='100'
                     emailError.style.color="rgb(192, 57, 43)"
@@ -102,19 +100,13 @@ formulario.addEventListener('submit', function(e){
                     password.style.backgroundColor = colorRojo;
                     password.style.transition = "0.5s 0s ease"
                 } 
-            
             if (!(email.value.match(pattern))){
                 emailError.innerHTML = "Ingrese un email válido"
                 errors.push(3)
             }
-            
-
         if(errors.length > 0){
             e.preventDefault();     
-        }
-       
-             
-            
+        }  
 })
 
 
