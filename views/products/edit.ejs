@@ -50,7 +50,7 @@
                         </div>
                         <div class="desciption-input-box">
                             <div class="descripcion-input">
-                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio <span id="price-error-text"class="msj-error" >Este campo es obligatorio</span></label></div>
+                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio <span id="price-error-text"class="msj-error" >Este campo es obligatorio</span></label> <span id="discount-error-text"class="msj-error" >El descuento debe ser mayor a 0 y menor a 100</span></div>
                                 <div class="descripcion-input-row">
                                       <input type="text"  id="form-price" name="price"class="descripcion-input-mid" placeholder="Ej: 2000" value="<%=product.price%>">
                                     <input type="text" id="form-discount" name="discount" class="descripcion-input-mid"  placeholder="Ej: 10" value="<%=product.discount%>">
@@ -67,14 +67,6 @@
                                         <option value="<%=category.id%>"><%=category.name%></option> 
                                         <% } %> 
                                         <% } %>
-                                   <!-- <option value="Plantas de Interior">Plantas de Interior</option>
-                                    <option value="Plantas de Exterior" selected>Plantas de Exterior</option>
-                                    <option value="Plantas Florales" >Plantas Florales</option>
-                                    <option value="Cáctus y Crasas" >Cáctus y Crasas</option>
-                                    <option value="Orquideas" >Orquideas</option>
-                                    <option value="Kokedamas">Kokedamas</option>
-                                    <option value="Macetas">Macetas</option>
-                                    <option value="Accesorios">Accesorios</option>-->
                                 </select>
                             </div>
                             <div class="desciption-input-box">
@@ -158,16 +150,16 @@
             </div>
             <div class="filter-container">
                 <div class="filter-benefit">
-                    <div id="benefit-errors"></div>
-                    <div><label>Beneficio</label></div>
+                    <div id="benefit-errors" class="msj-error">Elegí al menos uno.</div>
+                    <div><label id="benefit-label">Beneficio</label></div>
                     <% for (benefit of benefits) { %> 
                         <div><input type="checkbox" name="filter_benefit" class="form-filter-benefit" value="<%=benefit.id%>" <% for (benefitProduct of product.benefits) { if (benefitProduct.id == benefit.id){ %>checked<% } %><% } %>><%=benefit.name%></div>
                         
                         <% } %>  
                 </div>
                 <div class="filter-room">
-                    <div id="room-errors"></div>
-                    <div><label>Espacio</label></div>
+                    <div id="room-errors" class="msj-error">Elegí al menos uno.</div>
+                    <div><label id="rooms-label">Espacio</label></div>
                     <% for (room of rooms) { %>
                         <div><input type="checkbox" name="filter_room" class="form-filter-room" value="<%=room.id%>"<% for (roomProduct of product.rooms) { if (roomProduct.id == room.id){ %>checked <% } %> <% } %>><%=room.name%></div>
                         

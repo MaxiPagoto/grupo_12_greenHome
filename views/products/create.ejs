@@ -50,10 +50,10 @@
                         </div>
                         <div class="desciption-input-box">
                             <div class="descripcion-input">
-                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio <span id="price-error-text"class="msj-error" >Este campo es obligatorio</span></label></div>
+                                <div class="descripcion-input"><label for="name" class="descripcion-input">Precio <span id="price-error-text"class="msj-error" >Este campo es obligatorio</span></label> <span id="discount-error-text"class="msj-error" >El descuento debe ser mayor a 0 y menor a 100</span></div>
                                 <div class="descripcion-input-row">
                                     <input type="number" name="price" id="form-price" class="descripcion-input-mid" placeholder="Ej: 2000">
-                                    <input type="number" name="discount" id="form-discount" class="descripcion-input-mid"  placeholder="Ej: 10">
+                                    <input type="number" name="discount" id="form-discount" class="descripcion-input-mid"  placeholder="Descuento">
                                 </div>
                             </div>
                         </div>
@@ -144,16 +144,16 @@
             </div>
             <div class="filter-container">
                 <div class="filter-benefit">
-                    <div id="benefit-errors"></div>
-                    <div><label>Beneficio</label></div>
+                    <div id="benefit-errors" class="msj-error">Elegí al menos uno.</div>
+                    <div><label id="benefit-label">Beneficio</label></div>
                     <% for (benefit of benefits) { %>
                         <div><input type="checkbox" name="filter_benefit" class="form-filter-benefit" value="<%=benefit.id%>"><%=benefit.name%></div>
                         <% } %>  
 
                 </div>
                 <div class="filter-room">
-                    <div id="room-errors"></div>
-                    <div><label>Espacio</label></div>
+                    <div id="room-errors" class="msj-error">Elegí al menos uno.</div>
+                    <div><label id="rooms-label">Espacio</label></div>
                     <% for (room of rooms) { %>
                         <div><input type="checkbox" class="form-filter-room" name="filter_room" value="<%=room.id%>"><%=room.name%></div>
                         <% } %>  
