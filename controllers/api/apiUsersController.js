@@ -7,7 +7,6 @@ const apisUsersController = {
         res.json({meta:{status:"success"},data:Users})
     },
     store: async(req,res,next)=>{
-        console.log(req.body)
         try {
             await db.User.create(req.body)
                 return res.json({
