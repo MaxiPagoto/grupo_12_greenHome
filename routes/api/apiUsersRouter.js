@@ -4,6 +4,7 @@ const apisController = require('../../controllers/api/apiUsersController')
 
 
 router.get('/', apisController.list);
+router.get('/:id', apisController.detail)
 router.post('/', apisController.store)
 router.post('/delete', apisController.delete)
 router.post('/update', apisController.update)

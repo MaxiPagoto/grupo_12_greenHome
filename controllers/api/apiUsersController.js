@@ -3,8 +3,47 @@ const db = require('../../database/models/index');
 
 const apisUsersController = {
     list: async (req,res)=>{
-        const Users = await db.User.findAll({attributes: ['id','email','password']});
-        res.json({meta:{status:"success"},data:Users})
+        try{
+            const Users = await db.User.findAll({attributes: ['id','first_name','last_name', 'email']});
+            let userList = []
+
+            for (user of Users) {
+                userList.push({
+                    id:user.id,
+                    first_name:user.first_name,
+                    last_name:user.last_name,
+                    email:user.email,
+                    detail: '/api/users/'+user.id
+                })
+            }
+
+            let data = {
+                count:Users.length,
+                users:userList
+            }
+            res.json(data)
+        } catch {
+            return res.json({
+                status:'failed'
+            })
+        }
+    },
+    detail: async(req,res,netx)=>{
+        try{
+            const user= await db.User.findByPk(req.params.id,{attributes: ['id','first_name','last_name', 'email', 'avatar']})
+            const detail = {
+                id:user.id,
+                first_name:user.first_name,
+                last_name:user.last_name,
+                email:user.email,
+                avatar: user.avatar,
+            }
+            return res.json(detail)
+        }catch{
+            return res.json({
+                status:'failed'
+            })
+        }
     },
     store: async(req,res,next)=>{
         try {
