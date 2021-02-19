@@ -18,6 +18,7 @@ const apisUsersController = {
             }
 
             let data = {
+                data:'Users',
                 count:Users.length,
                 users:userList
             }

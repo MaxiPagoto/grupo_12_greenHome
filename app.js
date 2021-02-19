@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session')
 const methodOverride = require('method-override'); // Para usar Metodos PUT y DELETE
+const cors = require('cors')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -17,7 +18,6 @@ const sessionCheck = require('./middlewares/sessionCheck')
 const app = express();
 
 // Middlewares 
-
 app.use(methodOverride('_method')); // Pisa el metodo POST por el PUT y DELETE
 
 // view engine setup
@@ -40,8 +40,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
-app.use('/api/users', apisUsersRouter);
-app.use('/api/products', apisProductsRouter);
+app.use('/api/users',cors(), apisUsersRouter);
+app.use('/api/products',cors(), apisProductsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -30,10 +30,24 @@ const apisProductsController = {
           detail: '/api/products/'+product.id}
           )
       }
+      
+      let last = productList[productList.length-1]
+
+      let lastProduct = {
+        id: last.id,
+        name:last.name,
+        description: last.description,
+        category: last.category,
+        detail: '/api/products/'+last.id,
+        image: 'http://localhost:3000/images/products/'+last.image}
+        
+
 
       let data = {
+        data: 'Products',
         count: productList.length,
-        countByCategory: countByCategory,
+        categories: { data:'Categories', count: categories.length, countByCategory:countByCategory},
+        last: lastProduct,
         products:products
       }
       return res.json(data)
