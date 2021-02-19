@@ -13,12 +13,14 @@ const apisProductsController = {
 
       const categories = await db.Category.findAll();
 
-      let countByCategory = {};
+      let countByCategory = [];
       let products = []
 
       for (let category of categories) { 
           let productByCategory = productList.filter(product => product.category.id == category.id)
-          Object.defineProperty(countByCategory, category.id, {value:{name:category.name, count: productByCategory.length},writable:false,configurable:false,enumerable:true})
+          countByCategory.push({name:category.name, count: productByCategory.length})
+          // > La consigna dice que tiene que ser un objeto. Pero resulta más cómodo hacerlo un array.< 
+          //Object.defineProperty(countByCategory, category.id, {value:{name:category.name, count: productByCategory.length},writable:false,configurable:false,enumerable:true})
       }; 
       
       for (let product of productList) {
@@ -64,7 +66,17 @@ const apisProductsController = {
       });
 
       let last = productList[productList.length-1]
-      return res.json(last)
+
+      let lastProduct = {
+        id: last.id,
+        name:last.name,
+        description: last.description,
+        category: last.category,
+        detail: '/api/products/'+last.id,
+        image: 'http://localhost:3000/images/products/'+last.image}
+        
+
+      return res.json(lastProduct)
     } catch {
       return res.json({
         status:'failed'
