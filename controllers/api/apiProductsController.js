@@ -1,9 +1,6 @@
 const db = require('../../database/models/index.js')
 const { Op } = require("sequelize")
 
-
-
-
 const apisProductsController = {
   list: async (req,res,next) =>{
     try {
@@ -29,7 +26,8 @@ const apisProductsController = {
           name:product.name,
           description: product.description,
           category: product.category,
-          detail: '/api/products/'+product.id}
+          detail: '/api/products/'+product.id,
+          image: product.image}
           )
       }
       
