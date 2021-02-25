@@ -8,7 +8,8 @@ const apisProductsController = {
   list: async (req,res,next) =>{
     try {
       const productList = await db.Product.findAll({
-        include: ['category', 'rooms', 'benefits']
+        include: ['category', 'rooms', 'benefits'],
+        order:[['name','ASC']]
       });
 
       const categories = await db.Category.findAll();
