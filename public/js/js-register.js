@@ -26,7 +26,7 @@ let formulario = document.querySelector('#register-form')
 // Verificador de email
  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
  const colorVerde  = '#EAFAF1'
- const colorRojo = '#F9EBEA'
+ const colorRojo = '#f32828fa'
 
 // funciones
  function msjCampo (imput,msj){

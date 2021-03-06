@@ -1,12 +1,13 @@
 
 <header>
+  
     <% if (userLocal) { %>
      
     
     <section class="header-container"> 
             <div class="menu">
-                <div><button class="menu-nav-button">Menu</button></div>
-                <nav> <ul class="menu-list">
+                <div><button class="menu-nav-button" id="menu-nav-button-js">Menu</button></div>
+                <nav> <ul class="menu-list" id="menu-list-js">
                 <li class="menu-list-item"><a href="/index">Home</a></li>
                 <li class="menu-list-item"><a href="/products/admin">Tienda</a></li>
                 <li class="menu-list-item"><a href="#">Descubre</a></li>
@@ -31,8 +32,8 @@
 
     <section class="header-container"> 
         <div class="menu">
-            <div><button class="menu-nav-button">Menu</button></div>
-            <nav> <ul class="menu-list">
+            <div><button class="menu-nav-button" id="menu-nav-button-js">Menu</button></div>
+            <nav> <ul class="menu-list" id="menu-list-js">
             <li class="menu-list-item"><a href="/index">Home</a></li>
             <li class="menu-list-item"><a href="/products/admin">Tienda</a></li>
             <li class="menu-list-item"><a href="#">Descubre</a></li>
@@ -50,6 +51,7 @@
         <a class="carrito" href="/products/cart">
             <div>Carrito</div>
         </a>
+
 </section>
 <% } %> 
 

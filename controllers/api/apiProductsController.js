@@ -30,7 +30,8 @@ const apisProductsController = {
           name:product.name,
           description: product.description,
           category: product.category,
-          detail: '/api/products/'+product.id}
+          detail: '/api/products/'+product.id,
+          image:product.image }
           )
       }
       
