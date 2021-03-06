@@ -35,7 +35,11 @@ const apisProductsController = {
           description: product.description,
           category: product.category,
           detail: '/api/products/'+product.id,
+<<<<<<< HEAD
           image: product.image}
+=======
+          image:product.image }
+>>>>>>> bbb5cf03515607eda890e8468ffae6c923d48889
           )
       }
       
