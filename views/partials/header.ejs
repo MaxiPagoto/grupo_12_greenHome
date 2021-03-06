@@ -4,53 +4,64 @@
     <% if (userLocal) { %>
      
     
-    <section class="header-container"> 
-            <div class="menu">
+        <section class="header-container"> 
+            <div class="row justify-content-between w-100">
+                   
+                <a class="logo-h1 col-3"  href="/index">
+                    <h1>GREEN HOME</h1>
+                </a>    
+                
+                <div class="menu col-6">
                 <div><button class="menu-nav-button" id="menu-nav-button-js">Menu</button></div>
                 <nav> <ul class="menu-list" id="menu-list-js">
                 <li class="menu-list-item"><a href="/index">Home</a></li>
                 <li class="menu-list-item"><a href="/products/admin">Tienda</a></li>
                 <li class="menu-list-item"><a href="#">Descubre</a></li>
-                <li class="menu-list-item"><a href="/products/create">Crear</a></li>
+                
+                <li class="menu-list-item"><div>|</div></li>
                 <li class="menu-list-item"><a href="/users/profile"> Perfil </a></li>
                 <li class="menu-list-item"><a href="/users/logout"> Logout </a></li>
-                </ul> 
-            </nav>           
-            </div>
+                <li class="menu-list-item"><div>|</div></li>
+                <li class="menu-list-item fw-bolder"><a href="/products/create">Crear</a></li>
+            </ul> 
+        </nav>           
+        </div>
 
-            <a class="logo-h1"  href="/index">
-                <h1>GREEN HOME</h1>
-            </a>    
+        <a class="carrito col-3" href="/products/cart">
+            <div>Carrito</div>
+        </a>
+    </div>
 
-            <a class="carrito" href="/products/cart">
-                <div>Carrito</div>
-            </a>
-    </section>
+</section>
     
     <% } else { %>
      
 
     <section class="header-container"> 
-        <div class="menu">
-            <div><button class="menu-nav-button" id="menu-nav-button-js">Menu</button></div>
-            <nav> <ul class="menu-list" id="menu-list-js">
-            <li class="menu-list-item"><a href="/index">Home</a></li>
-            <li class="menu-list-item"><a href="/products/admin">Tienda</a></li>
-            <li class="menu-list-item"><a href="#">Descubre</a></li>
-            <li class="menu-list-item"><a href="/users/login">Ingresá</a></li>
-            <li class="menu-list-item"><a href="/users/register">Registrate</a></li>
+        <div class="row justify-content-between w-100">
+               
+            <a class="logo-h1 col-3"  href="/index">
+                <h1>GREEN HOME</h1>
+            </a>    
+            
+            <div class="menu col-6">
+                <div><button class="menu-nav-button" id="menu-nav-button-js">Menu</button></div>
+                <nav> <ul class="menu-list align-items-end" id="menu-list-js">
+                <li class="menu-list-item"><a href="/index">Home</a></li>
+                <li class="menu-list-item"><a href="/products/admin">Tienda</a></li>
+                <li class="menu-list-item"><a href="#">Descubre</a></li>
+                <li class="menu-list-item"><div>|</div></li>
+                <li class="menu-list-item"><a href="/users/login">Ingresá</a></li>
+                <li class="menu-list-item"><a href="/users/register">Registrate</a></li>
+    
+                </ul> 
+            </nav>           
+            </div>
 
-            </ul> 
-        </nav>           
+            <a class="carrito col-3" href="/products/cart">
+                <div>Carrito</div>
+            </a>
         </div>
-
-        <a class="logo-h1"  href="/index">
-            <h1>GREEN HOME</h1>
-        </a>    
-
-        <a class="carrito" href="/products/cart">
-            <div>Carrito</div>
-        </a>
 
 </section>
 <% } %> 

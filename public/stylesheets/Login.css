@@ -92,10 +92,8 @@
 
 .login-cont{
     width: 50%;
-    margin-right: auto;
-    margin-left: auto;
-    border: rgb(151, 153, 156) solid 1px;
-    margin-top: 5%;
+    
+    margin: 2.5% auto;
 }
 .login-post{
     width: 50%;

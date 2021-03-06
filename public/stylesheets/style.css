@@ -59,8 +59,8 @@ body {
     .menu{
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      justify-self: flex-start;
+      justify-content:end;
+      justify-self: flex-end;
     }
     .menu-nav-button{
       width: 10%;
@@ -80,7 +80,7 @@ body {
       }
 
     .menu-list-item{
-      display: none;
+      padding: 0.2rem;
     }
     
     .carrito{
@@ -127,7 +127,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     justify-self: center;
-    align-items: center;
+    align-items: flex-end;
   }
   .menu-nav-button{
     width: 10%;
@@ -968,8 +968,6 @@ footer {
 }
 
 .footer-column-01 {
-  width: 50%;
-  padding: 5%;
   display: flex;
   flex-direction: column;
   height: 100%;
