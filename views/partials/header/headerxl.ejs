@@ -1,0 +1,26 @@
+<% if (userLocal) { %> 
+            <nav>
+                <ul class="menu-list" id="menu-list-js">
+                    <li class="menu-list-item"><a href="/index">Home</a></li>
+                    <li class="menu-list-item"><a href="/products/admin">Tienda</a></li>
+                    <li class="menu-list-item"><a href="#">Descubre</a></li>
+                    
+                    <li class="menu-list-item"><div>|</div></li>
+                    <li class="menu-list-item"><a href="/users/profile"> Perfil </a></li>
+                    <li class="menu-list-item"><a href="/users/logout"> Logout </a></li>
+                    <li class="menu-list-item"><div>|</div></li>
+                    <li class="menu-list-item fw-bolder"><a href="/products/create">Crear</a></li>
+                </ul> 
+            </nav>           
+<% } else { %>      
+            <nav> 
+                <ul class="menu-list align-items-end" id="menu-list-js">
+                    <li class="menu-list-item"><a href="/index">Home</a></li>
+                    <li class="menu-list-item"><a href="/products/admin">Tienda</a></li>
+                    <li class="menu-list-item"><a href="#">Descubre</a></li>
+                    <li class="menu-list-item"><div>|</div></li>
+                    <li class="menu-list-item"><a href="/users/login">Ingresá</a></li>
+                    <li class="menu-list-item"><a href="/users/register">Registrate</a></li>
+                </ul> 
+            </nav>           
+<% } %> 
