@@ -1,5 +1,13 @@
+const url = window.location.origin;
+console.log(`${url}/api/users`)
+let usersList = []
+fetch(`${url}/api/users`)
+    .then(function(response){
+        return response.json();
+    }).then(function(users){
+        usersList = [...users.users];
+    })
 
-const URL = window.location.origin;
 let formulario = document.querySelector('#login-form')
 
 
@@ -68,42 +76,47 @@ password.onkeyup = function(){
 }
 
 
-let usersList = []
-fetch(URL+'/api/users')
-    .then(function(response){
-        return response.json();
-    }).then(function(users){
-        usersList = users.data
-    })
+
 
 // EVENTOS SUBMIT
 formulario.addEventListener('submit', function(e){
-    const errors = []
+    let errors = []
     if(password.value.length<6){
         passwordError.innerHTML  = "Ingrese una contraseña de al menos 6 caracteres"
         passwordError.style.opacity = '100'
         passwordError.style.color = "rgb(192, 57, 43)"
         errors.push(1)
     }
-            let userFind = usersList.find((user)=>{
-                return user.email == email.value
-            })
-            if(!userFind){
-                errors.push(2)
-            }
-            if(!userFind){
-                    emailError.style.opacity='100'
-                    emailError.style.color="rgb(192, 57, 43)"
-                    emailError.innerHTML = "Usuario no registrado"
-                    email.style.backgroundColor = colorRojo;
-                    email.style.transition = "0.5s 0s ease"
-                    password.style.backgroundColor = colorRojo;
-                    password.style.transition = "0.5s 0s ease"
-                } 
-            if (!(email.value.match(pattern))){
-                emailError.innerHTML = "Ingrese un email válido"
-                errors.push(3)
-            }
+
+    let userFind = usersList.find((user)=>{
+        return user.email == email.value
+    })
+
+
+    if(userFind){
+        emailError.style.opacity='0'
+        emailError.innerHTML = "  "
+    }
+
+    if(!userFind){
+        errors.push(2)
+    }
+    if(!userFind){
+            emailError.style.opacity='100'
+            emailError.style.color="rgb(192, 57, 43)"
+            emailError.innerHTML = "Usuario no registrado"
+            email.style.backgroundColor = colorRojo;
+            email.style.transition = "0.5s 0s ease"
+            password.style.backgroundColor = colorRojo;
+            password.style.transition = "0.5s 0s ease"
+        } 
+    if (!(email.value.match(pattern))){
+        emailError.innerHTML = "Ingrese un email válido"
+        errors.push(3)
+    }
+
+
+    
         if(errors.length > 0){
             e.preventDefault();     
         }  

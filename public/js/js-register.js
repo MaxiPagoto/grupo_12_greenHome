@@ -1,5 +1,16 @@
+const url = window.location.origin;
+let usersList = []
+
+fetch(`${url}/api/users`)
+    .then(function(response){
+        return response.json();
+    }).then(function(users){
+        usersList = [...users.users];
+    })
+
 window.addEventListener('load', function(){
-const URL = window.location.origin;
+
+
 
 
 // Formulario
@@ -26,7 +37,7 @@ let formulario = document.querySelector('#register-form')
 // Verificador de email
  let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
  const colorVerde  = '#EAFAF1'
- const colorRojo = '#f32828fa'
+ const colorRojo = '#F9EBEA'
 
 // funciones
  function msjCampo (imput,msj){
@@ -44,7 +55,7 @@ let formulario = document.querySelector('#register-form')
 }
 
 let isError = function (element){
-    element.style.color = colorRojo;
+    element.style.color = "rgb(192, 57, 43)";
     element.style.opacity = '100'
     
 }
@@ -231,18 +242,13 @@ const error = []
             error.push(1)
         }
 
-        fetch(URL+'/api/users')
-        .then(function(response){
-            return response.json();
-        }).then(function(users){
-            const userslogged = users.data
-            for(user of userslogged){
-                if(user.email === email.value){
-                    msjFormEmail.innerHTML = 'El email ya existe'
-                    isError(msjFormEmail);
-                }
-            }
+        let userFind = usersList.find((user)=>{
+            return user.email == email.value
         })
+        if(userFind){
+            msjFormEmail.innerHTML = 'El email ya existe'
+            isError(msjFormEmail);
+        }
 
         if(error.length >0 ){
             e.preventDefault()
