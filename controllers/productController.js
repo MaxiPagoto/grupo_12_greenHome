@@ -65,9 +65,6 @@ const productController = {
           if(req.query.category_id !=0){
             operations.push({category_id: req.query.category_id})
           };
-
-
-
         
           if(operations.length>0){
 
