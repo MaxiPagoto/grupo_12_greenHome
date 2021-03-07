@@ -31,13 +31,19 @@
                     <option value="3">Cuidado especial</option>
                 </select>
         </div>
-        <button class="filtros-button col-12 col-lg-3 col-md-12 col-sm-12 align-self-center mt-3" type="submit">Filtrar</button>
+        <button class="filtros-button col-12 col-lg-3 col-md-12 col-sm-12 col align-self-center mt-3" type="submit">Filtrar</button>
         </form> 
     </div>
-        <form action="/products/search" method="GET" class="search-product">
-            <input type="search" name="search_query">
-            <button type="submit"class="filtros-button">Buscar</button>
-        </form>
+    <div class="row d-flex align-items-end justify-content-end w-100">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xs align-items-end justify-self-end" >
+            <form action="/products/search" method="GET" class="search-product">
+                <input type="search" name="search_query">
+                <button type="submit"class="filtros-button">Buscar</button>
+            </form>
+        </div>
+        
+    </div>
+        
     
     
    
