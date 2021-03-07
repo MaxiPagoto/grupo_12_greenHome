@@ -31,13 +31,18 @@
 }
 
 .filtros-button{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    height: 100%;
-    align-items: flex-end;
-    justify-content: flex-end;
-    align-self: flex-end;
+    box-sizing: border-box;
+    background-color: #447977;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+   
+    height: 2rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 0;
+    line-height: normal;
+    overflow: visible;
 
     
 }
