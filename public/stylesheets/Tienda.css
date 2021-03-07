@@ -137,7 +137,7 @@
   .detail-product-name { 
       grid-area: product-name; 
       color: #68c5bd;
-      font-size: 0.9em;
+      font-size: 1.1em;
       font-weight: 400;
       display: flex;
       justify-content: flex-start;
@@ -159,7 +159,7 @@
     font-weight: 500;}
   .detail-product-line { 
     grid-area: product-line; 
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 300;
     color: black;
     overflow: hidden
