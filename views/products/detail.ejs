@@ -140,19 +140,20 @@
             <div class="resume-list">
                 <div class="row-simple-item">
                     <span class="row-simple-item-text"><%=product.name%></span>
-                    <span class="row-simple-item-value">$100</span>
+                    <span class="row-simple-item-value"><%=finalPrice%></span>
                 </div>
                 <div class="row-simple-item">
                     <span class="row-simple-item-text">Costo de envío</span>
                     <span class="row-simple-item-value">$200</span>
                 </div>
                 <div class="delivery">
-                    <span>Llega el 31 de Febrero</span>
+                    <span>Llega dentro de 5 días.</span>
                 </div>
                 <hr>
+                <% let total = finalPrice +200 %>
                 <div class="resume-total">
                     <span>Total</span>
-                    <span>$300</span>
+                    <span><%=total %>  </span>
                 </div>
             </div>
         </div>
@@ -163,7 +164,7 @@
     <div class="product-shop-fixed">
     <a class="product-shop-button" href="#">
             <div class="product-button-text">Añadir al Carrito</div>
-            <div class="product-button-price">$ 100</div>
+            <div class="product-button-price">$ <%=finalPrice%></div>
     <a>
     </div>   
     </section>
