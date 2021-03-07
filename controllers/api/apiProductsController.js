@@ -35,7 +35,7 @@ const apisProductsController = {
           description: product.description,
           category: product.category,
           detail: '/api/products/'+product.id,
-          image:product.image }
+          image:'https://greenhomearg.herokuapp.com/images/products/'+product.image }
           )
       }
       
@@ -49,8 +49,8 @@ const apisProductsController = {
         name:last[0].name,
         description: last[0].description,
         category: last[0].category,
-        detail: '/api/products/'+last.id,
-        image: 'http://localhost:3000/images/products/'+last.image}
+        detail: '/api/products/'+last[0].id,
+        image: 'https://greenhomearg.herokuapp.com/images/products/'+last[0].image}
 
 
 
