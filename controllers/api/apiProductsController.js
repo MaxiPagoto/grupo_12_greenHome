@@ -83,7 +83,7 @@ const apisProductsController = {
         description: last.description,
         category: last.category,
         detail: '/api/products/'+last.id,
-        image: 'http://localhost:3000/images/products/'+last.image}
+        image: 'https://greenhomearg.herokuapp.com/images/products/'+last.image}
         
 
       return res.json(lastProduct)
