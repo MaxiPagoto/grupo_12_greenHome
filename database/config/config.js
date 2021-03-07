@@ -14,10 +14,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "process.env.DB_USERNAME",
+    "username": "freedbtech_greenHomeDB",
     "password": "process.env.DB_PASSWORD",
-    "database": "process.env.DB_NAME",
-    "host": "process.env.DB_HOST",
+    "database": "freedbtech_greenHomeDB",
+    "host": "freedb.tech",
     "dialect": "mysql"
   }
 }
