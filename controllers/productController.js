@@ -6,6 +6,7 @@ const path = require('path');
 const { send } = require('process');
 const db = require('../database/models/index.js')
 const { Op } = require("sequelize")
+const sequelize = require("sequelize")
 
 const productsFilePath = path.join(__dirname, '../data/products-GreenHome.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -26,8 +27,8 @@ const productController = {
       const categories = await db.Category.findAll()
       const rooms = await db.Room.findAll()
       const benefits = await db.Benefit.findAll()
-
-       return res.render('products/list',{products:productList, rooms:rooms, benefits:benefits, categories:categories})
+      let queries =[]
+       return res.render('products/list',{products:productList, rooms:rooms, benefits:benefits, categories:categories,queries:queries})
       },
       adminShop: async function (req,res,next){
         const productList = await db.Product.findAll({
@@ -36,9 +37,11 @@ const productController = {
         const categories = await db.Category.findAll()
       const rooms = await db.Room.findAll()
       const benefits = await db.Benefit.findAll()
-        return res.render('products/admin-list',{products:productList, rooms:rooms, benefits:benefits, categories:categories})
+      let queries =[]
+        return res.render('products/admin-list',{products:productList, rooms:rooms, benefits:benefits, categories:categories,queries:queries})
       } ,
       search: async function (req,res,next){
+        let queries =[]
         let query = req.query.search_query;
         const productList = await db.Product.findAll({
           where: {name : {[Op.like]: '%'+query+'%'}}
@@ -47,26 +50,62 @@ const productController = {
         });
         const categories = await db.Category.findAll()
         const rooms = await db.Room.findAll()
-        return res.render('products/list',{products:productList,rooms:rooms,categories:categories})
+        return res.render('products/list',{products:productList,rooms:rooms,categories:categories,queries:queries})
       }
       ,
       filter: async function (req,res,next){
-        const productList = await db.Product.findAll({
+        const roomFilter = await db.Room.findOne({where: {id:req.query.filter_room}}) 
+          let operations = []
+          let productFilter = []
+          let finalResult
+          let queries = [req.query.category_id, req.query.filter_room, req.query.filter_dificult ]
+          if(req.query.filter_dificult !=0){
+            operations.push({filter_dificult: req.query.filter_dificult})
+          };
+          if(req.query.category_id !=0){
+            operations.push({category_id: req.query.category_id})
+          };
+
+
+
+        
+          if(operations.length>0){
+
+         productFilter = await db.Product.findAll({
           include: ['category', 'rooms', 'benefits']
-        },
-        {where: {
-            [Op.and]: [
-              { category_id: req.query.category_id},
-              { rooms: {where: {id:req.query.filter_room}}},
-              { filter_dificult: req.query.filter_dificult}
-            ]
+        ,where: {
+              [Op.and]: operations
+            }
           }
+        );
+        finalResult = [...productFilter]
+        } else {
+          productFilter = await db.Product.findAll({
+            include: ['category', 'rooms', 'benefits']
+          });
+          finalResult = [...productFilter]
+        }
+       
+         if (roomFilter){
+          finalResult = []
+          productFilter.forEach(product => {
+            let roomFind = product.rooms.find(room=>{return room.id == roomFilter.id});
+            if (roomFind){
+              finalResult.push(product)
+            } 
         });
+         }
+
+
       const categories = await db.Category.findAll()
       const rooms = await db.Room.findAll()
       const benefits = await db.Benefit.findAll()
-      return res.render('products/list',{products:productList, rooms:rooms, benefits:benefits, categories:categories})
-      },
+      return res.render('products/list',{products:finalResult, rooms:rooms, benefits:benefits, categories:categories, queries:queries})
+        
+        }
+      
+
+      ,
 
       article: async function (req,res,next){
         const productoSQL = await db.Product.findByPk(req.params.id,{

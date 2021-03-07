@@ -30,43 +30,47 @@
 
     <h2>Destacados</h2>
 
-    <section class="sale-container">
-        <% for (product of products) { %>
-        <a class="sale-box" href="/products/detail/<%=product.id%>">
-            <img class= "sale-box-image" src="\images\products/<%=product.image%>" alt="">
-            <div class="sale-box-column">
-                <div class="sale-box-title"><%=product.name%></div>
-                <div class="sale-box-price">$ <%=product.price%></div>    
-            </div>
-        
-        </a>
-        <%}%>
+    <div class="container">
+        <div >
+        <section class="row d-flex">
+            <% for (product of products) { %>
+            <a class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 justify-content-center" href="/products/detail/<%=product.id%>">
+                <img class= "sale-box-image img-fluid width-100" src="\images\products/<%=product.image%>" alt="">
+                <div class="row col-12 d-flex justify-content-center">
+                    <div class="sale-box-title col-12 w-100 d-flex justify-content-center"><%=product.name%></div>
+                    <div class="sale-box-price col-12 w-100 d-flex justify-content-center">$ <%=product.price%></div>    
+                </div>
+            
+            </a>
+            <%}%>
 
-    </section>
+        </section>
+    </div>
+    </div>
 
                                             <!-- TIENDA -->
         <h2>Tienda</h2>
         <section class="shop-container">
         <div class="grid-container">
-            <a href="#" class="selection01">
+            <a href="/products/filter?category_id=1&filter_room=0&filter_dificult=0" class="selection01">
                 <div class="categoria-img-interior">
                     <div class="shop-category-title">Plantas de Interior</div>
 
                 </div>
             </a>
-            <a class="selection02">
+            <a class="selection02" href="/products/filter?category_id=2&filter_room=0&filter_dificult=0">
                 <div class="categoria-img-exterior">
                     <div class="shop-category-title">Plantas de Exterior</div>
 
                 </div>
             </a>
-            <a href="#" class="selection03">
+            <a href="/products/filter?category_id=3&filter_room=0&filter_dificult=0" class="selection03">
                 <div class="categoria-img-cactus">
                     <div class="shop-category-title">Cactus y Suculentas</div>
 
                 </div>
             </a>
-            <a href="#" class="selection04">
+            <a href="/products/filter?category_id=8&filter_room=0&filter_dificult=0" class="selection04">
                 <div class="categoria-img-macetas">
                     <div class="shop-category-title">Maceta y complementos</div>
 

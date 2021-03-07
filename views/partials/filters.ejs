@@ -6,29 +6,36 @@
             <label>Tipo</label><br>
             <select class="filtro-select w-100" name="category_id" id="">
                 <option value="">Todas</option>
-                <% for (category of categories) { %>               
-                <option value="<%=category.id%>"><%=category.name%></option>
-                <% } %> 
+                <% for (category of categories) { %>
+                    <% if (category.id == queries[0]) {%>         
+                <option value="<%=category.id%>" selected><%=category.name%></option>
+                <% } else { %> 
+                    <option value="<%=category.id%>"><%=category.name%></option>
+                    <% }} %> 
             </select>
     
         </div>
         <div class="col-12 col-lg-3 col-md-12 col-sm-12">
             <label>Ambiente</label><br>
             <select class="filtro-select w-100" name="filter_room" id="">
-                <option value="">Todas</option>
+                <option value="0">Todas</option>
                 <% for (room of rooms) { %> 
+                    <% if (room.id == queries[1]) { %> 
+                    <option value="<%=room.id%>" selected><%=room.name%></option>
+                    <% } else { %>
                     <option value="<%=room.id%>"><%=room.name%></option>
-                    <% } %> 
+                    <% }} %> 
+
             </select>
     
         </div>
         <div class="col-12 col-lg-3 col-md-12 col-sm-12">
             <label>Cuidados</label><br>
                 <select class="filtro-select w-100" name="filter_dificult" id="">
-                    <option value="">Todos</option>
-                    <option value="1">Poco cuidado</option>
-                    <option value="2">Requiere atencion</option>
-                    <option value="3">Cuidado especial</option>
+                    <option value="0">Todos</option>
+                    <option value="1"<% if(queries[2]==1){%>selected <% } %>  >Poco cuidado</option>
+                    <option value="2"<% if(queries[2]==2){%>selected <% } %>>Requiere atencion</option>
+                    <option value="3"<% if(queries[2]==3){%>selected <% } %>>Cuidado especial</option>
                 </select>
         </div>
         <button class="filtros-button col-12 col-lg-3 col-md-12 col-sm-12 col align-self-center mt-3" type="submit">Filtrar</button>
