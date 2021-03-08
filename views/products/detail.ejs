@@ -150,10 +150,10 @@
                     <span>Llega dentro de 5 días.</span>
                 </div>
                 <hr>
-                <% let total = finalPrice +200 %>
                 <div class="resume-total">
                     <span>Total</span>
-                    <span><%=total %>  </span>
+                    <% let totalPrice = (parseInt(finalPrice)+200) %> 
+                    <span><%=totalPrice %>  </span>
                 </div>
             </div>
         </div>
