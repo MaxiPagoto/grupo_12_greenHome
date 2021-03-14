@@ -2,7 +2,8 @@ const db = require('../../database/models/index.js')
 const { Op } = require("sequelize")
 const Sequelize = require('sequelize')
 const urlImages = process.env.URL_IMAGES || 'http://localhost:3000/images/products/';
-console.log(process.env.URL_IMAGES)
+
+
 
 const apisProductsController = {
   list: async (req,res,next) =>{
