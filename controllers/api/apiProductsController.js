@@ -1,6 +1,8 @@
 const db = require('../../database/models/index.js')
 const { Op } = require("sequelize")
 const Sequelize = require('sequelize')
+const urlImages = process.env.URL_IMAGES || 'http://localhost:3000/images/products/';
+console.log(process.env.URL_IMAGES)
 
 const apisProductsController = {
   list: async (req,res,next) =>{
@@ -35,7 +37,7 @@ const apisProductsController = {
           description: product.description,
           category: product.category,
           detail: '/api/products/'+product.id,
-          image:'https://greenhomearg.herokuapp.com/images/products/'+product.image }
+          image: urlImages+product.image }
           )
       }
       
@@ -50,7 +52,7 @@ const apisProductsController = {
         description: last[0].description,
         category: last[0].category,
         detail: '/api/products/'+last[0].id,
-        image: 'https://greenhomearg.herokuapp.com/images/products/'+last[0].image}
+        image: urlImages+last[0].image}
 
 
 
